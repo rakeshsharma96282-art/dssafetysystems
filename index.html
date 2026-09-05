@@ -1,49 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DS Safety Systems</title>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Link to Local CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DS Safety Systems | Fire Safety & Protection Solutions</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Light Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <div class="logo-badge"><i class="fa-solid fa-fire"></i> DS</div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#products">Our Products</a></li>
-        </ul>
-        <a href="#shop" class="btn-shop">Shop Now</a>
-    </nav>
+  <!-- ================= HEADER ================= -->
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+  <header class="header">
+
+    <div class="nav-container">
+
+      <!-- LOGO -->
+      <a href="#home" class="brand">
+        <img src="logo.png" alt="DS Safety Systems Logo">
+
+        <div class="brand-text">
+          <strong>DS SAFETY SYSTEMS</strong>
+          <span>FIRE SAFETY & PROTECTION</span>
+        </div>
+      </a>
+
+
+      <!-- NAVIGATION -->
+      <nav class="navigation">
+
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+
+      <!-- RIGHT SIDE -->
+      <div class="nav-right">
+
+        <a href="tel:+919818701683" class="phone">
+          <span class="phone-icon">☎</span>
+          <span>+91 98187 01683</span>
+        </a>
+
+        <a href="#quote" class="quote-btn">
+          Get a Quote
+          <span>→</span>
+        </a>
+
+      </div>
+
+
+      <!-- MOBILE MENU -->
+      <button class="menu-button" id="menuButton">
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <!-- Background elements -->
+      <div class="hero-glow"></div>
+      <div class="grid-overlay"></div>
+
+      <div class="hero-container">
+
+        <!-- LEFT CONTENT -->
         <div class="hero-content">
-            <h1 class="outline-title">DS SAFETY SYSTEMS</h1>
-            <p class="hero-description">
-                Providing premium fire safety equipment and professional assistance across India, our specialist team ensures your site remains secure with absolute reliability.
-            </p>
-            <a href="#equipment" class="btn-equipment">View Equipment</a>
+
+          <div class="eyebrow">
+            <span class="red-line"></span>
+            FIRE SAFETY & PROTECTION SOLUTIONS
+          </div>
+
+          <h1>
+            Complete Fire Safety.
+            <span>Total Protection.</span>
+          </h1>
+
+          <p class="hero-description">
+            DS SAFETY SYSTEMS provides premium fire safety equipment
+            and professional assistance across India. Our specialist
+            team helps protect your people, property and business with
+            absolute reliability.
+          </p>
+
+
+          <!-- CTA BUTTONS -->
+          <div class="hero-buttons">
+
+            <a href="#products" class="primary-btn">
+              Explore Products
+              <span>→</span>
+            </a>
+
+            <a href="#quote" class="secondary-btn">
+              Get a Quote
+              <span>→</span>
+            </a>
+
+          </div>
+
+
+          <!-- TRUST POINTS -->
+          <div class="trust-points">
+
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div>
+                <strong>Professional</strong>
+                <small>Fire Safety Solutions</small>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div>
+                <strong>Reliable</strong>
+                <small>Equipment & Service</small>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div>
+                <strong>Pan India</strong>
+                <small>Service Support</small>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Scrolling Ticker Bar -->
-        <div class="ticker-bar">
-            <div class="ticker-track">
-                <span>TRUSTED FIRE PROTECTION ACROSS INDIA • TRUSTED FIRE PROTECTION ACROSS INDIA • TRUSTED FIRE PROTECTION ACROSS INDIA • </span>
-                <span>TRUSTED FIRE PROTECTION ACROSS INDIA • TRUSTED FIRE PROTECTION ACROSS INDIA • TRUSTED FIRE PROTECTION ACROSS INDIA • </span>
+
+        <!-- RIGHT VISUAL -->
+        <div class="hero-visual">
+
+          <div class="visual-glow"></div>
+
+          <div class="equipment-card">
+
+            <div class="card-label">
+              FIRE PROTECTION
             </div>
+
+            <!-- Replace this image with your preferred fire equipment image -->
+            <img
+              src="fire-equipment.png"
+              alt="Fire Safety Equipment"
+            >
+
+            <div class="equipment-info">
+              <strong>Advanced Fire Protection</strong>
+              <span>Equipment • Systems • Service</span>
+            </div>
+
+          </div>
+
+
+          <!-- Floating cards -->
+
+          <div class="floating-card card-one">
+            <div class="mini-icon">🔥</div>
+            <div>
+              <strong>Fire Extinguishers</strong>
+              <span>Sales & Refilling</span>
+            </div>
+          </div>
+
+          <div class="floating-card card-two">
+            <div class="mini-icon">◉</div>
+            <div>
+              <strong>Fire Alarm Systems</strong>
+              <span>Installation & Service</span>
+            </div>
+          </div>
+
+          <div class="floating-card card-three">
+            <div class="mini-icon">✦</div>
+            <div>
+              <strong>Complete Protection</strong>
+              <span>End-to-End Solutions</span>
+            </div>
+          </div>
+
         </div>
+
+      </div>
+
+
+      <!-- BOTTOM STRIP -->
+      <div class="hero-bottom">
+
+        <div>
+          <span>01</span>
+          FIRE EXTINGUISHERS
+        </div>
+
+        <div>
+          <span>02</span>
+          FIRE ALARM SYSTEMS
+        </div>
+
+        <div>
+          <span>03</span>
+          HYDRANT & SPRINKLER
+        </div>
+
+        <div>
+          <span>04</span>
+          FIRE SAFETY AMC
+        </div>
+
+      </div>
+
     </section>
+
+  </main>
+
+
+  <!-- MOBILE MENU SCRIPT -->
+
+  <script>
+
+    const menuButton = document.getElementById("menuButton");
+    const navigation = document.querySelector(".navigation");
+
+    menuButton.addEventListener("click", () => {
+      navigation.classList.toggle("mobile-active");
+    });
+
+  </script>
 
 </body>
 </html>
