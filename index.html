@@ -1,399 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DS Safety Systems</title>
-  
-  <!-- Import Inter Font from Google Fonts & CDN fonts for Nexa Text Pro -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS Safety Systems</title>
+  
+  <!-- Import Inter Font from Google Fonts & CDN fonts for Nexa Text Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <style>
-    /* Load Nexa Text Pro Black / Nexa Black via font-face with fallback */
-    @font-face {
-      font-family: 'Nexa Text Pro Black';
-      src: local('Nexa Text Pro Black'), local('NexaTextPro-Black'), local('Nexa-Black'), local('Nexa Black'),
-           url('https://cdn.jsdelivr.net/gh/projectwallace/font-files@master/fonts/nexa-black/nexa-black.woff2') format('woff2');
-      font-weight: 900;
-      font-style: normal;
-    }
+  <style>
+    /* Load Nexa Text Pro Black / Nexa Black via font-face with fallback */
+    @font-face {
+      font-family: 'Nexa Text Pro Black';
+      src: local('Nexa Text Pro Black'), local('NexaTextPro-Black'), local('Nexa-Black'), local('Nexa Black'),
+           url('https://cdn.jsdelivr.net/gh/projectwallace/font-files@master/fonts/nexa-black/nexa-black.woff2') format('woff2');
+      font-weight: 900;
+      font-style: normal;
+    }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
-    body {
-      background-color: #05070c;
-      color: #ffffff;
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
+    body {
+      background-color: #05070c;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
 
-    /* ---------------- HEADER ---------------- */
-    .header {
-      width: 100%;
-      height: 95px;
-      background: linear-gradient(180deg, #0b0f19 0%, #06080d 100%);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      position: relative;
-      z-index: 10;
-    }
+    /* ---------------- HEADER ---------------- */
+    .header {
+      width: 100%;
+      height: 95px;
+      background: linear-gradient(180deg, #0b0f19 0%, #06080d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      z-index: 10;
+    }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
 
-    /* SUBTLE LOGO GLOW MATCHING LOGO COLORS */
-    .custom-logo {
-      height: 75px;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 0 4px rgba(229, 9, 20, 0.35)) 
-              drop-shadow(0 0 6px rgba(0, 102, 255, 0.25))
-              drop-shadow(0 0 8px rgba(255, 140, 0, 0.2));
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
+    /* SUBTLE LOGO GLOW MATCHING LOGO COLORS */
+    .custom-logo {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 4px rgba(229, 9, 20, 0.35)) 
+              drop-shadow(0 0 6px rgba(0, 102, 255, 0.25))
+              drop-shadow(0 0 8px rgba(255, 140, 0, 0.2));
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-    .custom-logo:hover {
-      transform: scale(1.03);
-      filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.5)) 
-              drop-shadow(0 0 8px rgba(0, 102, 255, 0.35))
-              drop-shadow(0 0 10px rgba(255, 140, 0, 0.3));
-    }
+    .custom-logo:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.5)) 
+              drop-shadow(0 0 8px rgba(0, 102, 255, 0.35))
+              drop-shadow(0 0 10px rgba(255, 140, 0, 0.3));
+    }
 
-    /* NAVIGATION LINKS (Shifted slightly left with margin-right) */
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      list-style: none;
-      gap: 36px;
-      margin-right: 20px;
-    }
+    /* NAVIGATION LINKS (Shifted slightly left with margin-right) */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 36px;
+      margin-right: 20px;
+    }
 
-    .nav-item a {
-      color: #d1d7e0;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 700;
-      font-family: 'Inter', sans-serif;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      position: relative;
-      padding-bottom: 6px;
-    }
+    .nav-item a {
+      color: #d1d7e0;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-bottom: 6px;
+    }
 
-    .nav-item a:hover {
-      color: #ffffff;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-    }
+    .nav-item a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
 
-    .nav-item.active a {
-      color: #e50914;
-      text-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
-    }
+    .nav-item.active a {
+      color: #e50914;
+      text-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+    }
 
-    .header-actions {
-      display: flex;
-      align-items: center;
-    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+    }
 
-    /* ---------------- HEADER PILL BUTTON FOR "GET A QUOTE" ---------------- */
-    .header-pill-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    /* ---------------- HEADER PILL BUTTON FOR "GET A QUOTE" ---------------- */
+    .header-pill-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-    .header-pill-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #ffffff;
-      color: #000000;
-      padding: 10px 24px;
-      border-radius: 9999px; /* White Pill Shape */
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 700;
-      font-family: 'Inter', sans-serif !important;
-      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+    .header-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #000000;
+      padding: 10px 24px;
+      border-radius: 9999px; /* White Pill Shape */
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif !important;
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-    .header-pill-btn:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 10px 28px rgba(255, 255, 255, 0.25), 0 4px 10px rgba(0, 0, 0, 0.6);
-      background: #f8fafc;
-    }
+    .header-pill-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 28px rgba(255, 255, 255, 0.25), 0 4px 10px rgba(0, 0, 0, 0.6);
+      background: #f8fafc;
+    }
 
-    .header-pill-icon {
-      width: 18px;
-      height: 18px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2.2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+    .header-pill-icon {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-    .header-pill-subtext {
-      margin-top: 4px;
-      color: #94a3b8;
-      font-size: 11px;
-      font-weight: 400;
-      font-family: 'Inter', sans-serif !important;
-      letter-spacing: 0.2px;
-      text-align: center;
-    }
+    .header-pill-subtext {
+      margin-top: 4px;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 400;
+      font-family: 'Inter', sans-serif !important;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
 
-    /* ---------------- HERO BUTTONS ---------------- */
-    .pill-card-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-top: 10px;
-    }
+    /* ---------------- HERO BUTTONS ---------------- */
+    .pill-card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
 
-    .pill-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #ffffff;
-      color: #000000;
-      padding: 14px 32px;
-      border-radius: 9999px; /* Pill Shape */
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 700;
-      font-family: 'Inter', sans-serif !important;
-      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #000000;
+      padding: 14px 32px;
+      border-radius: 9999px; /* Pill Shape */
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif !important;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-    .pill-btn:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.6);
-      background: #f8fafc;
-    }
+    .pill-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.6);
+      background: #f8fafc;
+    }
 
-    .pill-icon {
-      width: 20px;
-      height: 20px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2.2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+    .pill-icon {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-    .pill-subtext {
-      margin-top: 10px;
-      color: #94a3b8;
-      font-size: 13.5px;
-      font-weight: 400;
-      font-family: 'Inter', sans-serif !important;
-      letter-spacing: 0.2px;
-      padding-left: 6px;
-    }
+    .pill-subtext {
+      margin-top: 10px;
+      color: #94a3b8;
+      font-size: 13.5px;
+      font-weight: 400;
+      font-family: 'Inter', sans-serif !important;
+      letter-spacing: 0.2px;
+      padding-left: 6px;
+    }
 
-    /* ---------------- HERO SECTION ---------------- */
-    .hero {
-      position: relative;
-      min-height: calc(100vh - 95px);
-      display: flex;
-      align-items: center;
-      padding: 60px 5% 0 5%;
-      background: linear-gradient(90deg, #05070c 0%, #05070ce6 40%, #05070c33 100%), 
-                  url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-    }
+    /* ---------------- HERO SECTION ---------------- */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 95px);
+      display: flex;
+      align-items: center;
+      padding: 60px 5% 0 5%;
+      background: linear-gradient(90deg, #05070c 0%, #05070ce6 40%, #05070c33 100%), 
+                  url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    }
 
-    .hero-content {
-      max-width: 920px;
-      z-index: 2;
-    }
+    .hero-content {
+      max-width: 920px;
+      z-index: 2;
+    }
 
-    /* SUB-TAGLINE WITH NEXA TEXT PRO BLACK */
-    .sub-tagline {
-      color: #e50914;
-      font-size: 20px;
-      font-weight: 900;
-      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
+    /* SUB-TAGLINE WITH NEXA TEXT PRO BLACK */
+    .sub-tagline {
+      color: #e50914;
+      font-size: 20px;
+      font-weight: 900;
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
 
-    .sub-tagline::before {
-      content: '';
-      width: 30px;
-      height: 4px;
-      background-color: #e50914;
-    }
+    .sub-tagline::before {
+      content: '';
+      width: 30px;
+      height: 4px;
+      background-color: #e50914;
+    }
 
-    /* MAIN TITLE LINES WITH SUBTLE SOFT GLOW */
-    .hero-title {
-      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
-      font-size: 46px;
-      font-weight: 900;
-      line-height: 1.1;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
-    }
+    /* MAIN TITLE LINES WITH SUBTLE SOFT GLOW */
+    .hero-title {
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
 
-    .hero-title .text-white {
-      color: #ffffff;
-      display: block;
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
-    }
+    .hero-title .text-white {
+      color: #ffffff;
+      display: block;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    }
 
-    .hero-title .text-red {
-      color: #e50914;
-      display: block;
-      filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.4));
-    }
+    .hero-title .text-red {
+      color: #e50914;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.4));
+    }
 
-    /* DS SAFETY SYSTEMS CONTAINER */
-    .brand-subtitle-container {
-      position: relative;
-      margin-top: 8px;
-      margin-bottom: 12px;
-      display: inline-block;
-    }
+    /* DS SAFETY SYSTEMS CONTAINER */
+    .brand-subtitle-container {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
 
-    .brand-subtitle {
-      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
-      font-size: 66px;
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin: 0;
-      color: #ffffff;
-      
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) 
-              drop-shadow(0 0 18px rgba(229, 9, 20, 0.35));
-    }
+    .brand-subtitle {
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+      font-size: 66px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0;
+      color: #ffffff;
+      
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) 
+              drop-shadow(0 0 18px rgba(229, 9, 20, 0.35));
+    }
 
-    /* DESCRIPTION PARAGRAPH */
-    .hero-description {
-      font-family: 'Inter', sans-serif;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 1.65;
-      color: #f1f5f9;
-      margin-top: 0;
-      margin-bottom: 32px;
-      max-width: 780px;
-    }
+    /* DESCRIPTION PARAGRAPH */
+    .hero-description {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.65;
+      color: #f1f5f9;
+      margin-top: 0;
+      margin-bottom: 32px;
+      max-width: 780px;
+    }
 
-    .hero-buttons {
-      display: flex;
-      align-items: flex-start;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
-  </style>
+    .hero-buttons {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header Navigation -->
-  <header class="header">
-    <div class="logo-container">
-      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1).png" alt="DSF Fire Safety Device Logo" class="custom-logo" />
-    </div>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1).png" alt="DSF Fire Safety Device Logo" class="custom-logo" />
+    </div>
 
-    <nav>
-      <ul class="nav-menu">
-        <li class="nav-item active"><a href="#">Home</a></li>
-        <li class="nav-item"><a href="#">About Us</a></li>
-        <li class="nav-item"><a href="#">Products</a></li>
-        <li class="nav-item"><a href="#">Services</a></li>
-      </ul>
-    </nav>
+    <nav>
+      <ul class="nav-menu">
+        <li class="nav-item active"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About Us</a></li>
+        <li class="nav-item"><a href="#">Products</a></li>
+        <li class="nav-item"><a href="#">Services</a></li>
+      </ul>
+    </nav>
 
-    <div class="header-actions">
-      <!-- "GET A QUOTE" WHITE PILL BUTTON IN TOP RIGHT (REPLACED CALL NOW) -->
-      <div class="header-pill-container">
-        <a href="#" class="header-pill-btn">
-          <svg class="header-pill-icon" viewBox="0 0 24 24">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-            <polyline points="10 9 9 9 8 9"></polyline>
-          </svg>
-          Get A Quote
-        </a>
-        <span class="header-pill-subtext">Instant custom pricing</span>
-      </div>
-    </div>
-  </header>
+    <div class="header-actions">
+      <!-- "GET A QUOTE" WHITE PILL BUTTON IN TOP RIGHT (REPLACED CALL NOW) -->
+      <div class="header-pill-container">
+        <a href="#" class="header-pill-btn">
+          <svg class="header-pill-icon" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Get A Quote
+        </a>
+        <span class="header-pill-subtext">Instant custom pricing</span>
+      </div>
+    </div>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="sub-tagline">Protecting Lives. Securing Futures.</div>
-      
-      <h1 class="hero-title">
-        <span class="text-white">Complete</span>
-        <span class="text-white">Fire Safety.</span>
-        <span class="text-red">Total Protection.</span>
-      </h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="sub-tagline">Protecting Lives. Securing Futures.</div>
+      
+      <h1 class="hero-title">
+        <span class="text-white">Complete</span>
+        <span class="text-white">Fire Safety.</span>
+        <span class="text-red">Total Protection.</span>
+      </h1>
 
-      <div class="brand-subtitle-container">
-        <h2 class="brand-subtitle">DS SAFETY SYSTEMS</h2>
-      </div>
+      <div class="brand-subtitle-container">
+        <h2 class="brand-subtitle">DS SAFETY SYSTEMS</h2>
+      </div>
 
-      <p class="hero-description">
-        Providing premium fire safety equipment and professional assistance across India, our specialist team ensures your site remains secure with absolute reliability.
-      </p>
+      <p class="hero-description">
+        Providing premium fire safety equipment and professional assistance across India, our specialist team ensures your site remains secure with absolute reliability.
+      </p>
 
-      <!-- HERO BUTTONS AREA -->
-      <div class="hero-buttons">
-        
-        <!-- 1st Button: Explore Products -->
-        <div class="pill-card-container">
-          <a href="#" class="pill-btn">
-            <svg class="pill-icon" viewBox="0 0 24 24">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
-            </svg>
-            Explore Products
-          </a>
-          <span class="pill-subtext">Browse safety catalog</span>
-        </div>
+      <!-- HERO BUTTONS AREA -->
+      <div class="hero-buttons">
+        
+        <!-- 1st Button: Explore Products -->
+        <div class="pill-card-container">
+          <a href="#" class="pill-btn">
+            <svg class="pill-icon" viewBox="0 0 24 24">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+            Explore Products
+          </a>
+          <span class="pill-subtext">Browse safety catalog</span>
+        </div>
 
-        <!-- 2nd Button: Call Now -->
-        <div class="pill-card-container">
-          <a href="tel:9818701683" class="pill-btn">
-            <svg class="pill-icon" viewBox="0 0 24 24">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            Call Now
-          </a>
-          <span class="pill-subtext">One tap. Instant connection</span>
-        </div>
+        <!-- 2nd Button: Call Now -->
+        <div class="pill-card-container">
+          <a href="tel:9818701683" class="pill-btn">
+            <svg class="pill-icon" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call Now
+          </a>
+          <span class="pill-subtext">One tap. Instant connection</span>
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
