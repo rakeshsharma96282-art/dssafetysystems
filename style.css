@@ -1,1 +1,297 @@
+/* Load Nexa Text Pro Black / Nexa Black via font-face with fallback */
+@font-face {
+  font-family: 'Nexa Text Pro Black';
+  src: local('Nexa Text Pro Black'), local('NexaTextPro-Black'), local('Nexa-Black'), local('Nexa Black'),
+       url('https://cdn.jsdelivr.net/gh/projectwallace/font-files@master/fonts/nexa-black/nexa-black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #05070c;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------------- HEADER ---------------- */
+.header {
+  width: 100%;
+  height: 95px;
+  background: linear-gradient(180deg, #0b0f19 0%, #06080d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* SUBTLE LOGO GLOW MATCHING LOGO COLORS */
+.custom-logo {
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(229, 9, 20, 0.35)) 
+          drop-shadow(0 0 6px rgba(0, 102, 255, 0.25))
+          drop-shadow(0 0 8px rgba(255, 140, 0, 0.2));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.custom-logo:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.5)) 
+          drop-shadow(0 0 8px rgba(0, 102, 255, 0.35))
+          drop-shadow(0 0 10px rgba(255, 140, 0, 0.3));
+}
+
+/* NAVIGATION LINKS (Shifted slightly left with margin-right) */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 36px;
+  margin-right: 20px;
+}
+
+.nav-item a {
+  color: #d1d7e0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav-item a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.nav-item.active a {
+  color: #e50914;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------------- HEADER PILL BUTTON FOR "GET A QUOTE" ---------------- */
+.header-pill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 24px;
+  border-radius: 9999px; /* White Pill Shape */
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-pill-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.25), 0 4px 10px rgba(0, 0, 0, 0.6);
+  background: #f8fafc;
+}
+
+.header-pill-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.header-pill-subtext {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+/* ---------------- HERO BUTTONS ---------------- */
+.pill-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #000000;
+  padding: 14px 32px;
+  border-radius: 9999px; /* Pill Shape */
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif !important;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pill-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.6);
+  background: #f8fafc;
+}
+
+.pill-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pill-subtext {
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 13.5px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif !important;
+  letter-spacing: 0.2px;
+  padding-left: 6px;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 95px);
+  display: flex;
+  align-items: center;
+  padding: 60px 5% 0 5%;
+  background: linear-gradient(90deg, #05070c 0%, #05070ce6 40%, #05070c33 100%), 
+              url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 920px;
+  z-index: 2;
+}
+
+/* SUB-TAGLINE WITH NEXA TEXT PRO BLACK */
+.sub-tagline {
+  color: #e50914;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.sub-tagline::before {
+  content: '';
+  width: 30px;
+  height: 4px;
+  background-color: #e50914;
+}
+
+/* MAIN TITLE LINES WITH SUBTLE SOFT GLOW */
+.hero-title {
+  font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.hero-title .text-white {
+  color: #ffffff;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.hero-title .text-red {
+  color: #e50914;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.4));
+}
+
+/* DS SAFETY SYSTEMS CONTAINER */
+.brand-subtitle-container {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.brand-subtitle {
+  font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+  font-size: 66px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff;
+  
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) 
+          drop-shadow(0 0 18px rgba(229, 9, 20, 0.35));
+}
+
+/* DESCRIPTION PARAGRAPH */
+.hero-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.65;
+  color: #f1f5f9;
+  margin-top: 0;
+  margin-bottom: 32px;
+  max-width: 780px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+}
