@@ -1,869 +1,399 @@
-/* =========================
-   RESET
-========================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Inter", Arial, sans-serif;
-  color: #ffffff;
-  background: #07111f;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 82px;
-
-  background: rgba(5, 14, 26, 0.94);
-  backdrop-filter: blur(18px);
-
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-
-  z-index: 1000;
-}
-
-.nav-container {
-  max-width: 1400px;
-  height: 100%;
-  margin: auto;
-
-  padding: 0 35px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-/* =========================
-   BRAND
-========================= */
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  min-width: 260px;
-}
-
-.brand img {
-  width: 58px;
-  height: 58px;
-
-  object-fit: contain;
-
-  border-radius: 8px;
-}
-
-.brand-text strong {
-  display: block;
-
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: 0.7px;
-}
-
-.brand-text span {
-  display: block;
-
-  margin-top: 3px;
-
-  font-size: 9px;
-  letter-spacing: 1.5px;
-
-  color: #aab5c5;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-.navigation {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.navigation a {
-  position: relative;
-
-  font-size: 13px;
-  font-weight: 600;
-
-  color: #c8d0dc;
-
-  transition: 0.3s;
-}
-
-.navigation a:hover,
-.navigation a.active {
-  color: #ffffff;
-}
-
-.navigation a.active::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: -9px;
-
-  width: 100%;
-  height: 2px;
-
-  background: #e51c23;
-}
-
-
-/* =========================
-   RIGHT NAV
-========================= */
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.phone {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  font-size: 13px;
-  font-weight: 600;
-
-  color: #ffffff;
-}
-
-.phone-icon {
-  color: #ef272e;
-  font-size: 16px;
-}
-
-.quote-btn {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 13px 20px;
-
-  background: #df1e26;
-
-  border-radius: 5px;
-
-  font-size: 13px;
-  font-weight: 700;
-
-  transition: 0.3s;
-}
-
-.quote-btn:hover {
-  background: #ff2931;
-  transform: translateY(-2px);
-}
-
-.quote-btn span {
-  font-size: 17px;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  position: relative;
-
-  min-height: 100vh;
-
-  padding-top: 82px;
-
-  overflow: hidden;
-
-  background:
-    radial-gradient(
-      circle at 78% 45%,
-      rgba(180, 25, 30, 0.18),
-      transparent 32%
-    ),
-    linear-gradient(
-      120deg,
-      #050d18 0%,
-      #091625 52%,
-      #07111f 100%
-    );
-}
-
-
-/* =========================
-   HERO GRID
-========================= */
-
-.grid-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  opacity: 0.12;
-
-  background-image:
-    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
-
-  background-size: 70px 70px;
-
-  mask-image: linear-gradient(
-    to right,
-    black,
-    transparent 85%
-  );
-}
-
-
-/* =========================
-   RED GLOW
-========================= */
-
-.hero-glow {
-  position: absolute;
-
-  width: 650px;
-  height: 650px;
-
-  right: -250px;
-  top: 130px;
-
-  background: rgba(220, 25, 32, 0.15);
-
-  filter: blur(120px);
-
-  border-radius: 50%;
-}
-
-
-/* =========================
-   HERO CONTAINER
-========================= */
-
-.hero-container {
-  position: relative;
-
-  max-width: 1400px;
-
-  min-height: calc(100vh - 150px);
-
-  margin: auto;
-
-  padding: 80px 35px 120px;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  align-items: center;
-
-  gap: 60px;
-}
-
-
-/* =========================
-   HERO CONTENT
-========================= */
-
-.hero-content {
-  max-width: 680px;
-}
-
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  margin-bottom: 24px;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  color: #d7dee8;
-}
-
-.red-line {
-  width: 38px;
-  height: 2px;
-
-  background: #e51c23;
-}
-
-
-.hero h1 {
-  font-size: clamp(48px, 5.5vw, 78px);
-
-  line-height: 1.04;
-
-  letter-spacing: -3px;
-
-  font-weight: 800;
-
-  margin-bottom: 28px;
-}
-
-.hero h1 span {
-  display: block;
-
-  color: #ef2a30;
-}
-
-
-.hero-description {
-  max-width: 610px;
-
-  color: #aeb9c8;
-
-  font-size: 16px;
-
-  line-height: 1.8;
-
-  margin-bottom: 38px;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.hero-buttons {
-  display: flex;
-
-  gap: 14px;
-
-  margin-bottom: 48px;
-}
-
-.primary-btn,
-.secondary-btn {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  padding: 16px 24px;
-
-  border-radius: 5px;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  transition: 0.3s;
-}
-
-.primary-btn {
-  background: #e31d25;
-}
-
-.primary-btn:hover {
-  background: #ff2a31;
-
-  transform: translateY(-2px);
-}
-
-.secondary-btn {
-  border: 1px solid rgba(255,255,255,0.25);
-
-  color: #ffffff;
-
-  background: rgba(255,255,255,0.04);
-}
-
-.secondary-btn:hover {
-  border-color: #e31d25;
-}
-
-
-/* =========================
-   TRUST POINTS
-========================= */
-
-.trust-points {
-  display: flex;
-
-  gap: 28px;
-}
-
-.trust-item {
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-}
-
-.trust-icon {
-  width: 27px;
-  height: 27px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #e51c23;
-
-  border-radius: 50%;
-
-  color: #ff3036;
-
-  font-size: 12px;
-}
-
-.trust-item strong {
-  display: block;
-
-  font-size: 11px;
-}
-
-.trust-item small {
-  display: block;
-
-  margin-top: 3px;
-
-  font-size: 9px;
-
-  color: #8996a7;
-}
-
-
-/* =========================
-   HERO VISUAL
-========================= */
-
-.hero-visual {
-  position: relative;
-
-  min-height: 560px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* Main equipment card */
-
-.equipment-card {
-  position: relative;
-
-  width: 470px;
-  height: 500px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.10),
-      rgba(255,255,255,0.025)
-    );
-
-  border: 1px solid rgba(255,255,255,0.12);
-
-  border-radius: 18px;
-
-  box-shadow:
-    0 40px 100px rgba(0,0,0,0.45);
-
-  backdrop-filter: blur(12px);
-}
-
-.equipment-card::before {
-  content: "";
-
-  position: absolute;
-
-  width: 350px;
-  height: 350px;
-
-  background: rgba(218, 24, 31, 0.18);
-
-  filter: blur(80px);
-
-  border-radius: 50%;
-}
-
-.equipment-card img {
-  position: relative;
-
-  width: 90%;
-
-  height: 90%;
-
-  object-fit: contain;
-
-  z-index: 2;
-}
-
-.card-label {
-  position: absolute;
-
-  top: 22px;
-  left: 22px;
-
-  z-index: 4;
-
-  font-size: 9px;
-
-  letter-spacing: 2px;
-
-  color: #b6c0ce;
-}
-
-
-/* =========================
-   FLOATING CARDS
-========================= */
-
-.floating-card {
-  position: absolute;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 14px 18px;
-
-  background: rgba(9, 20, 34, 0.88);
-
-  border: 1px solid rgba(255,255,255,0.12);
-
-  border-radius: 9px;
-
-  backdrop-filter: blur(15px);
-
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-
-  z-index: 5;
-}
-
-.floating-card strong {
-  display: block;
-
-  font-size: 11px;
-}
-
-.floating-card span {
-  display: block;
-
-  margin-top: 4px;
-
-  color: #8896a8;
-
-  font-size: 9px;
-}
-
-.mini-icon {
-  width: 34px;
-  height: 34px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 7px;
-
-  background: rgba(220, 25, 32, 0.12);
-
-  color: #ff3036;
-}
-
-.card-one {
-  left: -30px;
-  top: 105px;
-}
-
-.card-two {
-  right: -30px;
-  top: 210px;
-}
-
-.card-three {
-  left: 20px;
-  bottom: 55px;
-}
-
-
-/* =========================
-   VISUAL GLOW
-========================= */
-
-.visual-glow {
-  position: absolute;
-
-  width: 450px;
-  height: 450px;
-
-  background: rgba(228, 28, 35, 0.14);
-
-  filter: blur(100px);
-
-  border-radius: 50%;
-}
-
-
-/* =========================
-   BOTTOM STRIP
-========================= */
-
-.hero-bottom {
-  position: absolute;
-
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-
-  height: 70px;
-
-  padding: 0 35px;
-
-  display: flex;
-  justify-content: center;
-
-  gap: 70px;
-
-  align-items: center;
-
-  background: rgba(0,0,0,0.22);
-
-  border-top: 1px solid rgba(255,255,255,0.07);
-}
-
-.hero-bottom div {
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: 1px;
-
-  color: #9da9b8;
-}
-
-.hero-bottom span {
-  color: #e51c23;
-}
-
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.menu-button {
-  display: none;
-
-  background: none;
-
-  border: none;
-
-  color: white;
-
-  font-size: 27px;
-
-  cursor: pointer;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1150px) {
-
-  .navigation {
-    gap: 16px;
-  }
-
-  .navigation a {
-    font-size: 12px;
-  }
-
-  .phone {
-    display: none;
-  }
-
-  .brand {
-    min-width: auto;
-  }
-
-}
-
-
-@media (max-width: 900px) {
-
-  .navigation,
-  .nav-right {
-    display: none;
-  }
-
-  .menu-button {
-    display: block;
-  }
-
-  .hero-container {
-    grid-template-columns: 1fr;
-
-    padding-top: 65px;
-
-    text-align: center;
-  }
-
-  .hero-content {
-    margin: auto;
-  }
-
-  .eyebrow,
-  .hero-buttons,
-  .trust-points {
-    justify-content: center;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-visual {
-    min-height: 500px;
-  }
-
-  .navigation.mobile-active {
-    position: absolute;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    top: 82px;
-    left: 0;
-
-    width: 100%;
-
-    padding: 20px 30px;
-
-    background: #07111f;
-
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .navigation.mobile-active a {
-    padding: 10px 0;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .nav-container {
-    padding: 0 18px;
-  }
-
-  .brand-text strong {
-    font-size: 14px;
-  }
-
-  .brand-text span {
-    font-size: 7px;
-  }
-
-  .brand img {
-    width: 48px;
-    height: 48px;
-  }
-
-  .hero-container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .hero h1 {
-    font-size: 43px;
-    letter-spacing: -2px;
-  }
-
-  .hero-description {
-    font-size: 14px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    justify-content: center;
-  }
-
-  .trust-points {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .equipment-card {
-    width: 90%;
-    height: 400px;
-  }
-
-  .floating-card {
-    transform: scale(0.82);
-  }
-
-  .card-one {
-    left: -25px;
-  }
-
-  .card-two {
-    right: -25px;
-  }
-
-  .hero-bottom {
-    display: none;
-  }
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS Safety Systems</title>
+  
+  <!-- Import Inter Font from Google Fonts & CDN fonts for Nexa Text Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Load Nexa Text Pro Black / Nexa Black via font-face with fallback */
+    @font-face {
+      font-family: 'Nexa Text Pro Black';
+      src: local('Nexa Text Pro Black'), local('NexaTextPro-Black'), local('Nexa-Black'), local('Nexa Black'),
+           url('https://cdn.jsdelivr.net/gh/projectwallace/font-files@master/fonts/nexa-black/nexa-black.woff2') format('woff2');
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #05070c;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    .header {
+      width: 100%;
+      height: 95px;
+      background: linear-gradient(180deg, #0b0f19 0%, #06080d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    /* SUBTLE LOGO GLOW MATCHING LOGO COLORS */
+    .custom-logo {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 4px rgba(229, 9, 20, 0.35)) 
+              drop-shadow(0 0 6px rgba(0, 102, 255, 0.25))
+              drop-shadow(0 0 8px rgba(255, 140, 0, 0.2));
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .custom-logo:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.5)) 
+              drop-shadow(0 0 8px rgba(0, 102, 255, 0.35))
+              drop-shadow(0 0 10px rgba(255, 140, 0, 0.3));
+    }
+
+    /* NAVIGATION LINKS (Shifted slightly left with margin-right) */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 36px;
+      margin-right: 20px;
+    }
+
+    .nav-item a {
+      color: #d1d7e0;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .nav-item a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+
+    .nav-item.active a {
+      color: #e50914;
+      text-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    /* ---------------- HEADER PILL BUTTON FOR "GET A QUOTE" ---------------- */
+    .header-pill-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #000000;
+      padding: 10px 24px;
+      border-radius: 9999px; /* White Pill Shape */
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif !important;
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .header-pill-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 28px rgba(255, 255, 255, 0.25), 0 4px 10px rgba(0, 0, 0, 0.6);
+      background: #f8fafc;
+    }
+
+    .header-pill-icon {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .header-pill-subtext {
+      margin-top: 4px;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 400;
+      font-family: 'Inter', sans-serif !important;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+
+    /* ---------------- HERO BUTTONS ---------------- */
+    .pill-card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #000000;
+      padding: 14px 32px;
+      border-radius: 9999px; /* Pill Shape */
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif !important;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .pill-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.6);
+      background: #f8fafc;
+    }
+
+    .pill-icon {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .pill-subtext {
+      margin-top: 10px;
+      color: #94a3b8;
+      font-size: 13.5px;
+      font-weight: 400;
+      font-family: 'Inter', sans-serif !important;
+      letter-spacing: 0.2px;
+      padding-left: 6px;
+    }
+
+    /* ---------------- HERO SECTION ---------------- */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 95px);
+      display: flex;
+      align-items: center;
+      padding: 60px 5% 0 5%;
+      background: linear-gradient(90deg, #05070c 0%, #05070ce6 40%, #05070c33 100%), 
+                  url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 920px;
+      z-index: 2;
+    }
+
+    /* SUB-TAGLINE WITH NEXA TEXT PRO BLACK */
+    .sub-tagline {
+      color: #e50914;
+      font-size: 20px;
+      font-weight: 900;
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .sub-tagline::before {
+      content: '';
+      width: 30px;
+      height: 4px;
+      background-color: #e50914;
+    }
+
+    /* MAIN TITLE LINES WITH SUBTLE SOFT GLOW */
+    .hero-title {
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title .text-white {
+      color: #ffffff;
+      display: block;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    }
+
+    .hero-title .text-red {
+      color: #e50914;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.4));
+    }
+
+    /* DS SAFETY SYSTEMS CONTAINER */
+    .brand-subtitle-container {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .brand-subtitle {
+      font-family: 'Nexa Text Pro Black', 'Nexa Black', 'Inter', sans-serif !important;
+      font-size: 66px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0;
+      color: #ffffff;
+      
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) 
+              drop-shadow(0 0 18px rgba(229, 9, 20, 0.35));
+    }
+
+    /* DESCRIPTION PARAGRAPH */
+    .hero-description {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.65;
+      color: #f1f5f9;
+      margin-top: 0;
+      margin-bottom: 32px;
+      max-width: 780px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1).png" alt="DSF Fire Safety Device Logo" class="custom-logo" />
+    </div>
+
+    <nav>
+      <ul class="nav-menu">
+        <li class="nav-item active"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">About Us</a></li>
+        <li class="nav-item"><a href="#">Products</a></li>
+        <li class="nav-item"><a href="#">Services</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <!-- "GET A QUOTE" WHITE PILL BUTTON IN TOP RIGHT (REPLACED CALL NOW) -->
+      <div class="header-pill-container">
+        <a href="#" class="header-pill-btn">
+          <svg class="header-pill-icon" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Get A Quote
+        </a>
+        <span class="header-pill-subtext">Instant custom pricing</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="sub-tagline">Protecting Lives. Securing Futures.</div>
+      
+      <h1 class="hero-title">
+        <span class="text-white">Complete</span>
+        <span class="text-white">Fire Safety.</span>
+        <span class="text-red">Total Protection.</span>
+      </h1>
+
+      <div class="brand-subtitle-container">
+        <h2 class="brand-subtitle">DS SAFETY SYSTEMS</h2>
+      </div>
+
+      <p class="hero-description">
+        Providing premium fire safety equipment and professional assistance across India, our specialist team ensures your site remains secure with absolute reliability.
+      </p>
+
+      <!-- HERO BUTTONS AREA -->
+      <div class="hero-buttons">
+        
+        <!-- 1st Button: Explore Products -->
+        <div class="pill-card-container">
+          <a href="#" class="pill-btn">
+            <svg class="pill-icon" viewBox="0 0 24 24">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+            Explore Products
+          </a>
+          <span class="pill-subtext">Browse safety catalog</span>
+        </div>
+
+        <!-- 2nd Button: Call Now -->
+        <div class="pill-card-container">
+          <a href="tel:9818701683" class="pill-btn">
+            <svg class="pill-icon" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call Now
+          </a>
+          <span class="pill-subtext">One tap. Instant connection</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
