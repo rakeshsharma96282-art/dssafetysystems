@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DS Safety Header Example</title>
+  <title>DS Safety Header</title>
+  <!-- Import Lato Font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Global Reset */
+    /* Global Reset & Apply Lato Font */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Lato', Arial, sans-serif;
     }
 
     /* Top Utility Bar */
@@ -22,7 +24,7 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 15px;
     }
 
     .top-bar-left, .top-bar-right {
@@ -30,6 +32,21 @@
       align-items: center;
       gap: 20px;
       flex-wrap: wrap;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .info-item img {
+      width: 16px;
+      height: 16px;
+      filter: invert(1); /* Turns black icons white to match the dark bar */
     }
 
     .top-bar a {
@@ -106,6 +123,10 @@
         text-align: center;
       }
 
+      .top-bar-left {
+        justify-content: center;
+      }
+
       .menu-toggle {
         display: flex;
       }
@@ -133,12 +154,18 @@
 </head>
 <body>
 
-  <!-- Top Utility Bar without emojis -->
+  <!-- Top Utility Bar with Custom Icons -->
   <div class="top-bar">
     <div class="top-bar-left">
-      <span>9818701683</span>
-      <span>dssafety@hotmail.com</span>
-      <span>Govind Puri, New Delhi</span>
+      <a href="tel:9818701683" class="info-item">
+        <img src="call.png" alt="Phone Icon"> 9818701683
+      </a>
+      <a href="mailto:dssafety@hotmail.com" class="info-item">
+        <img src="email.png" alt="Email Icon"> dssafety@hotmail.com
+      </a>
+      <div class="info-item">
+        <img src="pin.png" alt="Location Icon"> Govind Puri, New Delhi
+      </div>
     </div>
     <div class="top-bar-right">
       <a href="#">Client Portal</a>
