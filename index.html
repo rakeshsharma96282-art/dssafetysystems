@@ -1,1 +1,59 @@
+<!-- Header Navigation -->
+<header class="header">
+  <!-- Top Bar with Contact Info & Actions -->
+  <div class="top-bar">
+    <div class="top-contact">
+      <span>📞 01276 684473</span>
+      <span>✉️ info@dssafetysystems.com</span>
+    </div>
+    <div class="top-actions">
+      <a href="#" class="client-portal-link">Client Portal</a>
+      <a href="#" class="top-quote-btn">Contact Us</a>
+    </div>
+  </div>
 
+  <!-- Main Navbar -->
+  <div class="main-nav-bar">
+    <div class="logo-container">
+      <img src="ChatGPT_Image_Aug_14___2026__04_46_35_PM-removebg-preview (1).png" alt="DS Safety Systems Logo" class="custom-logo" />
+    </div>
+    
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger Toggle Button -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      ☰
+    </button>
+  </div>
+</header> 
+<!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">ADVANCED INDUSTRIAL PROTECTION</h1>
+      <h2 class="brand-subtitle">DS SAFETY SYSTEMS</h2>
+      <p class="hero-description">Next-generation fire suppression and industrial safety technology engineered to protect mission-critical operations 24/7.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Explore Products</a>
+        <a href="#" class="btn-secondary">Contact Experts</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburgerBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
