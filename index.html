@@ -1,82 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DS Safety Systems</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DS Safety Header Example</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-bar-left, .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn-contact {
+      background-color: #d93830;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    /* Main Header & Navigation Bar */
+    .main-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      color: #d93830;
+    }
+
+    /* Hamburger Menu Toggle (Hidden on PC) */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 900px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        gap: 15px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header Navigation -->
-  <header class="header">
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <div class="top-contact">
-        <span>📞 01276 684473</span>
-        <span>✉️ info@dssafetysystems.com</span>
-        <span>📍 Surrey, London & South East</span>
-      </div>
-      <div class="top-actions">
-        <a href="#" class="client-portal-link">Client Portal</a>
-        <a href="#" class="search-btn">🔍 Search</a>
-        <a href="#" class="top-quote-btn">Contact Us</a>
-      </div>
+  <!-- Top Utility Bar with updated info -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span>📞 9818701683</span>
+      <span>✉️ dssafety@hotmail.com</span>
+      <span>📍 Govind Puri, New Delhi</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="#">Client Portal</a>
+      <a href="#" class="btn-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <a href="#" class="logo">DS Safety</a>
+    
+    <!-- Hamburger Toggle Button for Mobile -->
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <!-- Main Navbar -->
-    <div class="main-nav-bar">
-      <div class="logo-container">
-        <a href="#">
-          <img src="ChatGPT_Image_Aug_14_2026_04_46_35_PM-removebg-preview (1) (1).png" alt="DSF Fire Safety Device Logo" class="brand-logo">
-        </a>
-      </div>
-      
-      <nav class="nav-menu" id="navMenu">
-        <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">About ▾</a></li>
-          <li><a href="#">Our Services ▾</a></li>
-          <li><a href="#">Fire Safety Info ▾</a></li>
-          <li><a href="#">Fire Safety Blog</a></li>
-          <li><a href="#">Contact ▾</a></li>
-        </ul>
-      </nav>
-
-      <!-- Mobile Hamburger Toggle Button -->
-      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
-        ☰
-      </button>
-    </div>
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Safety Info</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">ADVANCED INDUSTRIAL PROTECTION</h1>
-      <h2 class="brand-subtitle">DS SAFETY SYSTEMS</h2>
-      <p class="hero-description">Next-generation fire suppression and industrial safety technology engineered to protect mission-critical operations 24/7.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn-primary">Explore Products</a>
-        <a href="#" class="btn-secondary">Get a Quote</a>
-      </div>
-    </div>
-  </section>
-
+  <!-- JavaScript to Handle Mobile Menu Toggle -->
   <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const navMenu = document.getElementById('navMenu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
 
-    hamburgerBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+    mobileMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
     });
   </script>
+
 </body>
 </html>
