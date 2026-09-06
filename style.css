@@ -319,3 +319,41 @@ html, body {
     width: 100%;
   }
 }
+/* Button Enhancements & States */
+.top-quote-btn, .btn-primary {
+  background-color: #e32929;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.top-quote-btn:hover, .btn-primary:hover {
+  background-color: #c72020;
+}
+
+.btn-secondary {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.search-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+  border-color: #e32929;
+  color: #e32929;
+}
