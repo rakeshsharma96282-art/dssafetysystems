@@ -1,3 +1,4 @@
+/* Base Resets & Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,7 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Top Bar */
 .top-bar {
   background-color: #14171f;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -61,24 +63,25 @@ html, body {
   color: #e32929;
 }
 
-/* Top Right "Contact Us" Button - Red Glow Pill */
+/* Top Right Button: Red Glow Pill */
 .top-quote-btn {
   background-color: #e32929;
   color: #ffffff;
   padding: 10px 24px;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 0 15px rgba(227, 41, 41, 0.5);
+  box-shadow: 0 0 16px rgba(227, 41, 41, 0.6);
   transition: all 0.3s ease;
 }
 
 .top-quote-btn:hover {
   background-color: #c72020;
-  box-shadow: 0 0 25px rgba(227, 41, 41, 0.8);
+  box-shadow: 0 0 24px rgba(227, 41, 41, 0.9);
   transform: translateY(-2px);
 }
 
+/* Main Navbar & Logo Image */
 .main-nav-bar {
   width: 100%;
   height: 90px;
@@ -96,24 +99,14 @@ html, body {
   align-items: center;
 }
 
-.logo-text {
-  font-family: 'Lato', sans-serif;
-  font-size: 24px;
-  font-weight: 900;
-  color: #e32929;
-  letter-spacing: 1px;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+.brand-logo {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
-.logo-text small {
-  font-size: 10px;
-  font-weight: 700;
-  color: #222222;
-  letter-spacing: 2px;
-}
-
+/* Navigation Links using Lato font */
 .nav-menu ul {
   display: flex;
   list-style: none;
@@ -142,6 +135,7 @@ html, body {
   cursor: pointer;
 }
 
+/* Hero Section */
 .hero {
   width: 100%;
   min-height: calc(100vh - 160px);
@@ -191,46 +185,47 @@ html, body {
   opacity: 0;
 }
 
-/* Explore Products - Red Glow Pill */
+/* Explore Products: Red Glow Pill Button */
 .btn-primary {
   padding: 14px 32px;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   text-align: center;
   background-color: #e32929;
   color: #ffffff;
   border: none;
-  box-shadow: 0 0 15px rgba(227, 41, 41, 0.6);
+  box-shadow: 0 0 16px rgba(227, 41, 41, 0.6);
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: #c72020;
-  box-shadow: 0 0 25px rgba(227, 41, 41, 0.9);
+  box-shadow: 0 0 24px rgba(227, 41, 41, 0.9);
   transform: translateY(-2px);
 }
 
-/* Get a Quote - White Glow Pill */
+/* Get a Quote: White Glow Pill Button */
 .btn-secondary {
   padding: 14px 32px;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   text-align: center;
   background-color: #ffffff;
   color: #0f1115;
   border: none;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
   background-color: #f0f0f0;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.8);
   transform: translateY(-2px);
 }
 
+/* Entrance Animations */
 @keyframes fadeInSlide {
   0% {
     opacity: 0;
@@ -242,6 +237,7 @@ html, body {
   }
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
@@ -277,6 +273,10 @@ html, body {
   .main-nav-bar {
     padding: 0 16px;
     height: 70px;
+  }
+
+  .brand-logo {
+    height: 50px;
   }
 
   .hamburger {
