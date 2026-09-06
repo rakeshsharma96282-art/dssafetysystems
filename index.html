@@ -15,7 +15,7 @@
       font-family: 'Lato', Arial, sans-serif;
     }
 
-    /* Top Utility Bar (Enlarged text size) */
+    /* Top Utility Bar */
     .top-bar {
       background-color: #1a1a1a;
       color: #fff;
@@ -39,13 +39,13 @@
       align-items: center;
       gap: 10px;
       color: #fff;
-      font-size: 16px; /* Increased size */
+      font-size: 16px;
       font-weight: 700;
       text-decoration: none;
     }
 
     .info-item img {
-      width: 20px; /* Increased icon size */
+      width: 20px;
       height: 20px;
       filter: invert(1);
     }
@@ -89,6 +89,13 @@
       display: block;
     }
 
+    /* Right side container for nav + get quote button */
+    .header-right-group {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
     /* Navigation Links with divider lines */
     .nav-links {
       list-style: none;
@@ -116,6 +123,22 @@
       font-weight: 400;
     }
 
+    /* Get Quote Button Style */
+    .btn-get-quote {
+      background-color: #d93830;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-get-quote:hover {
+      background-color: #b52b24;
+    }
+
     /* Hamburger Menu Toggle (Hidden on PC) */
     .menu-toggle {
       display: none;
@@ -132,7 +155,7 @@
     }
 
     /* Mobile Responsiveness & Slide-Down Animation */
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       .top-bar {
         flex-direction: column;
         align-items: center;
@@ -147,41 +170,41 @@
         display: flex;
       }
 
-      .nav-links {
-        display: flex;
-        flex-direction: column;
+      .header-right-group {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: #ffffff;
         border-bottom: 1px solid #e0e0e0;
+        flex-direction: column;
+        align-items: center;
         padding: 0;
         max-height: 0;
         overflow: hidden;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        text-align: center;
-        gap: 0;
-        /* Smooth animation for menu open/close */
         transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
       }
 
-      .nav-links.active {
-        max-height: 400px; /* Expands smoothly to fit links */
+      .header-right-group.active {
+        max-height: 350px;
         padding: 20px;
+        gap: 15px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
       }
 
       .nav-links li {
         width: 100%;
         padding: 10px 0;
         border-bottom: 1px solid #f0f0f0;
+        text-align: center;
       }
 
-      .nav-links li:last-child {
-        border-bottom: none;
-      }
-
-      /* Hide inline dividers on mobile view */
       .divider {
         display: none;
       }
@@ -190,7 +213,7 @@
 </head>
 <body>
 
-  <!-- Top Utility Bar with enlarged text and custom icons -->
+  <!-- Top Utility Bar -->
   <div class="top-bar">
     <div class="top-bar-left">
       <a href="tel:9818701683" class="info-item">
@@ -211,7 +234,7 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Logo on Left Upper -->
+    <!-- Logo on Upper Left -->
     <a href="#" class="logo">
       <img src="logo.png" alt="DSF Fire Safety Device Logo">
     </a>
@@ -223,24 +246,25 @@
       <span></span>
     </div>
 
-    <!-- Navigation Links with Divider Lines -->
-    <ul class="nav-links" id="nav-list">
-      <li><a href="#">Home</a></li><span class="divider">|</span>
-      <li><a href="#">About</a></li><span class="divider">|</span>
-      <li><a href="#">Our Services</a></li><span class="divider">|</span>
-      <li><a href="#">Safety Info</a></li><span class="divider">|</span>
-      <li><a href="#">Blog</a></li><span class="divider">|</span>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    <!-- Navigation Links & Get Quote Button Container -->
+    <div class="header-right-group" id="header-group">
+      <ul class="nav-links" id="nav-list">
+        <li><a href="#">Home</a></li><span class="divider">|</span>
+        <li><a href="#">About</a></li><span class="divider">|</span>
+        <li><a href="#">Products</a></li><span class="divider">|</span>
+        <li><a href="#">AMC</a></li>
+      </ul>
+      <a href="#" class="btn-get-quote">Get Quote</a>
+    </div>
   </header>
 
   <!-- JavaScript to Handle Smooth Mobile Menu Animation -->
   <script>
     const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
+    const headerGroup = document.getElementById('header-group');
 
     mobileMenu.addEventListener('click', () => {
-      navList.classList.toggle('active');
+      headerGroup.classList.toggle('active');
     });
   </script>
 
