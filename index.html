@@ -211,41 +211,44 @@
       border-radius: 2px;
     }
 
-    /* Mobile Responsiveness - Wrapped text for mobile so font size remains readable */
+    /* Mobile Responsiveness - Unified compound branding lockup */
     @media (max-width: 1200px) {
       .top-bar { 
         flex-direction: column; 
         text-align: center; 
-        padding: 15px;
+        padding: 12px 15px;
       }
       .top-bar-left { 
         justify-content: center; 
-        gap: 12px;
+        gap: 10px;
         flex-direction: column;
       }
       .top-bar-right {
         justify-content: center;
         width: 100%;
-        margin-top: 5px;
+        margin-top: 2px;
         gap: 15px;
       }
       .menu-toggle { display: flex; }
       
       .main-header {
-        padding: 12px 15px;
+        padding: 10px 15px;
       }
+
+      /* Unified Branding Part: Seamless integration matching PC scale tone */
       .logo-container {
-        gap: 10px;
-        max-width: calc(100% - 50px);
+        gap: 12px;
+        max-width: calc(100% - 45px);
+        align-items: center;
       }
       .logo-container img { 
-        height: 50px; 
+        height: 52px; 
       }
       .brand-single-line { 
-        font-size: 17px; 
-        letter-spacing: 0.5px;
-        white-space: normal; /* Allows text to stack neatly to 2 lines so font is readable */
-        line-height: 1.2;
+        font-size: 21px; 
+        letter-spacing: 1px;
+        white-space: nowrap; /* Forces text to flow cleanly next to the logo as one unified block */
+        overflow: visible;
       }
       
       .header-right-group {
