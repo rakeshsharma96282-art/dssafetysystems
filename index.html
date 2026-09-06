@@ -101,31 +101,31 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 22px;
       text-decoration: none;
       opacity: 0;
       animation: pureFadeIn 1.1s ease 0.2s forwards;
     }
 
-    /* Decreased logo size */
+    /* Increased logo size back to a balanced, prominent dimension */
     .logo img {
-      height: 60px;
+      height: 85px;
       width: auto;
       display: block !important;
       visibility: visible !important;
       object-fit: contain;
-      filter: drop-shadow(0 0 5px rgba(217, 56, 48, 0.2));
+      filter: drop-shadow(0 0 6px rgba(217, 56, 48, 0.25));
     }
 
-    /* Single-line text, black color, slightly bigger/prominent than the logo */
+    /* Single-line text, slightly bigger than logo, with bold, shiny red glow effect */
     .brand-single-line {
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
-      font-size: 38px;
-      color: #1a1a1a;
+      font-size: 36px;
+      color: #e63930;
       letter-spacing: 2px;
       white-space: nowrap;
-      text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+      text-shadow: 0 0 10px rgba(230, 57, 48, 0.5), 0 0 20px rgba(230, 57, 48, 0.3), 0 0 30px rgba(230, 57, 48, 0.15);
     }
 
     .header-right-group {
@@ -217,7 +217,7 @@
       .top-bar { flex-direction: column; text-align: center; }
       .top-bar-left { justify-content: center; }
       .menu-toggle { display: flex; }
-      .logo img { height: 45px; }
+      .logo img { height: 55px; }
       .brand-single-line { font-size: 20px; letter-spacing: 1px; }
       .header-right-group {
         position: absolute; top: 100%; left: 0; width: 100%;
