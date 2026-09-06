@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DS Safety Header</title>
+  <title>DSF Fire Safety Device</title>
   <!-- Import Lato Font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -15,11 +15,11 @@
       font-family: 'Lato', Arial, sans-serif;
     }
 
-    /* Top Utility Bar */
+    /* Top Utility Bar (Enlarged text size) */
     .top-bar {
       background-color: #1a1a1a;
       color: #fff;
-      padding: 10px 20px;
+      padding: 12px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -30,74 +30,90 @@
     .top-bar-left, .top-bar-right {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
     .info-item {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: #fff;
-      font-size: 14px;
+      font-size: 16px; /* Increased size */
+      font-weight: 700;
       text-decoration: none;
     }
 
     .info-item img {
-      width: 16px;
-      height: 16px;
-      filter: invert(1); /* Turns black icons white to match the dark bar */
+      width: 20px; /* Increased icon size */
+      height: 20px;
+      filter: invert(1);
     }
 
     .top-bar a {
       color: #fff;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .btn-contact {
       background-color: #d93830;
       color: white;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 4px;
       font-weight: bold;
       text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: #b52b24;
     }
 
     /* Main Header & Navigation Bar */
     .main-header {
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
-      padding: 15px 20px;
+      padding: 15px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: relative;
     }
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-      text-decoration: none;
+    /* Logo Image Style */
+    .logo img {
+      height: 65px;
+      width: auto;
+      display: block;
     }
 
-    /* Navigation Links */
+    /* Navigation Links with divider lines */
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 15px;
     }
 
     .nav-links li a {
       text-decoration: none;
       color: #333;
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 5px 10px;
+      transition: color 0.3s ease;
     }
 
     .nav-links li a:hover {
       color: #d93830;
+    }
+
+    .divider {
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 400;
     }
 
     /* Hamburger Menu Toggle (Hidden on PC) */
@@ -105,17 +121,17 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 5px;
+      gap: 6px;
     }
 
     .menu-toggle span {
-      width: 25px;
+      width: 30px;
       height: 3px;
       background-color: #333;
       border-radius: 2px;
     }
 
-    /* Mobile Responsiveness */
+    /* Mobile Responsiveness & Slide-Down Animation */
     @media (max-width: 900px) {
       .top-bar {
         flex-direction: column;
@@ -132,7 +148,7 @@
       }
 
       .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -140,21 +156,41 @@
         width: 100%;
         background-color: #ffffff;
         border-bottom: 1px solid #e0e0e0;
-        padding: 20px;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         text-align: center;
-        gap: 15px;
+        gap: 0;
+        /* Smooth animation for menu open/close */
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
       }
 
       .nav-links.active {
-        display: flex;
+        max-height: 400px; /* Expands smoothly to fit links */
+        padding: 20px;
+      }
+
+      .nav-links li {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .nav-links li:last-child {
+        border-bottom: none;
+      }
+
+      /* Hide inline dividers on mobile view */
+      .divider {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Utility Bar with Custom Icons -->
+  <!-- Top Utility Bar with enlarged text and custom icons -->
   <div class="top-bar">
     <div class="top-bar-left">
       <a href="tel:9818701683" class="info-item">
@@ -175,7 +211,10 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <a href="#" class="logo">DS Safety</a>
+    <!-- Logo on Left Upper -->
+    <a href="#" class="logo">
+      <img src="logo.png" alt="DSF Fire Safety Device Logo">
+    </a>
     
     <!-- Hamburger Toggle Button for Mobile -->
     <div class="menu-toggle" id="mobile-menu">
@@ -184,18 +223,18 @@
       <span></span>
     </div>
 
-    <!-- Navigation Links -->
+    <!-- Navigation Links with Divider Lines -->
     <ul class="nav-links" id="nav-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Our Services</a></li>
-      <li><a href="#">Safety Info</a></li>
-      <li><a href="#">Blog</a></li>
+      <li><a href="#">Home</a></li><span class="divider">|</span>
+      <li><a href="#">About</a></li><span class="divider">|</span>
+      <li><a href="#">Our Services</a></li><span class="divider">|</span>
+      <li><a href="#">Safety Info</a></li><span class="divider">|</span>
+      <li><a href="#">Blog</a></li><span class="divider">|</span>
       <li><a href="#">Contact</a></li>
     </ul>
   </header>
 
-  <!-- JavaScript to Handle Mobile Menu Toggle -->
+  <!-- JavaScript to Handle Smooth Mobile Menu Animation -->
   <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
