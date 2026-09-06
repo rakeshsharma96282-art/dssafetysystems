@@ -82,11 +82,18 @@
       position: relative;
     }
 
-    /* Logo Image Style */
+    /* Logo Image Style with subtle fire-red glow effect */
     .logo img {
       height: 65px;
       width: auto;
       display: block;
+      border-radius: 50px;
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      filter: drop-shadow(0 0 10px rgba(217, 56, 48, 0.7));
+      transform: scale(1.02);
     }
 
     /* Right side container for nav + get quote button */
@@ -234,9 +241,9 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Logo on Upper Left -->
+    <!-- Logo on Upper Left with glowing hover effect -->
     <a href="#" class="logo">
-      <img src="logo.png" alt="DSF Fire Safety Device Logo">
+      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1) (1).png" alt="DSF Fire Safety Device Logo">
     </a>
     
     <!-- Hamburger Toggle Button for Mobile -->
