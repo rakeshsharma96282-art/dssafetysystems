@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DSF Fire Safety Device</title>
-  <!-- Import Lato Font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Import Outfit Font (Weight 570 and 700) and Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@570;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Global Reset & Apply Lato Font */
+    /* Global Reset & Apply Font */
     * {
       margin: 0;
       padding: 0;
@@ -37,7 +37,7 @@
     /* Pure Fade-In Animation for Top Bar Elements */
     .info-item, .top-bar-right > a {
       opacity: 0;
-      animation: pureFadeIn 1s ease forwards;
+      animation: pureFadeIn 1.1s ease forwards;
     }
 
     .top-bar-left .info-item:nth-child(1) { animation-delay: 0.1s; }
@@ -106,19 +106,20 @@
       gap: 15px;
       text-decoration: none;
       opacity: 0;
-      animation: pureFadeIn 1s ease 0.2s forwards;
+      animation: pureFadeIn 1.1s ease 0.2s forwards;
     }
 
-    /* Improved, Larger Logo Image Size */
+    /* Larger Logo Image Size with Light Balanced Red Glow */
     .logo img {
       height: 95px;
       width: auto;
       display: block !important;
       visibility: visible !important;
       object-fit: contain;
+      filter: drop-shadow(0 0 6px rgba(217, 56, 48, 0.25));
     }
 
-    /* Blended Brand Text Matching the Logo Theme */
+    /* Blended Brand Text with Font Weight 570 and Light Dark Glow */
     .brand-title {
       display: flex;
       flex-direction: column;
@@ -126,20 +127,24 @@
     }
 
     .brand-main {
-      font-size: 24px;
-      font-weight: 900;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 570;
+      font-size: 25px;
       color: #d93830;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       line-height: 1.1;
+      text-shadow: 0 0 7px rgba(217, 56, 48, 0.25);
     }
 
     .brand-sub {
-      font-size: 13px;
-      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 570;
+      font-size: 13.5px;
       color: #1a1a1a;
-      letter-spacing: 2px;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
-      margin-top: 2px;
+      margin-top: 3px;
+      text-shadow: 0 0 5px rgba(26, 26, 26, 0.15);
     }
 
     /* Right side container for nav + get quote button */
@@ -330,7 +335,7 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Blended Logo and DS Safety Systems Branding -->
+    <!-- Blended Logo & Heading with Weight 570 and a Subtle Balanced Glow -->
     <a href="#" class="logo">
       <img src="logo.png" alt="DSF Fire Safety Device Logo" onerror="this.style.display='none';">
       <div class="brand-title">
