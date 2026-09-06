@@ -295,3 +295,41 @@ body {
   gap: 28px;
   flex-wrap: wrap;
 }
+/* ---------------- MOBILE RESPONSIVENESS FIXES ---------------- */
+@media (max-width: 768px) {
+  /* Hide desktop navigation menu temporarily on mobile to prevent overflow */
+  .nav-menu {
+    display: none;
+  }
+
+  /* Adjust header padding */
+  .header {
+    padding: 0 20px;
+    height: 80px;
+  }
+
+  /* Shrink hero titles for mobile screens */
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .brand-subtitle {
+    font-size: 42px;
+  }
+
+  /* Stack hero description text */
+  .hero-description {
+    font-size: 16px;
+  }
+
+  /* Make hero buttons stack vertically on small screens */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Ensure products grid fits nicely on mobile */
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
