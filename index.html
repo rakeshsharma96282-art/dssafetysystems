@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DS Safety Systems | Home</title>
-  <!-- Import Outfit and Montserrat (for Ikaros-style high-end geometric look) and Lato -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Outfit:wght@570;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Import Outfit Font (Weight 570 and 700) and Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@570;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Global Reset & Apply Font */
     * {
@@ -91,7 +91,7 @@
     .main-header {
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
-      padding: 12px 25px;
+      padding: 14px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -108,7 +108,7 @@
     }
 
     .logo img {
-      height: 95px;
+      height: 105px;
       width: auto;
       display: block !important;
       visibility: visible !important;
@@ -116,30 +116,32 @@
       filter: drop-shadow(0 0 6px rgba(217, 56, 48, 0.25));
     }
 
-    /* Ikaros-inspired Bold, Fat, All-Caps Geometric Branding with Bottom Accent Line */
-    .brand-single-line-container {
+    /* Slightly increased and refined stacked brand style */
+    .brand-title {
       display: flex;
       flex-direction: column;
-      position: relative;
+      justify-content: center;
     }
 
-    .brand-single-line {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 34px;
+    .brand-main {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 29px;
+      color: #d93830;
+      letter-spacing: 1.4px;
+      line-height: 1.1;
+      text-shadow: 0 0 7px rgba(217, 56, 48, 0.25);
+    }
+
+    .brand-sub {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 15.5px;
       color: #1a1a1a;
-      letter-spacing: 3.5px;
-      white-space: nowrap;
-      line-height: 1.15;
-    }
-
-    /* Sleek solid accent underline matching Ikaros modern poster style */
-    .brand-underline {
-      width: 100%;
-      height: 4px;
-      background-color: #d93830;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
       margin-top: 4px;
-      border-radius: 2px;
+      text-shadow: 0 0 5px rgba(26, 26, 26, 0.15);
     }
 
     .header-right-group {
@@ -231,9 +233,9 @@
       .top-bar { flex-direction: column; text-align: center; }
       .top-bar-left { justify-content: center; }
       .menu-toggle { display: flex; }
-      .logo img { height: 65px; }
-      .brand-single-line { font-size: 18px; letter-spacing: 2px; }
-      .brand-underline { height: 3px; margin-top: 2px; }
+      .logo img { height: 75px; }
+      .brand-main { font-size: 20px; }
+      .brand-sub { font-size: 11px; }
       .header-right-group {
         position: absolute; top: 100%; left: 0; width: 100%;
         background-color: #ffffff; flex-direction: column;
@@ -271,12 +273,11 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Ikaros-Inspired Fat Geometric Branding -->
     <a href="#" class="logo">
       <img src="logo.png" alt="DSF Fire Safety Logo" onerror="this.style.display='none';">
-      <div class="brand-single-line-container">
-        <span class="brand-single-line">DS SAFETY SYSTEMS</span>
-        <div class="brand-underline"></div>
+      <div class="brand-title">
+        <span class="brand-main">DS SAFETY</span>
+        <span class="brand-sub">SYSTEMS</span>
       </div>
     </a>
     
