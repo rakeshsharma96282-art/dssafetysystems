@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DSF Fire Safety Device - Client Portal</title>
+  <title>DSF Fire Safety Device</title>
   <!-- Import Lato Font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -95,18 +95,19 @@
     .main-header {
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
-      padding: 12px 25px;
+      padding: 20px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: relative;
     }
 
-    /* Enhanced Logo Image Size */
+    /* Prominent, Fully Visible Logo Image Size */
     .logo img {
-      height: 85px;
+      height: 110px;
       width: auto;
       display: block;
+      object-fit: contain;
     }
 
     /* Right side container for nav + get quote button */
@@ -174,90 +175,6 @@
       border-radius: 2px;
     }
 
-    /* Client Portal Animated Showcase Section */
-    .portal-showcase {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 40px;
-      background: #fafafa;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      text-align: center;
-    }
-
-    .portal-showcase h2 {
-      font-size: 28px;
-      color: #1a1a1a;
-      margin-bottom: 12px;
-    }
-
-    .portal-showcase p {
-      color: #666;
-      font-size: 16px;
-      margin-bottom: 30px;
-    }
-
-    /* Animated Status Cards Container */
-    .portal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      text-align: left;
-    }
-
-    .portal-card {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 8px;
-      border-left: 5px solid #d93830;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeSlideUp 0.6s ease forwards;
-    }
-
-    .portal-card:nth-child(1) { animation-delay: 0.2s; }
-    .portal-card:nth-child(2) { animation-delay: 0.4s; }
-    .portal-card:nth-child(3) { animation-delay: 0.6s; }
-
-    .portal-card h3 {
-      font-size: 18px;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-
-    .portal-card p {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 0;
-    }
-
-    /* Keyframe Animations */
-    @keyframes fadeSlideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 0 0 rgba(217, 56, 48, 0.4); }
-      70% { box-shadow: 0 0 0 12px rgba(217, 56, 48, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(217, 56, 48, 0); }
-    }
-
-    .pulse-badge {
-      display: inline-block;
-      background-color: #d93830;
-      color: white;
-      padding: 4px 10px;
-      font-size: 12px;
-      border-radius: 20px;
-      font-weight: bold;
-      margin-top: 12px;
-      animation: pulseGlow 2s infinite;
-    }
-
     /* Mobile Responsiveness & Slide-Down Animation */
     @media (max-width: 950px) {
       .top-bar {
@@ -272,6 +189,10 @@
 
       .menu-toggle {
         display: flex;
+      }
+
+      .logo img {
+        height: 90px;
       }
 
       .header-right-group {
@@ -338,7 +259,7 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Logo on Upper Left with increased height -->
+    <!-- Clean, Large, Fully Visible Logo on Upper Left -->
     <a href="#" class="logo">
       <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1) (1).png" alt="DSF Fire Safety Device Logo">
     </a>
@@ -361,30 +282,6 @@
       <a href="#" class="btn-get-quote">Get Quote</a>
     </div>
   </header>
-
-  <!-- Client Portal Interactive Animated Section -->
-  <section class="portal-showcase">
-    <h2>Client Portal Features</h2>
-    <p>Manage your facility safety compliance and extinguisher maintenance schedules in real time.</p>
-    
-    <div class="portal-grid">
-      <div class="portal-card">
-        <h3>Extinguisher Refill Tracker</h3>
-        <p>Monitor mandatory recharge dates, hydrostatic testing logs, and cylinder pressure statuses.</p>
-        <span class="pulse-badge">Active Monitoring</span>
-      </div>
-      <div class="portal-card">
-        <h3>AMC & Service History</h3>
-        <p>Access digital invoices, technician sign-off reports, and scheduled maintenance checklists.</p>
-        <span class="pulse-badge">Audit Ready</span>
-      </div>
-      <div class="portal-card">
-        <h3>Facility Floor Plan Sync</h3>
-        <p>Interactive location mapping of every fire safety device installed across your premises.</p>
-        <span class="pulse-badge">Real-Time</span>
-      </div>
-    </div>
-  </section>
 
   <!-- JavaScript to Handle Smooth Mobile Menu Animation -->
   <script>
