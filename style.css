@@ -186,15 +186,20 @@ html, body {
   text-align: center;
 }
 
-.btn-primary {
+.btn-secondary {
   background-color: #e32929;
   color: #ffffff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(227, 41, 41, 0.6);
+  transition: all 0.3s ease;
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+.btn-secondary:hover {
+  background-color: #c72020;
+  box-shadow: 0 0 25px rgba(227, 41, 41, 0.9);
+  transform: translateY(-2px);
+}
 }
 
 /* Animations */
