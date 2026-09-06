@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DSF Fire Safety Device</title>
   <!-- Import Lato Font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     /* Global Reset & Apply Lato Font */
     * {
@@ -92,37 +92,54 @@
     .main-header {
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
-      padding: 15px 25px;
+      padding: 12px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: relative;
     }
 
-    /* Logo Container with Pure Fade-In */
+    /* Logo Group Container with Pure Fade-In */
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
       text-decoration: none;
       opacity: 0;
       animation: pureFadeIn 1s ease 0.2s forwards;
     }
 
+    /* Improved, Larger Logo Image Size */
     .logo img {
-      height: 75px;
+      height: 95px;
       width: auto;
-      max-width: 280px;
       display: block !important;
       visibility: visible !important;
       object-fit: contain;
     }
 
-    .logo-text {
-      font-size: 26px;
-      font-weight: 700;
+    /* Blended Brand Text Matching the Logo Theme */
+    .brand-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-main {
+      font-size: 24px;
+      font-weight: 900;
       color: #d93830;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 2px;
     }
 
     /* Right side container for nav + get quote button */
@@ -132,7 +149,7 @@
       gap: 25px;
     }
 
-    /* Slide-in from Left & Fade-In Animation for Navigation Menu items (Home to AMC) */
+    /* Slide-in from Left & Fade-In Animation for Navigation Menu items */
     @keyframes slideInFromLeft {
       0% {
         opacity: 0;
@@ -236,7 +253,15 @@
       }
 
       .logo img {
-        height: 60px;
+        height: 75px;
+      }
+
+      .brand-main {
+        font-size: 20px;
+      }
+
+      .brand-sub {
+        font-size: 11px;
       }
 
       .header-right-group {
@@ -272,7 +297,7 @@
         padding: 10px 0;
         border-bottom: 1px solid #f0f0f0;
         text-align: center;
-        animation: none; /* Reset animation for mobile dropdown view */
+        animation: none;
         opacity: 1;
       }
 
@@ -305,10 +330,13 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Logo with logo.png file name -->
+    <!-- Blended Logo and DS Safety Systems Branding -->
     <a href="#" class="logo">
-      <img src="logo.png" alt="DSF Fire Safety Device Logo" onerror="this.style.display='none'; document.getElementById('fallback-logo-text').style.display='inline-block';">
-      <span id="fallback-logo-text" class="logo-text" style="display: none;">DSF Fire Safety</span>
+      <img src="logo.png" alt="DSF Fire Safety Device Logo" onerror="this.style.display='none';">
+      <div class="brand-title">
+        <span class="brand-main">DS SAFETY</span>
+        <span class="brand-sub">SYSTEMS</span>
+      </div>
     </a>
     
     <!-- Hamburger Toggle Button for Mobile -->
@@ -318,7 +346,7 @@
       <span></span>
     </div>
 
-    <!-- Navigation Links (Home to AMC) with Slide-In From Left Animation -->
+    <!-- Navigation Links & Get Quote Button Container -->
     <div class="header-right-group" id="header-group">
       <ul class="nav-links" id="nav-list">
         <li><a href="#">Home</a></li><span class="divider">|</span>
