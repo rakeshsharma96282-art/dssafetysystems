@@ -211,45 +211,13 @@
       border-radius: 2px;
     }
 
-    /* Mobile Responsiveness - Unified compound branding lockup */
+    /* Mobile Responsiveness */
     @media (max-width: 1200px) {
-      .top-bar { 
-        flex-direction: column; 
-        text-align: center; 
-        padding: 12px 15px;
-      }
-      .top-bar-left { 
-        justify-content: center; 
-        gap: 10px;
-        flex-direction: column;
-      }
-      .top-bar-right {
-        justify-content: center;
-        width: 100%;
-        margin-top: 2px;
-        gap: 15px;
-      }
+      .top-bar { flex-direction: column; text-align: center; }
+      .top-bar-left { justify-content: center; }
       .menu-toggle { display: flex; }
-      
-      .main-header {
-        padding: 10px 15px;
-      }
-
-      /* Unified Branding Part: Seamless integration matching PC scale tone */
-      .logo-container {
-        gap: 12px;
-        max-width: calc(100% - 45px);
-        align-items: center;
-      }
-      .logo-container img { 
-        height: 52px; 
-      }
-      .brand-single-line { 
-        font-size: 21px; 
-        letter-spacing: 1px;
-        white-space: nowrap; /* Forces text to flow cleanly next to the logo as one unified block */
-        overflow: visible;
-      }
+      .logo-container img { height: 55px; }
+      .brand-single-line { font-size: 20px; letter-spacing: 1px; }
       
       .header-right-group {
         position: absolute; 
@@ -266,7 +234,7 @@
         z-index: 10;
       }
       .header-right-group.active { 
-        max-height: 400px; 
+        max-height: 350px; 
         padding: 20px; 
         gap: 15px; 
         border-bottom: 1px solid #e0e0e0;
