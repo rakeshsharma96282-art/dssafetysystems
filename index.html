@@ -34,11 +34,10 @@
       flex-wrap: wrap;
     }
 
-    /* Page-load Fade & Slide Animation for Top Bar Contact Elements */
+    /* Page-load Pure Fade-In Animation for Top Bar Contact Elements */
     .info-item, .top-bar-right > a {
       opacity: 0;
-      transform: translateY(-20px);
-      animation: topBarFadeIn 0.8s ease forwards;
+      animation: pureFadeIn 1s ease forwards;
     }
 
     .top-bar-left .info-item:nth-child(1) { animation-delay: 0.1s; }
@@ -47,11 +46,9 @@
     .top-bar-right a:nth-child(1) { animation-delay: 0.55s; }
     .top-bar-right a:nth-child(2) { animation-delay: 0.7s; }
 
-    @keyframes topBarFadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes pureFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .info-item {
@@ -102,24 +99,28 @@
       position: relative;
     }
 
-    /* Prominent Logo & Fallback Text Container */
+    /* Logo Container with Pure Fade-In */
     .logo {
       display: flex;
       align-items: center;
       gap: 12px;
       text-decoration: none;
+      opacity: 0;
+      animation: pureFadeIn 1s ease 0.2s forwards;
     }
 
+    /* Guaranteed Visible Logo Styling */
     .logo img {
-      height: 75px;
+      height: 85px;
       width: auto;
-      display: block;
+      max-width: 280px;
+      display: block !important;
+      visibility: visible !important;
       object-fit: contain;
     }
 
-    /* Text fallback if image file path fails */
     .logo-text {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
       color: #d93830;
       letter-spacing: 0.5px;
@@ -132,13 +133,35 @@
       gap: 25px;
     }
 
-    /* Navigation Links with divider lines */
+    /* Navigation Links Pure Fade-In */
     .nav-links {
       list-style: none;
       display: flex;
       align-items: center;
       gap: 15px;
     }
+
+    .nav-links li {
+      opacity: 0;
+      animation: pureFadeIn 0.8s ease forwards;
+    }
+
+    .nav-links li:nth-child(1) { animation-delay: 0.3s; }
+    .nav-links li:nth-child(3) { animation-delay: 0.45s; }
+    .nav-links li:nth-child(5) { animation-delay: 0.6s; }
+    .nav-links li:nth-child(7) { animation-delay: 0.75s; }
+
+    .divider {
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0;
+      animation: pureFadeIn 0.8s ease forwards;
+    }
+
+    .nav-links span:nth-of-type(1) { animation-delay: 0.37s; }
+    .nav-links span:nth-of-type(2) { animation-delay: 0.52s; }
+    .nav-links span:nth-of-type(3) { animation-delay: 0.67s; }
 
     .nav-links li a {
       text-decoration: none;
@@ -153,13 +176,7 @@
       color: #d93830;
     }
 
-    .divider {
-      color: #ccc;
-      font-size: 18px;
-      font-weight: 400;
-    }
-
-    /* Get Quote Button Style */
+    /* Get Quote Button Pure Fade-In */
     .btn-get-quote {
       background-color: #d93830;
       color: white;
@@ -168,6 +185,8 @@
       font-weight: bold;
       text-decoration: none;
       font-size: 16px;
+      opacity: 0;
+      animation: pureFadeIn 0.9s ease 0.85s forwards;
       transition: background-color 0.3s ease;
     }
 
@@ -207,7 +226,7 @@
       }
 
       .logo img {
-        height: 60px;
+        height: 65px;
       }
 
       .header-right-group {
@@ -234,6 +253,7 @@
 
       .nav-links {
         flex-direction: column;
+        width: transparent;
         width: 100%;
         gap: 0;
       }
@@ -274,9 +294,9 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Logo with built-in text backup so branding displays even if the image file is missing -->
+    <!-- Logo with forced display settings and dual fallback text -->
     <a href="#" class="logo">
-      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1) (1).png" alt="DSF Fire Safety Device Logo" onerror="this.style.display='none'; document.getElementById('fallback-logo-text').style.display='block';">
+      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1) (1).png" alt="DSF Fire Safety Device Logo" onerror="this.style.display='none'; document.getElementById('fallback-logo-text').style.display='inline-block';">
       <span id="fallback-logo-text" class="logo-text" style="display: none;">DSF Fire Safety</span>
     </a>
     
