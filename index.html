@@ -102,12 +102,27 @@
       position: relative;
     }
 
-    /* Prominent, Fully Visible Logo Image Size */
+    /* Prominent Logo & Fallback Text Container */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
     .logo img {
-      height: 110px;
+      height: 75px;
       width: auto;
       display: block;
       object-fit: contain;
+    }
+
+    /* Text fallback if image file path fails */
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #d93830;
+      letter-spacing: 0.5px;
     }
 
     /* Right side container for nav + get quote button */
@@ -192,7 +207,7 @@
       }
 
       .logo img {
-        height: 90px;
+        height: 60px;
       }
 
       .header-right-group {
@@ -259,9 +274,10 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <!-- Clean, Large, Fully Visible Logo on Upper Left -->
+    <!-- Logo with built-in text backup so branding displays even if the image file is missing -->
     <a href="#" class="logo">
-      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1) (1).png" alt="DSF Fire Safety Device Logo">
+      <img src="ChatGPT_Image_Aug_14__2026__04_46_35_PM-removebg-preview (1) (1).png" alt="DSF Fire Safety Device Logo" onerror="this.style.display='none'; document.getElementById('fallback-logo-text').style.display='block';">
+      <span id="fallback-logo-text" class="logo-text" style="display: none;">DSF Fire Safety</span>
     </a>
     
     <!-- Hamburger Toggle Button for Mobile -->
