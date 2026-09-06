@@ -211,7 +211,7 @@
       border-radius: 2px;
     }
 
-    /* Mobile Responsiveness - Scaled and stacked gracefully for mobile screens */
+    /* Mobile Responsiveness - Wrapped text for mobile so font size remains readable */
     @media (max-width: 1200px) {
       .top-bar { 
         flex-direction: column; 
@@ -232,21 +232,20 @@
       .menu-toggle { display: flex; }
       
       .main-header {
-        padding: 10px 15px;
+        padding: 12px 15px;
       }
       .logo-container {
-        gap: 8px;
-        max-width: calc(100% - 45px);
+        gap: 10px;
+        max-width: calc(100% - 50px);
       }
       .logo-container img { 
-        height: 42px; 
+        height: 50px; 
       }
       .brand-single-line { 
-        font-size: 15px; 
+        font-size: 17px; 
         letter-spacing: 0.5px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal; /* Allows text to stack neatly to 2 lines so font is readable */
+        line-height: 1.2;
       }
       
       .header-right-group {
