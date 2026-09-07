@@ -136,11 +136,44 @@ html, body {
   cursor: pointer;
 }
 
-.hero-section {
-  background: url('hero-banner.jpg.png') center/cover no-repeat;
-  width: 100%;
-  height: 500px;
-}
+/* Hero Section */
+    .hero-section {
+      position: relative;
+      background-color: #0b0b0b;
+      color: #ffffff;
+      padding: 110px 20px 60px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-banner-container {
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto 30px auto;
+    }
+
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      object-fit: cover;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
 /* Explore Products: Red Glow Pill Button */
 .btn-primary {
