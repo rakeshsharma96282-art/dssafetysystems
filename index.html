@@ -264,18 +264,29 @@
       transition: all 0.3s ease;
     }
 
-    <section class="hero-section" id="home">
-    <div class="hero-banner-container" data-aos="fade-up" data-aos-duration="1000">
-      <img src="hero-banner.jpg.png" alt="DS Safety Systems - Complete Fire Safety Solutions" class="hero-banner-img">
-    </div>
-    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-      <div class="hero-buttons">
-        <a href="#products" class="btn-hero-primary">Explore Products</a>
-        <a href="#contact" class="btn-hero-secondary">Request a Quote</a>
+   <header id="mainHeader">
+    <div class="nav-container">
+      <a href="#" class="logo-container">
+        <span class="logo-text">DS <span>SAFETY</span></span>
+      </a>
+      
+      <div class="header-group" id="header-group">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products & Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn-get-quote">Get a Quote</a>
+      </div>
+
+      <div class="mobile-menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-  </section>
-
+  </header>
     /* Client Logo Marquee Section */
     .marquee-section {
       background-color: #ffffff;
@@ -984,16 +995,6 @@
       .divider { display: none; }
       .btn-get-quote { width: 100%; text-align: center; }
 
-      .hero-section {
-        padding: 90px 20px;
-      }
-      .hero-section h1 {
-        font-size: 32px;
-      }
-      .hero-section p {
-        font-size: 16px;
-      }
-
       .about-container,
       .contact-wrapper {
         grid-template-columns: 1fr;
@@ -1070,14 +1071,14 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-section">
+  <section class="hero-section" id="home">
+    <div class="hero-banner-container" data-aos="fade-up" data-aos-duration="1000">
+      <img src="hero-banner.jpg.png" alt="DS Safety Systems - Complete Fire Safety Solutions" class="hero-banner-img">
+    </div>
     <div class="hero-content">
-      <span class="hero-badge" data-aos="fade-down" data-aos-duration="800">Certified Fire Protection Experts</span>
-      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Protecting What Matters Most with <span>Advanced Fire Safety</span> Solutions</h1>
-      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Providing professional installation, maintenance, and comprehensive Annual Maintenance Contracts (AMC) for commercial and residential safety standards.</p>
-      <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-        <a href="#contact" class="btn-hero-primary">Get Instant Quote</a>
-        <a href="#products" class="btn-hero-secondary">Explore Products</a>
+      <div class="hero-buttons">
+        <a href="#products" class="btn-hero-primary">Explore Products</a>
+        <a href="#contact" class="btn-hero-secondary">Request a Quote</a>
       </div>
     </div>
   </section>
