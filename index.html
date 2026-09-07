@@ -14,8 +14,9 @@
   <meta property="og:description" content="Professional fire safety equipment, installation, and AMC services in New Delhi.">
   <meta property="og:type" content="website">
 
-  <!-- Import Outfit Font (Weight 700) and Lato -->
+  <!-- Import Google Fonts & AOS Animation Library CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <style>
     /* Global Reset & Apply Font */
@@ -73,6 +74,11 @@
       font-size: 16px;
       font-weight: 700;
       text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info-item:hover {
+      color: #ff6b63;
     }
 
     .info-item img {
@@ -95,11 +101,13 @@
       font-weight: bold;
       text-decoration: none;
       font-size: 16px;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .btn-contact:hover {
       background-color: #b52b24;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(217, 56, 48, 0.4);
     }
 
     /* Main Navigation Header */
@@ -113,6 +121,11 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .main-header.scrolled {
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
     .logo-container {
@@ -131,6 +144,11 @@
       visibility: visible !important;
       object-fit: contain;
       filter: drop-shadow(0 0 6px rgba(217, 56, 48, 0.25));
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container:hover img {
+      transform: scale(1.03);
     }
 
     .brand-single-line {
@@ -189,11 +207,27 @@
       font-size: 17px;
       font-weight: 700;
       padding: 5px 10px;
+      position: relative;
       transition: color 0.3s ease;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 10px;
+      background-color: #d93830;
+      transition: width 0.3s ease;
     }
 
     .nav-links li a:hover {
       color: #d93830;
+    }
+
+    .nav-links li a:hover::after {
+      width: calc(100% - 20px);
     }
 
     .btn-get-quote {
@@ -206,11 +240,13 @@
       font-size: 16px;
       opacity: 0;
       animation: pureFadeIn 0.9s ease 0.85s forwards;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .btn-get-quote:hover {
       background-color: #b52b24;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(217, 56, 48, 0.4);
     }
 
     .menu-toggle {
@@ -225,6 +261,7 @@
       height: 3px;
       background-color: #333;
       border-radius: 2px;
+      transition: all 0.3s ease;
     }
 
     /* Hero Section */
@@ -232,12 +269,13 @@
       position: relative;
       background: linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.85)), url('hero-bg.jpg') center/cover no-repeat;
       color: #ffffff;
-      padding: 110px 25px;
+      padding: 120px 25px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .hero-content {
@@ -295,12 +333,13 @@
       font-weight: 700;
       font-size: 16px;
       text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .btn-hero-primary:hover {
       background-color: #b52b24;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(217, 56, 48, 0.4);
     }
 
     .btn-hero-secondary {
@@ -312,19 +351,20 @@
       font-weight: 700;
       font-size: 16px;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .btn-hero-secondary:hover {
       background-color: white;
       color: #1a1a1a;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
     }
 
     /* Client Logo Marquee Section */
     .marquee-section {
       background-color: #ffffff;
-      padding: 30px 0;
+      padding: 35px 0;
       border-bottom: 1px solid #eee;
       overflow: hidden;
       white-space: nowrap;
@@ -336,13 +376,13 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       color: #888;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-weight: 700;
     }
 
     .marquee-track {
       display: flex;
-      gap: 50px;
+      gap: 60px;
       justify-content: space-around;
       align-items: center;
       max-width: 1200px;
@@ -358,18 +398,20 @@
       color: #555;
       letter-spacing: 1px;
       opacity: 0.7;
-      transition: opacity 0.3s ease, color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .client-logo-item:hover {
       opacity: 1;
       color: #d93830;
+      transform: scale(1.05);
     }
 
     /* About Us Section */
     .about-section {
-      padding: 90px 25px;
+      padding: 100px 25px;
       background-color: #ffffff;
+      overflow: hidden;
     }
 
     .about-container {
@@ -414,6 +456,12 @@
       font-weight: 700;
       color: #333;
       font-size: 15px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .highlight-box:hover {
+      transform: translateX(5px);
+      background: #f1f1f1;
     }
 
     .about-card-box {
@@ -421,8 +469,13 @@
       color: white;
       padding: 50px;
       border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
       position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .about-card-box:hover {
+      transform: translateY(-5px);
     }
 
     .about-card-box h3 {
@@ -441,9 +494,10 @@
 
     /* Products & Services Section */
     .services-section {
-      padding: 90px 25px;
+      padding: 100px 25px;
       background-color: #f9f9f9;
       text-align: center;
+      overflow: hidden;
     }
 
     .section-title-container {
@@ -480,17 +534,17 @@
       background: #ffffff;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
       border-top: 4px solid #d93830;
       text-align: left;
       display: flex;
       flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
     }
 
     .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     }
 
     .service-card-body {
@@ -527,20 +581,21 @@
     }
 
     .service-link:hover {
-      gap: 8px;
+      gap: 10px;
     }
 
     /* Why Choose Us Section */
     .why-us-section {
-      padding: 90px 25px;
+      padding: 100px 25px;
       background-color: #ffffff;
+      overflow: hidden;
     }
 
     .why-us-container {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
     }
 
@@ -548,13 +603,21 @@
       display: flex;
       gap: 20px;
       align-items: flex-start;
+      padding: 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .why-us-feature:hover {
+      background-color: #fafafa;
+      transform: translateY(-3px);
     }
 
     .why-us-icon {
       background-color: rgba(217, 56, 48, 0.1);
       color: #d93830;
-      width: 60px;
-      height: 60px;
+      width: 65px;
+      height: 65px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -562,6 +625,13 @@
       font-size: 24px;
       flex-shrink: 0;
       font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .why-us-feature:hover .why-us-icon {
+      background-color: #d93830;
+      color: white;
+      transform: rotate(360deg);
     }
 
     .why-us-text h3 {
@@ -579,9 +649,10 @@
 
     /* Testimonials Section */
     .testimonials-section {
-      padding: 90px 25px;
+      padding: 100px 25px;
       background-color: #f9f9f9;
       text-align: center;
+      overflow: hidden;
     }
 
     .testimonials-grid {
@@ -595,13 +666,19 @@
 
     .testimonial-card {
       background: #ffffff;
-      padding: 30px;
+      padding: 35px 30px;
       border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       position: relative;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     }
 
     .testimonial-card::before {
@@ -640,8 +717,9 @@
 
     /* Contact / Get a Quote Form Section */
     .contact-section {
-      padding: 90px 25px;
+      padding: 100px 25px;
       background-color: #ffffff;
+      overflow: hidden;
     }
 
     .contact-wrapper {
@@ -653,11 +731,15 @@
       align-items: start;
     }
 
-    .contact-info-side h3 {
+    .contact-info-side h2 {
       font-family: 'Outfit', sans-serif;
-      font-size: 26px;
+      font-size: 34px;
       color: #1a1a1a;
       margin-bottom: 15px;
+    }
+
+    .contact-info-side h2 span {
+      color: #d93830;
     }
 
     .contact-info-side p {
@@ -674,6 +756,7 @@
       overflow: hidden;
       border: 1px solid #e0e0e0;
       margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
 
     .map-container iframe {
@@ -686,7 +769,7 @@
       background: #f9f9f9;
       padding: 40px;
       border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
       border: 1px solid #eee;
     }
 
@@ -720,7 +803,7 @@
       border-radius: 4px;
       font-size: 15px;
       font-family: 'Lato', Arial, sans-serif;
-      transition: border-color 0.3s ease;
+      transition: all 0.3s ease;
       background: #fff;
     }
 
@@ -728,6 +811,7 @@
     .form-group textarea:focus {
       outline: none;
       border-color: #d93830;
+      box-shadow: 0 0 0 3px rgba(217, 56, 48, 0.1);
     }
 
     .form-group textarea {
@@ -745,11 +829,13 @@
       font-weight: 700;
       font-size: 16px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .btn-submit:hover {
       background-color: #b52b24;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(217, 56, 48, 0.4);
     }
 
     .form-status {
@@ -759,6 +845,7 @@
       text-align: center;
       padding: 10px;
       display: none;
+      border-radius: 4px;
     }
 
     .form-status.success {
@@ -780,10 +867,17 @@
       border-radius: 50%;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
       z-index: 999;
       text-decoration: none;
       transition: transform 0.3s ease;
+      animation: pulseAnimation 2s infinite;
+    }
+
+    @keyframes pulseAnimation {
+      0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(39, 174, 96, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
     }
 
     .floating-call-btn:hover {
@@ -849,11 +943,12 @@
       color: #aaa;
       text-decoration: none;
       font-size: 15px;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .footer-links li a:hover {
       color: #d93830;
+      padding-left: 5px;
     }
 
     .footer-contact-info {
@@ -975,7 +1070,7 @@
       .btn-get-quote { width: 100%; text-align: center; }
 
       .hero-section {
-        padding: 80px 20px;
+        padding: 90px 20px;
       }
       .hero-section h1 {
         font-size: 32px;
@@ -1036,7 +1131,7 @@
   </div>
 
   <!-- Main Navigation Header -->
-  <header class="main-header">
+  <header class="main-header" id="mainHeader">
     <a href="#" class="logo-container">
       <img src="logo.png" alt="DS Safety Systems Logo" onerror="this.style.display='none';">
       <span class="brand-single-line">DS SAFETY SYSTEMS</span>
@@ -1062,10 +1157,10 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-content">
-      <span class="hero-badge">Certified Fire Protection Experts</span>
-      <h1>Protecting What Matters Most with <span>Advanced Fire Safety</span> Solutions</h1>
-      <p>Providing professional installation, maintenance, and comprehensive Annual Maintenance Contracts (AMC) for commercial and residential safety standards.</p>
-      <div class="hero-buttons">
+      <span class="hero-badge" data-aos="fade-down" data-aos-duration="800">Certified Fire Protection Experts</span>
+      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Protecting What Matters Most with <span>Advanced Fire Safety</span> Solutions</h1>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Providing professional installation, maintenance, and comprehensive Annual Maintenance Contracts (AMC) for commercial and residential safety standards.</p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
         <a href="#contact" class="btn-hero-primary">Get Instant Quote</a>
         <a href="#products" class="btn-hero-secondary">Explore Products</a>
       </div>
@@ -1073,7 +1168,7 @@
   </section>
 
   <!-- Client Logo Marquee Trust Bar -->
-  <div class="marquee-section">
+  <div class="marquee-section" data-aos="fade" data-aos-duration="1000">
     <div class="marquee-title">Trusted By Leading Corporate & Residential Properties</div>
     <div class="marquee-track">
       <div class="client-logo-item">VERTEX ENTERPRISES</div>
@@ -1087,7 +1182,7 @@
   <!-- About Us Section -->
   <section class="about-section" id="about">
     <div class="about-container">
-      <div class="about-text">
+      <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
         <h2>Your Dependable Partner in <span>Total Fire Safety Compliance</span></h2>
         <p>Based in Govind Puri, New Delhi, DS Safety Systems has built a reputation for engineering excellence and rigorous adherence to safety standards. We protect businesses, offices, warehouses, and residences against fire emergencies with elite equipment and proactive maintenance plans.</p>
         <p>Our expert technicians manage everything from initial site analysis and equipment supply to ongoing compliance checks and Annual Maintenance Contracts (AMC).</p>
@@ -1098,7 +1193,7 @@
           <div class="highlight-box">Govind Puri, New Delhi</div>
         </div>
       </div>
-      <div class="about-card-box">
+      <div class="about-card-box" data-aos="fade-left" data-aos-duration="1000">
         <h3>Committed to Safety</h3>
         <p>Fire safety isn't just an obligation—it's a critical shield for human lives and property investments. We ensure your systems are verified, tested, and ready to respond instantly when seconds count.</p>
         <a href="tel:9818701683" class="btn-hero-primary" style="display: inline-block;">Speak With An Expert</a>
@@ -1108,33 +1203,33 @@
 
   <!-- Products & Services Section -->
   <section class="services-section" id="products">
-    <div class="section-title-container">
+    <div class="section-title-container" data-aos="fade-up" data-aos-duration="800">
       <h2>Our Core <span>Solutions</span></h2>
       <p>High-performance safety equipment and reliable maintenance services engineered to meet industry safety compliance.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
         <div class="service-card-body">
           <h3>Fire Extinguishers</h3>
           <p>Comprehensive range of high-grade ABC, CO2, and foam extinguishers for industrial, commercial, and residential properties.</p>
           <a href="#contact" class="service-link">Inquire Now &rarr;</a>
         </div>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
         <div class="service-card-body">
           <h3>Fire Alarm Systems</h3>
           <p>Advanced smoke detectors, control panels, and alarm triggers designed for early detection and rapid emergency response.</p>
           <a href="#contact" class="service-link">Inquire Now &rarr;</a>
         </div>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
         <div class="service-card-body">
           <h3>Hydrant & Sprinkler Systems</h3>
           <p>Robust water-based suppression setups configured for maximum coverage across complex commercial spaces.</p>
           <a href="#contact" class="service-link">Inquire Now &rarr;</a>
         </div>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         <div class="service-card-body">
           <h3>Annual Maintenance (AMC)</h3>
           <p>Regular expert inspections, testing, and servicing contracts to ensure your fire safety systems remain 100% operational.</p>
@@ -1147,21 +1242,21 @@
   <!-- Why Choose Us Section -->
   <section class="why-us-section">
     <div class="why-us-container">
-      <div class="why-us-feature">
+      <div class="why-us-feature" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
         <div class="why-us-icon">✓</div>
         <div class="why-us-text">
           <h3>Certified Standards</h3>
           <p>All safety equipment and installation practices comply with national safety regulations.</p>
         </div>
       </div>
-      <div class="why-us-feature">
+      <div class="why-us-feature" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
         <div class="why-us-icon">24</div>
         <div class="why-us-text">
           <h3>Rapid Support</h3>
           <p>Dedicated customer service and emergency response teams ready when you need them.</p>
         </div>
       </div>
-      <div class="why-us-feature">
+      <div class="why-us-feature" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
         <div class="why-us-icon">★</div>
         <div class="why-us-text">
           <h3>Expert Technicians</h3>
@@ -1173,12 +1268,12 @@
 
   <!-- Customer Testimonials Section -->
   <section class="testimonials-section">
-    <div class="section-title-container">
+    <div class="section-title-container" data-aos="fade-up" data-aos-duration="800">
       <h2>What Our <span>Clients Say</span></h2>
       <p>Read feedback from property managers and business owners who rely on our safety infrastructure.</p>
     </div>
     <div class="testimonials-grid">
-      <div class="testimonial-card">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
         <div>
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"DS Safety Systems installed our complete commercial office building fire alarm and extinguisher setup. Their team was professional, prompt, and thorough with compliance standards."</p>
@@ -1188,7 +1283,7 @@
           <p>Facility Manager, New Delhi</p>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
         <div>
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"We have our AMC contract with them for over two years now. Whenever routine maintenance is due, their technicians arrive on schedule and provide complete peace of mind."</p>
@@ -1198,7 +1293,7 @@
           <p>Commercial Real Estate Owner</p>
         </div>
       </div>
-      <div class="testimonial-card">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
         <div>
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">"Top-notch service and genuine equipment. Their pricing is fair and transparent. Highly recommend DS Safety Systems for any residential or corporate fire protection needs."</p>
@@ -1214,7 +1309,7 @@
   <!-- Request a Quote / Contact Section with Map -->
   <section class="contact-section" id="contact">
     <div class="contact-wrapper">
-      <div class="contact-info-side">
+      <div class="contact-info-side" data-aos="fade-right" data-aos-duration="1000">
         <h2>Get in Touch With <span>Our Experts</span></h2>
         <p>Whether you need a custom fire protection quotation, emergency equipment replenishment, or an Annual Maintenance Contract, our team is ready to assist you.</p>
         
@@ -1236,11 +1331,11 @@
         </div>
       </div>
 
-      <div class="contact-container">
+      <div class="contact-container" data-aos="fade-left" data-aos-duration="1000">
         <h3 style="font-family: 'Outfit', sans-serif; font-size: 22px; color: #1a1a1a; margin-bottom: 5px;">Request a Free Quote</h3>
         <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Fill out the form below and we will get back to you promptly.</p>
         
-        <!-- Functional Form using Formspree (Replace YOUR_FORM_ID with a live form ID if desired, or keep as demo) -->
+        <!-- Functional Form using Formspree -->
         <form class="contact-form" id="quoteForm" action="https://formspree.io/f/xyzkrqpw" method="POST">
           <div class="form-group">
             <label for="name">Your Name</label>
@@ -1277,11 +1372,11 @@
   <!-- Professional Footer Section -->
   <footer class="site-footer">
     <div class="footer-container">
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="800">
         <h3>DS Safety Systems</h3>
         <p>Your trusted partner in total fire protection and safety compliance. We deliver quality installation, certified equipment, and dependable maintenance services.</p>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
         <h3>Quick Links</h3>
         <ul class="footer-links">
           <li><a href="#">Home</a></li>
@@ -1290,7 +1385,7 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
         <h3>Contact Info</h3>
         <div class="footer-contact-info">
           <a href="tel:9818701683" class="footer-contact-item">
@@ -1314,8 +1409,29 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Mobile Menu & Interactive Form -->
+  <!-- AOS Animation Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- JavaScript for Animations, Header Scroll, Mobile Menu & Form -->
   <script>
+    // Initialize AOS scroll animations
+    AOS.init({
+      once: true, // Animations happen only once while scrolling down
+      offset: 100, // Offset (in px) from the original trigger point
+      easing: 'ease-in-out',
+    });
+
+    // Sticky Header Shadow on Scroll
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 30) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const headerGroup = document.getElementById('header-group');
 
@@ -1330,7 +1446,7 @@
       });
     });
 
-    // Optional AJAX form submission feedback handler
+    // AJAX form submission feedback handler
     const form = document.getElementById('quoteForm');
     const statusDiv = document.getElementById('formStatus');
 
@@ -1352,7 +1468,6 @@
           statusDiv.className = 'form-status success';
           form.reset();
         } else {
-          // Fallback confirmation even if backend form ID is unconfigured yet
           statusDiv.style.display = 'block';
           statusDiv.className = 'form-status success';
           statusDiv.textContent = 'Thank you! Inquiry received.';
