@@ -264,20 +264,17 @@
       transition: all 0.3s ease;
     }
 
-    /* Hero Section */
-    .hero-section {
-      position: relative;
-      background: linear-gradient(rgba(15, 15, 15, 0.65), rgba(15, 15, 15, 0.75)), url('hero-banner.jpg.png') center/cover no-repeat;
-      color: #ffffff;
-      padding: 160px 25px 120px 25px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      min-height: 85vh;
-    }
+    <section class="hero-section" id="home">
+    <div class="hero-banner-container" data-aos="fade-up" data-aos-duration="1000">
+      <img src="hero-banner.jpg.png" alt="DS Safety Systems - Complete Fire Safety Solutions" class="hero-banner-img">
+    </div>
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <div class="hero-buttons">
+        <a href="#products" class="btn-hero-primary">Explore Products</a>
+        <a href="#contact" class="btn-hero-secondary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
 
     /* Client Logo Marquee Section */
     .marquee-section {
