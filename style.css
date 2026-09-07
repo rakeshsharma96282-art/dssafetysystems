@@ -136,55 +136,11 @@ html, body {
   cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-  width: 100%;
-  min-height: calc(100vh - 160px);
-  display: flex;
-  align-items: center;
-  padding: 40px 5%;
-  background: linear-gradient(90deg, #0f1115 0%, #0f1115e6 50%, #0f111533 100%), 
-              url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-}
-
-.hero-content {
-  max-width: 800px;
-}
-
-.hero-title {
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #e32929;
-  margin-bottom: 15px;
-  font-weight: 700;
-  animation: fadeInSlide 0.8s ease forwards;
-}
-
-.brand-subtitle {
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  color: #ffffff;
-  animation: fadeInSlide 1s ease 0.2s forwards;
-  opacity: 0;
-}
-
-.hero-description {
-  font-size: 17px;
-  color: #c5cbd3;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  animation: fadeInSlide 1s ease 0.4s forwards;
-  opacity: 0;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  animation: fadeInSlide 1s ease 0.6s forwards;
-  opacity: 0;
-}
+/.hero-section {
+      background: url('hero-banner.jpg') center/cover no-repeat;
+      width: 100%;
+      height: 500px;
+    }
 
 /* Explore Products: Red Glow Pill Button */
 .btn-primary {
