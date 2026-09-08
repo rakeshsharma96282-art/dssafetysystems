@@ -135,65 +135,18 @@
       font-size: 24px;
     }
 
-    /* Hero Section */
-    .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542013936-69f0eed2b212?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      color: #ffffff;
-      padding: 120px 5%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    /* Hero Banner Image Section */
+    .hero-banner-section {
+      width: 100%;
+      background-color: #000;
+      line-height: 0;
     }
 
-    .hero-section h2 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      max-width: 800px;
-    }
-
-    .hero-section p {
-      font-size: 18px;
-      max-width: 600px;
-      margin-bottom: 30px;
-      color: #e5e7eb;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 15px;
-    }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: #ffffff;
-      padding: 12px 25px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: var(--transition);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-dark);
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      border: 2px solid #ffffff;
-      color: #ffffff;
-      padding: 12px 25px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: var(--transition);
-    }
-
-    .btn-secondary:hover {
-      background-color: #ffffff;
-      color: var(--dark);
+    .hero-banner-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
     }
 
     /* About Section */
@@ -425,7 +378,6 @@
     .footer-contact-item img {
       width: 20px;
       height: 20px;
-      filter: invert(1);
     }
 
     .map-container {
@@ -522,7 +474,7 @@
       display: block;
     }
 
-    /* Floating Call Button */
+    /* Floating Click-to-Call Button */
     .floating-call-btn {
       position: fixed;
       bottom: 30px;
@@ -636,9 +588,6 @@
       .about-section, .contact-wrapper {
         grid-template-columns: 1fr;
       }
-      .hero-section h2 {
-        font-size: 32px;
-      }
       .footer-bottom {
         flex-direction: column;
         gap: 10px;
@@ -675,14 +624,9 @@
     </ul>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <h2 data-aos="fade-up" data-aos-duration="800">Certified Fire Protection & Safety Solutions</h2>
-    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Providing leading fire safety equipment supply, installation, refilling, and comprehensive AMC services across New Delhi.</p>
-    <div class="hero-btns" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-      <a href="#products" class="btn-primary">Our Solutions</a>
-      <a href="#contact" class="btn-secondary">Contact Experts</a>
-    </div>
+  <!-- Hero Banner Image Section (Instant Load without cutoff) -->
+  <section class="hero-banner-section">
+    <img src="hero-banner.jpg (3).png" alt="Complete Fire Safety Solutions" fetchpriority="high">
   </section>
 
   <!-- About Section -->
@@ -691,7 +635,7 @@
       <h2>About <span>DS Safety Systems</span></h2>
       <p>Established with a commitment to safeguarding commercial properties, industries, and residential spaces, DS Safety Systems is a trusted provider of complete fire fighting and security solutions in New Delhi.</p>
       <p>With years of technical expertise, we specialize in high-grade fire extinguishers, alarm networks, hydrant piping installations, and foolproof Annual Maintenance Contracts (AMC) designed to fulfill all standard safety compliance mandates.</p>
-      <a href="#contact" class="btn-primary">Learn More</a>
+      <a href="#contact" class="btn-primary" style="background-color: var(--primary); color: #fff; padding: 12px 25px; border-radius: 4px; text-decoration: none; font-weight: 600; display: inline-block;">Learn More</a>
     </div>
     <div class="about-image" data-aos="fade-left" data-aos-duration="1000">
       <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Safety and Engineering">
@@ -811,15 +755,15 @@
         <p>Reach out to us for fire safety equipment inquiries, installation requests, or Annual Maintenance Contracts. We are ready to assist you.</p>
         <div class="footer-contact-info">
           <div class="footer-contact-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
+            <img src="pin.png" alt="Location">
             <span>Govind Puri, New Delhi, India</span>
           </div>
           <div class="footer-contact-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Phone">
+            <img src="call.png" alt="Phone">
             <a href="tel:9818701683" style="color: inherit; text-decoration: none;">9818701683</a>
           </div>
           <div class="footer-contact-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+            <img src="email.png" alt="Email">
             <a href="mailto:Dssafetysystems@hotmail.com" style="color: inherit; text-decoration: none;">Dssafetysystems@hotmail.com</a>
           </div>
         </div>
@@ -857,11 +801,11 @@
 
   <!-- Floating Click-to-Call Button -->
   <a href="tel:9818701683" class="floating-call-btn" title="Call Us Now">
-    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Call">
+    <img src="call.png" alt="Call">
   </a>
 
   <!-- Footer Section -->
-  <footer class="site-footer">
+  <section class="site-footer">
     <div class="footer-container">
       <div class="footer-col">
         <h3>DS Safety Systems</h3>
@@ -889,15 +833,15 @@
         <h3>Contact Info</h3>
         <div class="footer-contact-info">
           <div class="footer-contact-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
+            <img src="pin.png" alt="Location">
             <span>Govind Puri, New Delhi</span>
           </div>
           <div class="footer-contact-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Phone">
+            <img src="call.png" alt="Phone">
             <a href="tel:9818701683" style="color: inherit; text-decoration: none;">9818701683</a>
           </div>
           <div class="footer-contact-item">
-            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+            <img src="email.png" alt="Email">
             <a href="mailto:Dssafetysystems@hotmail.com" style="color: inherit; text-decoration: none;">Dssafetysystems@hotmail.com</a>
           </div>
         </div>
@@ -910,7 +854,7 @@
         <a href="#">Terms of Service</a>
       </div>
     </div>
-  </footer>
+  </section>
 
   <!-- JavaScript for Interactivity -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
