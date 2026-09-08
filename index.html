@@ -3,289 +3,1248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DS Safety Systems - Fire Protection & Safety Solutions</title>
+  <title>DS Safety Systems | Comprehensive Fire Protection Engineering & Maintenance New Delhi</title>
+  <meta name="description" content="DS Safety Systems based in Govind Puri, New Delhi (near Kalkaji) delivers complete fire fighting equipment supply, hydrant installations, extinguishers, and professional AMC services across Delhi-NCR. Contact 9818701683.">
+  
+  <!-- Google Fonts Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       ADVANCED DESIGN SYSTEM & GLOBAL RESET
+       Enterprise-grade styling architecture optimized for high-performance conversion,
+       accessibility compliance, and rapid mobile responsiveness across all devices.
+       ========================================================================== */
+    :root {
+      --primary: #d92323;
+      --primary-dark: #b51b1b;
+      --primary-light: #fef2f2;
+      --secondary: #0f172a;
+      --dark: #090d16;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --border: #e2e8f0;
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--secondary);
+      background-color: #ffffff;
+      line-height: 1.8;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--dark);
+      line-height: 1.25;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ==========================================================================
+       TOP UTILITY BAR
+       ========================================================================== */
+    .top-bar {
+      background-color: var(--dark);
+      color: #ffffff;
+      padding: 12px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top-bar-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .top-bar-left span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-bar-left a {
+      color: #ffffff;
+      transition: var(--transition);
+    }
+
+    .top-bar-left a:hover {
+      color: var(--primary);
+    }
+
+    .top-bar-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .status-badge {
+      background-color: var(--primary);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       STICKY HEADER & NAVIGATION ARCHITECTURE
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-subtle);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 5%;
+      transition: var(--transition);
+    }
+
+    .site-header.scrolled {
+      padding: 12px 5%;
+      box-shadow: var(--shadow-card);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-icon {
+      background: var(--primary);
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(217, 35, 35, 0.3);
+    }
+
+    .logo-container h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-container h1 span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--secondary);
+      font-weight: 500;
+      font-size: 15px;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .btn-quote-header {
+      background-color: var(--primary);
+      color: #ffffff !important;
+      padding: 11px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(217, 35, 35, 0.25);
+      transition: var(--transition);
+    }
+
+    .btn-quote-header:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 28px;
+      color: var(--dark);
+    }
+
+    /* ==========================================================================
+       HERO & MULTI-PHOTO SHOWCASE GALLERY
+       ========================================================================== */
+    .hero-showcase-section {
+      width: 100%;
+      background-color: #080c14;
+      padding: 50px 5%;
+    }
+
+    .hero-main-banner {
+      width: 100%;
+      max-height: 75vh;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-heavy);
+      margin-bottom: 25px;
+      background: #000;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-main-banner img {
+      width: 100%;
+      height: auto;
+      max-height: 75vh;
+      display: block;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .hero-sub-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-thumb {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 200px;
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .gallery-thumb:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .gallery-thumb:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-thumb .thumb-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(transparent, rgba(9, 13, 22, 0.95));
+      color: #fff;
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       TRUST METRICS STRIP
+       ========================================================================== */
+    .metrics-strip {
+      background-color: var(--primary);
+      color: white;
+      padding: 40px 5%;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .metric-item h3 {
+      font-size: 38px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 5px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .metric-item p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       ABOUT SECTION
+       ========================================================================== */
+    .about-section {
+      padding: 110px 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      background-color: var(--light);
+    }
+
+    .about-content h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .about-content h2 span {
+      color: var(--primary);
+    }
+
+    .about-content p {
+      color: var(--gray);
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .about-badges {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 25px 0 35px;
+    }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--dark);
+    }
+
+    .badge-item span {
+      background-color: var(--primary-light);
+      color: var(--primary);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .btn-action {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 15px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(217, 35, 35, 0.3);
+      transition: var(--transition);
+    }
+
+    .btn-action:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .about-image-wrapper img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: var(--shadow-heavy);
+    }
+
+    /* ==========================================================================
+       PRODUCTS & SERVICES CATALOG
+       ========================================================================== */
+    .services-section {
+      padding: 110px 5%;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .section-header {
+      max-width: 750px;
+      margin: 0 auto 60px;
+    }
+
+    .section-header h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .section-header h2 span {
+      color: var(--primary);
+    }
+
+    .section-header p {
+      color: var(--gray);
+      font-size: 17px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
+      text-align: left;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--primary);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .service-card-body {
+      padding: 30px;
+    }
+
+    .service-card-body h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card-body p {
+      color: var(--gray);
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    .card-link {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .card-link:hover {
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       WHY CHOOSE US & LOCAL SERVICE REGIONS
+       ========================================================================== */
+    .advantages-section {
+      padding: 110px 5%;
+      background-color: var(--dark);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+      margin-top: 60px;
+      text-align: left;
+    }
+
+    .advantage-box {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 40px 35px;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: var(--transition);
+    }
+
+    .advantage-box:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .advantage-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .advantage-box h3 {
+      color: #ffffff;
+      margin-bottom: 12px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .advantage-box p {
+      color: #94a3b8;
+      font-size: 15px;
+    }
+
+    /* ==========================================================================
+       FAQ & COMPLIANCE KNOWLEDGE HUB
+       ========================================================================== */
+    .knowledge-section {
+      padding: 110px 5%;
+      background-color: var(--light);
+    }
+
+    .knowledge-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .knowledge-info h2 {
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .knowledge-info h2 span {
+      color: var(--primary);
+    }
+
+    .knowledge-info p {
+      color: var(--gray);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .accordion {
+      margin-top: 30px;
+    }
+
+    .accordion-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .accordion-header {
+      padding: 18px 22px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Outfit', sans-serif;
+      transition: var(--transition);
+    }
+
+    .accordion-header:hover {
+      color: var(--primary);
+    }
+
+    .accordion-body {
+      padding: 0 22px 18px;
+      color: var(--gray);
+      font-size: 15px;
+      display: none;
+    }
+
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+
+    /* ==========================================================================
+       CONTACT & INQUIRY SECTION
+       ========================================================================== */
+    .contact-section {
+      padding: 110px 5%;
+      background-color: var(--light);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-details h2 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .contact-details h2 span {
+      color: var(--primary);
+    }
+
+    .contact-details p {
+      color: var(--gray);
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      font-size: 15px;
+    }
+
+    .contact-item .icon-box {
+      background: var(--primary-light);
+      color: var(--primary);
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-item div h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 3px;
+    }
+
+    .contact-item div p, .contact-item div a {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    .contact-item div a:hover {
+      color: var(--primary);
+    }
+
+    .map-box {
+      width: 100%;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .quote-form-container {
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+    }
+
+    .quote-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: span 2;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .form-group input, .form-group textarea {
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+      transition: var(--transition);
+      background-color: var(--light);
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--primary);
+      background-color: #ffffff;
+      box-shadow: 0 0 0 4px rgba(217, 35, 35, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 140px;
+    }
+
+    .btn-submit {
+      grid-column: span 2;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(217, 35, 35, 0.3);
+    }
+
+    .btn-submit:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .form-alert {
+      grid-column: span 2;
+      display: none;
+      padding: 14px;
+      background-color: #d1fae5;
+      color: #065f46;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .form-alert.active {
+      display: block;
+    }
+
+    /* ==========================================================================
+       FLOATING WHATSAPP / CALL ACTION
+       ========================================================================== */
+    .floating-call {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25d366;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: var(--transition);
+      font-size: 28px;
+    }
+
+    .floating-call:hover {
+      transform: scale(1.1);
+    }
+
+    /* ==========================================================================
+       FOOTER ARCHITECTURE
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--dark);
+      color: #94a3b8;
+      padding: 80px 5% 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 45px;
+      margin-bottom: 60px;
+    }
+
+    .footer-col h3 {
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .footer-col p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col-links a {
+      color: #94a3b8;
+      font-size: 15px;
+      transition: var(--transition);
+    }
+
+    .footer-col-links a:hover {
+      color: #ffffff;
+      padding-left: 6px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .about-section, .contact-wrapper, .knowledge-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 12px;
+      }
+      .top-bar-left, .top-bar-right {
+        justify-content: center;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 30px;
+        box-shadow: var(--shadow-card);
+        border-top: 1px solid var(--border);
+        gap: 20px;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero-sub-gallery {
+        grid-template-columns: 1fr;
+      }
+      .quote-form-container {
+        padding: 30px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Top Info Bar -->
-  <div>
-    <div>
-      <span>📍 Govind Puri, New Delhi, India</span>
-      <span>⏰ Mon - Sun: 9:30 AM - 7:30 PM</span>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span>📍 Govind Puri, New Delhi (Near Kalkaji)</span>
+      <span>📞 Call Now: <a href="tel:9818701683" style="font-weight:700;">9818701683</a></span>
+      <span>✉️ <a href="mailto:Dssafetysystems@hotmail.com">Dssafetysystems@hotmail.com</a></span>
     </div>
-    <div>
-      <span>📞 Call Us: <a href="tel:9818701683">9818701683</a></span>
+    <div class="top-bar-right">
+      <span>⏰ Mon - Sun: 9:30 AM - 7:30 PM</span>
+      <span class="status-badge">Emergency Support</span>
     </div>
   </div>
 
   <!-- Header Section -->
-  <header id="mainHeader">
-    <a href="#">
+  <header class="site-header" id="mainHeader">
+    <a href="#" class="logo-container">
+      <div class="logo-icon">DS</div>
       <h1>DS <span>Safety Systems</span></h1>
     </a>
-    <div id="mobile-menu">☰</div>
-    <ul id="header-group">
-      <li><a href="#">Home</a></li>
+    <div class="menu-toggle" id="mobileMenuToggle">☰</div>
+    <ul class="nav-links" id="navLinksGroup">
+      <li><a href="#" class="active">Home</a></li>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#products">Products & Services</a></li>
+      <li><a href="#services">Products & Services</a></li>
+      <li><a href="#faq">Compliance FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#contact">Get Quote</a></li>
+      <li><a href="#contact" class="btn-quote-header">Get Quote</a></li>
     </ul>
   </header>
 
-  <!-- Hero Banner Image Section -->
-  <section>
-    <img src="hero-banner.jpg.png.png" alt="Complete Fire Safety Solutions" fetchpriority="high">
+  <!-- Hero & Multi-Photo Showcase Section -->
+  <section class="hero-showcase-section">
+    <div class="hero-main-banner" data-aos="fade-up" data-aos-duration="800">
+      <img src="hero-banner.jpg.png.png" alt="DS Safety Systems Fire Protection Banner" fetchpriority="high">
+    </div>
+    <div class="hero-sub-gallery">
+      <div class="gallery-thumb" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="Hydrant Setup">
+        <div class="thumb-caption">Industrial Hydrant Piping Setup</div>
+      </div>
+      <div class="gallery-thumb" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Extinguishers">
+        <div class="thumb-caption">Extinguisher Refilling & Supply</div>
+      </div>
+      <div class="gallery-thumb" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Control Panel">
+        <div class="thumb-caption">Automated Alarm Networks</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Metrics Strip -->
+  <section class="metrics-strip">
+    <div class="metrics-grid">
+      <div class="metric-item" data-aos="zoom-in" data-aos-duration="600">
+        <h3>100%</h3>
+        <p>Statutory Safety Compliance</p>
+      </div>
+      <div class="metric-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+        <h3>500+</h3>
+        <p>Commercial & Industrial Projects</p>
+      </div>
+      <div class="metric-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+        <h3>24/7</h3>
+        <p>Emergency Inspection Support</p>
+      </div>
+      <div class="metric-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+        <h3>Delhi-NCR</h3>
+        <p>Comprehensive Regional Coverage</p>
+      </div>
+    </div>
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <div>
-      <h2>About <span>DS Safety Systems</span></h2>
-      <p>Established with a commitment to safeguarding commercial properties, industries, and residential spaces, DS Safety Systems is a trusted provider of complete fire fighting and security solutions in New Delhi.</p>
-      <p>With years of technical expertise, we specialize in high-grade fire extinguishers, alarm networks, hydrant piping installations, and foolproof Annual Maintenance Contracts (AMC) designed to fulfill all standard safety compliance mandates.</p>
-      <a href="#contact">Learn More</a>
+  <section class="about-section" id="about">
+    <div class="about-content" data-aos="fade-right" data-aos-duration="1000">
+      <h2>Professional Fire Protection & Safety <span>Solutions in New Delhi</span></h2>
+      <p>Operating from Govind Puri, New Delhi (near Kalkaji), DS Safety Systems delivers complete safety engineering, equipment maintenance, and statutory compliance solutions for commercial offices, warehouses, retail hubs, and residential complexes.</p>
+      <p>Our expert technical crew handles everything from high-pressure hydrant network installations to standard fire extinguisher refilling and comprehensive Annual Maintenance Contracts (AMC).</p>
+      <div class="about-badges">
+        <div class="badge-item"><span>✓</span> Certified Safety Norms</div>
+        <div class="badge-item"><span>✓</span> 24/7 Rapid Response</div>
+        <div class="badge-item"><span>✓</span> Experienced Technicians</div>
+        <div class="badge-item"><span>✓</span> Affordable AMC Plans</div>
+      </div>
+      <a href="#contact" class="btn-action">Speak With Our Experts</a>
     </div>
-    <div>
-      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Safety and Engineering">
+    <div class="about-image-wrapper" data-aos="fade-left" data-aos-duration="1000">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Safety Engineering Team">
     </div>
   </section>
 
   <!-- Products & Services Section -->
-  <section id="products">
-    <div>
+  <section class="services-section" id="services">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="800">
       <h2>Our Core <span>Products & Services</span></h2>
-      <p>Explore our extensive range of certified fire safety equipment and maintenance operations.</p>
+      <p>Engineered to protect lives and properties with absolute compliance and uncompromised quality.</p>
     </div>
-    <div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Fire Extinguishers">
-        <div>
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Extinguishers">
+        <div class="service-card-body">
           <h3>Fire Extinguishers</h3>
-          <p>ABC Powder, CO2, Foam, and Clean Agent extinguishers supplied and refilled with strict adherence to safety norms.</p>
-          <a href="#contact">Inquire Now &rarr;</a>
+          <p>ABC Powder, CO2, Foam, and Clean Agent extinguishers supplied, pressure tested, and refilled according to safety codes.</p>
+          <a href="#contact" class="card-link">Request Quote &rarr;</a>
         </div>
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Fire Alarm Systems">
-        <div>
+      <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Alarms">
+        <div class="service-card-body">
           <h3>Fire Alarm Systems</h3>
-          <p>Advanced smoke detectors, manual call points, and 24/7 automated monitoring network setup for early hazard detection.</p>
-          <a href="#contact">Inquire Now &rarr;</a>
+          <p>Advanced smoke detectors, manual call points, and intelligent control panels set up for immediate hazard alerts.</p>
+          <a href="#contact" class="card-link">Request Quote &rarr;</a>
         </div>
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="Hydrant Systems">
-        <div>
+      <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="Hydrants">
+        <div class="service-card-body">
           <h3>Hydrant & Sprinklers</h3>
-          <p>Robust water hydrant setups, landing valves, hose reels, and automatic sprinkler installations for large-scale buildings.</p>
-          <a href="#contact">Inquire Now &rarr;</a>
+          <p>Heavy-duty water hydrant setups, landing valves, hose reels, and automatic overhead sprinkler networks for buildings.</p>
+          <a href="#contact" class="card-link">Request Quote &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Why Choose Us Section -->
-  <section>
-    <div>
-      <h2>Why Choose <span>DS Safety Systems</span></h2>
-      <p>What makes us the preferred fire protection partner in New Delhi.</p>
+  <section class="advantages-section">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+      <h2 style="color: #ffffff;">Why Choose <span>DS Safety Systems</span></h2>
+      <p style="color: #94a3b8;">Your reliable fire protection partner throughout Delhi-NCR.</p>
     </div>
-    <div>
-      <div>
-        <div>🛡️</div>
-        <div>
-          <h3>Certified Compliance</h3>
-          <p>All products and execution methodologies strictly comply with national and local safety regulations.</p>
-        </div>
+    <div class="advantages-grid">
+      <div class="advantage-box" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <div class="advantage-icon">🛡️</div>
+        <h3>Statutory Compliance</h3>
+        <p>All equipment and installations match strict government safety mandates and fire insurance policies.</p>
       </div>
-      <div>
-        <div>24</div>
-        <div>
-          <h3>Rapid Response Support</h3>
-          <p>Our technical team is on standby to handle emergencies, urgent repairs, and maintenance inquiries.</p>
-        </div>
+      <div class="advantage-box" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+        <div class="advantage-icon">⚡</div>
+        <h3>Prompt Site Support</h3>
+        <p>Quick deployment across South Delhi and surrounding regions for emergency repairs and inspections.</p>
       </div>
-      <div>
-        <div>🤝</div>
-        <div>
-          <h3>Trusted Expertise</h3>
-          <p>Years of experience protecting major commercial properties, offices, and residential spaces across New Delhi.</p>
-        </div>
+      <div class="advantage-box" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+        <div class="advantage-icon">🤝</div>
+        <h3>Complete AMC Contracts</h3>
+        <p>Regular scheduled maintenance checkups providing complete operational readiness year-round.</p>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section>
-    <div>
-      <h2>Client <span>Testimonials</span></h2>
-      <p>Hear what our valued clients have to say about our safety solutions and AMC services.</p>
-    </div>
-    <div>
-      <div>
-        <div>
-          <div>★★★★★</div>
-          <p>DS Safety Systems handles our office building's fire safety AMC seamlessly. Their team is prompt, knowledgeable, and professional.</p>
-        </div>
-        <div>
-          <h4>Rajesh Sharma</h4>
-          <p>Facility Manager, Vertex Enterprises</p>
-        </div>
+  <!-- FAQ Section -->
+  <section class="knowledge-section" id="faq">
+    <div class="knowledge-wrapper">
+      <div class="knowledge-info" data-aos="fade-right" data-aos-duration="1000">
+        <h2>Fire Safety Knowledge & <span>Compliance FAQ</span></h2>
+        <p>Understanding statutory fire safety obligations is essential for every commercial establishment, office building, and warehouse in New Delhi.</p>
+        <p>Explore answers to common questions regarding equipment upkeep, legal mandates, and safety protocols.</p>
       </div>
-      <div>
-        <div>
-          <div>★★★★★</div>
-          <p>Installed complete fire extinguishers and alarm systems for our warehouse. Exceptional service quality and fair pricing.</p>
+      <div class="accordion" data-aos="fade-left" data-aos-duration="1000">
+        <div class="accordion-item active">
+          <div class="accordion-header">How often must fire extinguishers be inspected and refilled? <span>-</span></div>
+          <div class="accordion-body">
+            Fire extinguishers require a visual inspection monthly and professional inspection annually. Refilling is mandatory after use or per manufacturer standards.
+          </div>
         </div>
-        <div>
-          <h4>Amit Verma</h4>
-          <p>Operations Head, Metro Infrastructure</p>
+        <div class="accordion-item">
+          <div class="accordion-header">What services are covered under your AMC? <span>+</span></div>
+          <div class="accordion-body">
+            Our comprehensive AMC covers routine scheduled visits, pressure testing, alarm checks, valve maintenance, and compliance log issuance.
+          </div>
         </div>
-      </div>
-      <div>
-        <div>
-          <div>★★★★★</div>
-          <p>Reliable partner for all safety compliances. Their regular maintenance checks give us total peace of mind.</p>
-        </div>
-        <div>
-          <h4>Priya Malhotra</h4>
-          <p>Society President, Apex Towers</p>
+        <div class="accordion-item">
+          <div class="accordion-header">How quickly can your team arrive for an emergency in South Delhi? <span>+</span></div>
+          <div class="accordion-body">
+            Because our office is based in Govind Puri, near Kalkaji, our technical crew can dispatch and arrive across South Delhi within hours.
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <div>
-      <div>
+  <section class="contact-section" id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-details" data-aos="fade-right" data-aos-duration="1000">
         <h2>Get In Touch With <span>Our Experts</span></h2>
-        <p>Reach out to us for fire safety equipment inquiries, installation requests, or Annual Maintenance Contracts. We are ready to assist you.</p>
-        <div>
-          <div>
-            <img src="pin.png" alt="Location">
-            <span>Govind Puri, New Delhi, India</span>
+        <p>Reach out to us for fire safety equipment inquiries, site audit bookings, or Annual Maintenance Contracts.</p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="icon-box">📍</div>
+            <div>
+              <h4>Office Location</h4>
+              <p>Govind Puri, New Delhi (Near Kalkaji)</p>
+            </div>
           </div>
-          <div>
-            <img src="call.png" alt="Phone">
-            <a href="tel:9818701683">9818701683</a>
+          <div class="contact-item">
+            <div class="icon-box">📞</div>
+            <div>
+              <h4>Phone Number</h4>
+              <p><a href="tel:9818701683" style="font-weight:700;">9818701683</a></p>
+            </div>
           </div>
-          <div>
-            <img src="email.png" alt="Email">
-            <a href="mailto:Dssafetysystems@hotmail.com">Dssafetysystems@hotmail.com</a>
+          <div class="contact-item">
+            <div class="icon-box">✉️</div>
+            <div>
+              <h4>Email Address</h4>
+              <p><a href="mailto:Dssafetysystems@hotmail.com">Dssafetysystems@hotmail.com</a></p>
+            </div>
           </div>
         </div>
-        <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.5!2d77.25!3d28.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zGovindpuri%2C+New+Delhi!5e0!3m2!1sen!2sin!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.5!2d77.25!3d28.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zGovindpuri%2C+New+Delhi!5e0!3m2!1sen!2sin!4v1600000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
-
-      <div>
-        <h3>Request a Free Quote</h3>
-        <p>Fill out the form and our team will get back to you shortly.</p>
-        <form id="quoteForm">
-          <div>
+      <div class="quote-form-container" data-aos="fade-left" data-aos-duration="1000">
+        <h3 style="font-family:'Outfit',sans-serif; font-size:24px; margin-bottom:5px;">Request a Free Quote</h3>
+        <p style="color:var(--gray); font-size:14px; margin-bottom:15px;">Fill out the form below to connect with our team.</p>
+        <form class="quote-form" id="quoteForm">
+          <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your Name">
+            <input type="text" id="name" required placeholder="Your Name">
           </div>
-          <div>
+          <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required placeholder="Your Phone">
+            <input type="tel" id="phone" required placeholder="Your Phone">
           </div>
-          <div>
+          <div class="form-group full">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="Your Email">
+            <input type="email" id="email" required placeholder="Your Email">
           </div>
-          <div>
-            <label for="message">Message / Requirement Details</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your requirements..."></textarea>
+          <div class="form-group full">
+            <label for="message">Requirement Details</label>
+            <textarea id="message" required placeholder="Tell us about your property and requirements..."></textarea>
           </div>
-          <button type="submit">Submit Request</button>
-          <div id="formStatus">Thank you! Your message has been sent successfully.</div>
+          <button type="submit" class="btn-submit">Submit Request</button>
+          <div class="form-alert" id="formAlert">Thank you! Your message has been sent successfully.</div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Floating Click-to-Call Button -->
-  <a href="tel:9818701683" title="Call Us Now">
-    <img src="call.png" alt="Call">
-  </a>
+  <!-- Floating Call Button -->
+  <a href="tel:9818701683" class="floating-call" title="Call Us Now">📞</a>
 
-  <!-- Footer Section -->
-  <footer>
-    <div>
-      <div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
         <h3>DS Safety Systems</h3>
-        <p>Your trusted partner for certified fire protection solutions, equipment supply, installation, and comprehensive AMC services in New Delhi.</p>
+        <p>Your trusted partner for certified fire protection solutions, equipment supply, professional installations, and comprehensive AMC services in New Delhi.</p>
       </div>
-      <div>
+      <div class="footer-col">
         <h3>Quick Links</h3>
-        <ul>
+        <ul class="footer-col-links">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#products">Products & Services</a></li>
+          <li><a href="#services">Products & Services</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <h3>Our Solutions</h3>
-        <ul>
-          <li><a href="#products">Fire Extinguishers</a></li>
-          <li><a href="#products">Fire Alarm Systems</a></li>
-          <li><a href="#products">Hydrant & Sprinkler Systems</a></li>
-          <li><a href="#products">Annual Maintenance (AMC)</a></li>
+        <ul class="footer-col-links">
+          <li><a href="#services">Fire Extinguishers</a></li>
+          <li><a href="#services">Fire Alarm Systems</a></li>
+          <li><a href="#services">Hydrant & Sprinklers</a></li>
+          <li><a href="#services">Annual Maintenance (AMC)</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <h3>Contact Info</h3>
-        <div>
-          <div>
-            <img src="pin.png" alt="Location">
-            <span>Govind Puri, New Delhi</span>
-          </div>
-          <div>
-            <img src="call.png" alt="Phone">
-            <a href="tel:9818701683">9818701683</a>
-          </div>
-          <div>
-            <img src="email.png" alt="Email">
-            <a href="mailto:Dssafetysystems@hotmail.com">Dssafetysystems@hotmail.com</a>
-          </div>
-        </div>
+        <ul class="footer-col-links">
+          <li>📍 Govind Puri, New Delhi (Kalkaji)</li>
+          <li>📞 <a href="tel:9818701683" style="color:inherit; font-weight:600;">9818701683</a></li>
+          <li>✉️ <a href="mailto:Dssafetysystems@hotmail.com" style="color:inherit;">Dssafetysystems@hotmail.com</a></li>
+        </ul>
       </div>
     </div>
-    <div>
+    <div class="footer-bottom">
       <p>&copy; 2026 DS Safety Systems. All Rights Reserved.</p>
-      <div>
+      <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript for Interactivity -->
+  <!-- JavaScript Utilities -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Mobile Menu Toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const headerGroup = document.getElementById('header-group');
+    AOS.init({ once: true, offset: 100 });
 
-    mobileMenu.addEventListener('click', () => {
-      headerGroup.classList.toggle('active');
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinksGroup = document.getElementById('navLinksGroup');
+    mobileMenuToggle.addEventListener('click', () => {
+      navLinksGroup.classList.toggle('active');
     });
 
-    // Contact Form Submission Simulation
-    const quoteForm = document.getElementById('quoteForm');
-    const formStatus = document.getElementById('formStatus');
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
 
-    quoteForm.addEventListener('submit', function(e) {
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(acc => {
+          acc.classList.remove('active');
+          acc.querySelector('span').textContent = '+';
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          header.querySelector('span').textContent = '-';
+        }
+      });
+    });
+
+    const quoteForm = document.getElementById('quoteForm');
+    const formAlert = document.getElementById('formAlert');
+    quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      formStatus.style.display = 'block';
+      formAlert.classList.add('active');
       quoteForm.reset();
-      setTimeout(() => {
-        formStatus.style.display = 'none';
-      }, 5000);
+      setTimeout(() => formAlert.classList.remove('active'), 5000);
     });
   </script>
 </body>
