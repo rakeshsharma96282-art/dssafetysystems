@@ -151,11 +151,6 @@ html, body {
 
     .hero-banner-container {
       width: 100%;
-      max-width: 1150px;
-      margin: 0 auto 30px auto;
-    }
-
-    .hero-banner-img {
       width: 100%;
       height: auto;
       border-radius: 10px;
@@ -171,7 +166,12 @@ html, body {
       display: flex;
       gap: 15px;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: wrap;    max-width: 1150px;
+      margin: 0 auto 30px auto;
+    }
+
+    .hero-banner-img {
+  
     }
 /* Explore Products: Red Glow Pill Button */
 .btn-primary {
@@ -414,5 +414,23 @@ html, body {
 
   .btn-primary, .btn-secondary {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 10px 0;
+  }
+  
+  .hero-banner-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
   }
 }
