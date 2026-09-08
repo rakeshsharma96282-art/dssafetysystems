@@ -221,7 +221,7 @@ html, body {
   position: relative;
   background-color: var(--darker-bg);
   color: var(--text-main);
-  padding: 50px 20px 70px 20px;
+  padding: 30px 20px 50px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -233,19 +233,21 @@ html, body {
 .hero-banner-container {
   width: 100%;
   max-width: 1150px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
   position: relative;
 }
 
-.hero-banner-img {
+.desktop-img {
+  display: block;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-  object-fit: cover;
-  display: block;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
+.mobile-img {
+  display: none;
+}
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
@@ -695,5 +697,31 @@ textarea.form-control {
   
   .top-quote-btn, .search-btn {
     max-width: 100%;
+  }
+}
+/* Responsive Image Switcher Rules */
+@media (max-width: 768px) {
+  .desktop-img {
+    display: none !important;
+  }
+  .mobile-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+  }
+  .mobile-img {
+    display: none !important;
   }
 }
