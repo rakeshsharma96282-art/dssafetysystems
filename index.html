@@ -415,13 +415,36 @@
       line-height: 1.6;
       margin-bottom: 25px;
     }
+/* Products & Services Section */
+    <script>
+  document.querySelectorAll('.product-card').forEach(card => {
+    const minusBtn = card.querySelector('.minus');
+    const plusBtn = card.querySelector('.plus');
+    const qtyInput = card.querySelector('.qty-input');
+    const capButtons = card.querySelectorAll('.cap-btn');
 
-    /* Products & Services Section */
-    .services-section {
-      padding: 90px 25px;
-      background-color: #f9f9f9;
-      text-align: center;
+    capButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        capButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    if (minusBtn && plusBtn && qtyInput) {
+      plusBtn.addEventListener('click', () => {
+        let currentVal = parseInt(qtyInput.value) || 1;
+        qtyInput.value = currentVal + 1;
+      });
+
+      minusBtn.addEventListener('click', () => {
+        let currentVal = parseInt(qtyInput.value) || 1;
+        if (currentVal > 1) {
+          qtyInput.value = currentVal - 1;
+        }
+      });
     }
+  });
+</script>
 
     .section-title-container {
       max-width: 600px;
