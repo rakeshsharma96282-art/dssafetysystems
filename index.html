@@ -1,1435 +1,1051 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DS Safety Systems - Certified Fire Protection, Equipment Supply & AMC Services in New Delhi</title>
-  <meta name="description" content="DS Safety Systems based in Govind Puri, New Delhi (near Kalkaji) offers professional fire fighting solutions, fire extinguishers, hydrants, alarms, and complete AMC safety services. Call 9818701683.">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- AOS Animation Library CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <style>
-    /* ==========================================================================
-       1. CSS CUSTOM PROPERTIES & DESIGN SYSTEM
-       ========================================================================== */
-    :root {
-      --primary: #d92323;
-      --primary-dark: #b51b1b;
-      --primary-light: #fef2f2;
-      --secondary: #1e293b;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --gray: #64748b;
-      --gray-light: #f1f5f9;
-      --border-color: #e2e8f0;
-      --success: #10b981;
-      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* ==========================================================================
-       2. RESET & GLOBAL BASE STYLES
-       ========================================================================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--secondary);
-      background-color: #ffffff;
-      line-height: 1.75;
-      overflow-x: hidden;
-      font-size: 16px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Outfit', sans-serif;
-      color: var(--dark);
-      line-height: 1.3;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: var(--transition);
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 5%;
-    }
-
-    /* ==========================================================================
-       3. TOP UTILITY BAR
-       ========================================================================== */
-    .top-bar {
-      background-color: var(--dark);
-      color: #ffffff;
-      padding: 12px 5%;
-      font-size: 13px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .top-bar-left {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      align-items: center;
-    }
-
-    .top-bar-left span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .top-bar-left a {
-      color: #ffffff;
-      text-decoration: none;
-      transition: var(--transition);
-    }
-
-    .top-bar-left a:hover {
-      color: var(--primary);
-    }
-
-    .top-bar-right {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .emergency-badge {
-      background-color: var(--primary);
-      color: white;
-      padding: 3px 10px;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    /* ==========================================================================
-       4. HEADER & NAVIGATION
-       ========================================================================== */
-    .site-header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-sm);
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 5%;
-      transition: var(--transition);
-    }
-
-    .site-header.scrolled {
-      padding: 12px 5%;
-      box-shadow: var(--shadow-md);
-      background: rgba(255, 255, 255, 1);
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-
-    .logo-icon {
-      background: var(--primary);
-      color: #fff;
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 20px;
-      box-shadow: 0 4px 10px rgba(217, 35, 35, 0.3);
-    }
-
-    .logo-container h1 {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.5px;
-    }
-
-    .logo-container h1 span {
-      color: var(--primary);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--secondary);
-      font-weight: 500;
-      font-size: 15px;
-      transition: var(--transition);
-      position: pointer;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-      color: var(--primary);
-    }
-
-    .btn-quote-header {
-      background-color: var(--primary);
-      color: #ffffff !important;
-      padding: 11px 24px;
-      border-radius: 6px;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(217, 35, 35, 0.25);
-      transition: var(--transition);
-    }
-
-    .btn-quote-header:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(217, 35, 35, 0.35);
-    }
-
-    .menu-toggle {
-      display: none;
-      cursor: pointer;
-      font-size: 28px;
-      color: var(--dark);
-    }
-
-    /* ==========================================================================
-       5. HERO & MULTI-PHOTO SHOWCASE GALLERY SECTION
-       ========================================================================== */
-    .hero-showcase-section {
-      width: 100%;
-      background-color: #0b0f19;
-      padding: 50px 5%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-main-banner {
-      width: 100%;
-      max-height: 75vh;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-      margin-bottom: 25px;
-      background: #000;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .hero-main-banner img {
-      width: 100%;
-      height: auto;
-      max-height: 75vh;
-      display: block;
-      object-fit: contain;
-      margin: 0 auto;
-    }
-
-    .hero-sub-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .gallery-thumb {
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 200px;
-      border: 2px solid rgba(255, 255, 255, 0.12);
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-    }
-
-    .gallery-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: var(--transition);
-    }
-
-    .gallery-thumb:hover {
-      border-color: var(--primary);
-      transform: translateY(-4px);
-    }
-
-    .gallery-thumb:hover img {
-      transform: scale(1.08);
-    }
-
-    .gallery-thumb .thumb-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
-      color: #fff;
-      padding: 14px 18px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    /* ==========================================================================
-       6. TRUST STATS STRIP
-       ========================================================================== */
-    .stats-strip {
-      background-color: var(--primary);
-      color: white;
-      padding: 35px 5%;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-
-    .stat-box h3 {
-      font-size: 36px;
-      font-weight: 800;
-      color: white;
-      margin-bottom: 5px;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .stat-box p {
-      font-size: 15px;
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
-    }
-
-    /* ==========================================================================
-       7. ABOUT SECTION
-       ========================================================================== */
-    .about-section {
-      padding: 100px 5%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      background-color: var(--light);
-    }
-
-    .about-content h2 {
-      font-size: 40px;
-      font-weight: 700;
-      margin-bottom: 22px;
-      line-height: 1.2;
-    }
-
-    .about-content h2 span {
-      color: var(--primary);
-    }
-
-    .about-content p {
-      color: var(--gray);
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-
-    .about-badges {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 25px 0 35px;
-    }
-
-    .badge-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--dark);
-    }
-
-    .badge-item span {
-      background-color: var(--primary-light);
-      color: var(--primary);
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-
-    .btn-primary-custom {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 15px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      display: inline-block;
-      box-shadow: 0 4px 15px rgba(217, 35, 35, 0.3);
-      transition: var(--transition);
-    }
-
-    .btn-primary-custom:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(217, 35, 35, 0.4);
-    }
-
-    .about-image-wrapper {
-      position: relative;
-    }
-
-    .about-image-wrapper img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: var(--shadow-xl);
-    }
-
-    /* ==========================================================================
-       8. PRODUCTS & SERVICES SECTION
-       ========================================================================== */
-    .products-section {
-      padding: 100px 5%;
-      text-align: center;
-      background-color: #ffffff;
-    }
-
-    .section-title-container {
-      max-width: 750px;
-      margin: 0 auto 60px;
-    }
-
-    .section-title-container h2 {
-      font-size: 40px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    .section-title-container h2 span {
-      color: var(--primary);
-    }
-
-    .section-title-container p {
-      color: var(--gray);
-      font-size: 17px;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 35px;
-      text-align: left;
-    }
-
-    .product-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--primary);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-    }
-
-    .product-card-body {
-      padding: 30px;
-    }
-
-    .product-card-body h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .product-card-body p {
-      color: var(--gray);
-      font-size: 15px;
-      margin-bottom: 22px;
-      line-height: 1.6;
-    }
-
-    .card-link {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: var(--transition);
-    }
-
-    .card-link:hover {
-      gap: 12px;
-      color: var(--primary-dark);
-    }
-
-    /* ==========================================================================
-       9. WHY CHOOSE US SECTION
-       ========================================================================== */
-    .why-us-section {
-      padding: 100px 5%;
-      background-color: var(--dark);
-      color: #ffffff;
-      text-align: center;
-    }
-
-    .why-us-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-      margin-top: 60px;
-      text-align: left;
-    }
-
-    .why-us-feature {
-      background: rgba(255, 255, 255, 0.04);
-      padding: 40px 35px;
-      border-radius: 12px;
-      border-left: 4px solid var(--primary);
-      transition: var(--transition);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .why-us-feature:hover {
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateY(-5px);
-    }
-
-    .why-us-icon {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    .why-us-text h3 {
-      color: #ffffff;
-      margin-bottom: 12px;
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    .why-us-text p {
-      color: #94a3b8;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       10. DETAILED KNOWLEDGE & COMPLIANCE SECTION
-       ========================================================================== */
-    .knowledge-section {
-      padding: 100px 5%;
-      background-color: var(--light);
-    }
-
-    .knowledge-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .knowledge-content h2 {
-      font-size: 38px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .knowledge-content h2 span {
-      color: var(--primary);
-    }
-
-    .knowledge-content p {
-      color: var(--gray);
-      margin-bottom: 20px;
-      font-size: 15px;
-    }
-
-    .accordion {
-      margin-top: 30px;
-    }
-
-    .accordion-item {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      margin-bottom: 15px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .accordion-header {
-      padding: 18px 22px;
-      font-weight: 600;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #ffffff;
-      transition: var(--transition);
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .accordion-header:hover {
-      color: var(--primary);
-    }
-
-    .accordion-body {
-      padding: 0 22px 18px;
-      color: var(--gray);
-      font-size: 15px;
-      display: none;
-      line-height: 1.6;
-    }
-
-    .accordion-item.active .accordion-body {
-      display: block;
-    }
-
-    /* ==========================================================================
-       11. TESTIMONIALS SECTION
-       ========================================================================== */
-    .testimonials-section {
-      padding: 100px 5%;
-      text-align: center;
-      background-color: #ffffff;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 35px;
-      margin-top: 50px;
-    }
-
-    .testimonial-card {
-      background: var(--light);
-      padding: 35px;
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .stars {
-      color: #f59e0b;
-      margin-bottom: 15px;
-      letter-spacing: 3px;
-      font-size: 18px;
-    }
-
-    .testimonial-text {
-      font-style: italic;
-      color: var(--gray);
-      font-size: 15px;
-      margin-bottom: 25px;
-      line-height: 1.7;
-    }
-
-    .testimonial-author h4 {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--dark);
-    }
-
-    .testimonial-author p {
-      font-size: 13px;
-      color: var(--gray);
-    }
-
-    /* ==========================================================================
-       12. CONTACT SECTION
-       ========================================================================== */
-    .contact-section {
-      padding: 100px 5%;
-      background-color: var(--light);
-    }
-
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-
-    .contact-info-side h2 {
-      font-size: 40px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .contact-info-side h2 span {
-      color: var(--primary);
-    }
-
-    .contact-info-side p {
-      color: var(--gray);
-      margin-bottom: 35px;
-      font-size: 16px;
-    }
-
-    .contact-details-list {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-      margin-bottom: 40px;
-    }
-
-    .contact-detail-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      font-size: 15px;
-    }
-
-    .contact-detail-item .icon-box {
-      background: var(--primary-light);
-      color: var(--primary);
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .contact-detail-item div h4 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 3px;
-    }
-
-    .contact-detail-item div p, .contact-detail-item div a {
-      color: var(--gray);
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .contact-detail-item div a:hover {
-      color: var(--primary);
-    }
-
-    .map-container {
-      width: 100%;
-      height: 250px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .contact-container {
-      background: #ffffff;
-      padding: 50px;
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .contact-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-top: 30px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .form-group.full-width {
-      grid-column: span 2;
-    }
-
-    .form-group label {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--dark);
-    }
-
-    .form-group input, .form-group textarea {
-      padding: 15px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 15px;
-      outline: none;
-      transition: var(--transition);
-      background-color: var(--light);
-    }
-
-    .form-group input:focus, .form-group textarea:focus {
-      border-color: var(--primary);
-      background-color: #ffffff;
-      box-shadow: 0 0 0 4px rgba(217, 35, 35, 0.1);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      height: 140px;
-    }
-
-    .btn-submit {
-      grid-column: span 2;
-      background-color: var(--primary);
-      color: #ffffff;
-      padding: 16px;
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 16px;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(217, 35, 35, 0.3);
-    }
-
-    .btn-submit:hover {
-      background-color: var(--primary-dark);
-      box-shadow: 0 6px 20px rgba(217, 35, 35, 0.4);
-    }
-
-    .form-status {
-      grid-column: span 2;
-      display: none;
-      padding: 14px;
-      background-color: #d1fae5;
-      color: #065f46;
-      border-radius: 8px;
-      text-align: center;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .form-status.success {
-      display: block;
-    }
-
-    /* ==========================================================================
-       13. FLOATING CALL BUTTON
-       ========================================================================== */
-    .floating-call-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #25d366;
-      color: white;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-      z-index: 999;
-      transition: var(--transition);
-      font-size: 28px;
-      text-decoration: none;
-    }
-
-    .floating-call-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
-    }
-
-    /* ==========================================================================
-       14. FOOTER
-       ========================================================================== */
-    .site-footer {
-      background-color: var(--dark);
-      color: #94a3b8;
-      padding: 80px 5% 30px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .footer-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 45px;
-      margin-bottom: 60px;
-    }
-
-    .footer-col h3 {
-      color: #ffffff;
-      font-size: 19px;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    .footer-col p {
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-links a {
-      color: #94a3b8;
-      text-decoration: none;
-      font-size: 15px;
-      transition: var(--transition);
-    }
-
-    .footer-links a:hover {
-      color: #ffffff;
-      padding-left: 6px;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .footer-bottom-links a {
-      color: #94a3b8;
-      text-decoration: none;
-    }
-
-    .footer-bottom-links a:hover {
-      color: #ffffff;
-    }
-
-    /* ==========================================================================
-       15. RESPONSIVE DESIGN ADJUSTMENTS
-       ========================================================================== */
-    @media (max-width: 992px) {
-      .about-section, .contact-wrapper, .knowledge-wrapper {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        padding: 12px;
-      }
-      .top-bar-left, .top-bar-right {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        padding: 30px;
-        box-shadow: var(--shadow-xl);
-        border-top: 1px solid var(--border-color);
-        gap: 20px;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .hero-sub-gallery {
-        grid-template-columns: 1fr;
-      }
-      .contact-container {
-        padding: 30px;
-      }
-      .footer-bottom {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS Safety Systems | Complete Fire Safety Solutions</title>
+    <style>
+        /* ==========================================================================
+           1. CSS RESET & GLOBAL VARIABLES
+           ========================================================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-deep: #0a0c10;
+            --bg-surface: #12161f;
+            --bg-card: #181d28;
+            --border-color: rgba(220, 38, 38, 0.25);
+            --border-glow: rgba(239, 68, 68, 0.45);
+            --primary-red: #ef4444;
+            --primary-red-hover: #dc2626;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --shadow-subtle: 0 10px 35px rgba(0, 0, 0, 0.6), 0 0 18px rgba(220, 38, 38, 0.12);
+            --shadow-card: 0 8px 25px rgba(0, 0, 0, 0.4);
+            --radius-lg: 28px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            --container-width: min(100% - 32px, 1400px);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: var(--container-width);
+            margin-inline: auto;
+        }
+
+        /* ==========================================================================
+           2. HEADER & NAVIGATION
+           ========================================================================== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(10, 12, 16, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            width: 100%;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            max-width: 180px;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            max-height: 50px;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-red);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-red-hover));
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--text-main);
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 11px; }
+        .hamburger span:nth-child(3) { top: 22px; }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 11px;
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 11px;
+        }
+
+        /* ==========================================================================
+           3. HERO SECTION
+           ========================================================================== */
+        .hero-section {
+            padding: 24px 0;
+            width: 100%;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-glow);
+            box-shadow: var(--shadow-subtle);
+            background-color: var(--bg-surface);
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: stretch;
+            min-height: 560px;
+        }
+
+        .hero-content {
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-surface) 0%, #161b25 100%);
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 3.2vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-red-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(239, 68, 68, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* ==========================================================================
+           4. SECTION HEADINGS & COMMON STYLES
+           ========================================================================== */
+        section {
+            padding: 80px 0;
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-red);
+            margin-bottom: 12px;
+            background: rgba(239, 68, 68, 0.1);
+            padding: 6px 14px;
+            border-radius: 50px;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* ==========================================================================
+           5. SERVICES SECTION
+           ========================================================================== */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-glow);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
+        .card-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary-red);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s ease;
+        }
+
+        .card-link:hover {
+            gap: 10px;
+        }
+
+        /* ==========================================================================
+           6. PRODUCTS SECTION
+           ========================================================================== */
+        .products-section {
+            background-color: rgba(18, 22, 31, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* ==========================================================================
+           7. ABOUT & WHY CHOOSE US
+           ========================================================================== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-box {
+            background-color: var(--bg-surface);
+            padding: 35px 30px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: rgba(239, 68, 68, 0.15);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .feature-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           8. CTA BANNER SECTION
+           ========================================================================== */
+        .cta-banner-wrapper {
+            padding: 40px 0 80px;
+            width: 100%;
+        }
+
+        .cta-banner {
+            background: linear-gradient(135deg, #181d28 0%, #11151f 100%);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-glow);
+            box-shadow: var(--shadow-subtle);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner h2 {
+            font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .cta-banner p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.05rem;
+        }
+
+        /* ==========================================================================
+           9. FOOTER
+           ========================================================================== */
+        .site-footer {
+            background-color: #07090c;
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0 30px;
+            width: 100%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================================================
+           10. RESPONSIVE MEDIA QUERIES & BREAKPOINTS
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content {
+                padding: 40px 30px;
+                text-align: center;
+                align-items: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image-wrapper {
+                min-height: 300px;
+                max-height: 400px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--bg-deep);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 50px;
+                gap: 24px;
+                transition: left 0.3s ease;
+                border-top: 1px solid var(--border-color);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-section {
+                padding: 16px 0;
+            }
+
+            .hero-container {
+                border-radius: var(--radius-md);
+            }
+
+            .hero-content {
+                padding: 30px 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .cta-banner {
+                padding: 40px 20px;
+                border-radius: var(--radius-md);
+            }
+        }
+
+        /* Specific mobile optimization for 320px, 360px, 375px, 390px, 430px */
+        @media (max-width: 480px) {
+            :root {
+                --container-width: min(100% - 24px, 1400px);
+            }
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .card-body {
+                padding: 18px;
+            }
+            .feature-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Top Info Bar -->
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <span>📍 Govind Puri, New Delhi (Near Kalkaji)</span>
-      <span>📞 Call Now: <a href="tel:9818701683" style="font-weight:700;">9818701683</a></span>
-      <span>✉️ <a href="mailto:Dssafetysystems@hotmail.com">Dssafetysystems@hotmail.com</a></span>
-    </div>
-    <div class="top-bar-right">
-      <span>⏰ Mon - Sun: 9:30 AM - 7:30 PM</span>
-      <span class="emergency-badge">24/7 Support</span>
-    </div>
-  </div>
+    <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo-container">
+                <img src="/images/logo.png" alt="DS Safety Systems Logo">
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="nav-cta">Get a Quote</a>
+            </nav>
 
-  <!-- Header Section -->
-  <header class="site-header" id="mainHeader">
-    <a href="#" class="logo-container">
-      <div class="logo-icon">DS</div>
-      <h1>DS <span>Safety Systems</span></h1>
-    </a>
-    <div class="menu-toggle" id="mobile-menu">☰</div>
-    <ul class="nav-links" id="header-group">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#products">Products & Services</a></li>
-      <li><a href="#compliance">Safety Hub</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#contact" class="btn-quote-header">Get Quote</a></li>
-    </ul>
-  </header>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-  <!-- Hero & Work Showcase Gallery Section (Exact User Images & Work Display) -->
-  <section class="hero-showcase-section">
-    <!-- Main Banner using exact filename provided by user -->
-    <div class="hero-main-banner" data-aos="fade-up" data-aos-duration="800">
-      <img src="hero-banner.jpg.png.png" alt="DS Safety Systems Fire Protection Banner" fetchpriority="high">
-    </div>
-    
-    <!-- Secondary Work Showcase Photos Sub-Gallery -->
-    <div class="hero-sub-gallery">
-      <div class="gallery-thumb" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-        <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="Fire Hydrant System Installation Work">
-        <div class="thumb-caption">Industrial Hydrant Piping Setup</div>
-      </div>
-      <div class="gallery-thumb" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Fire Extinguisher Supply and Refilling">
-        <div class="thumb-caption">Extinguisher Refilling & Maintenance</div>
-      </div>
-      <div class="gallery-thumb" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Automatic Fire Alarm Control Panel">
-        <div class="thumb-caption">Automated Alarm Networks</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust Stats Strip -->
-  <section class="stats-strip">
-    <div class="stats-grid">
-      <div class="stat-box" data-aos="zoom-in" data-aos-duration="600">
-        <h3>100%</h3>
-        <p>Statutory Safety Compliance</p>
-      </div>
-      <div class="stat-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
-        <h3>500+</h3>
-        <p>Commercial & Industrial Projects</p>
-      </div>
-      <div class="stat-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
-        <h3>24/7</h3>
-        <p>Emergency Inspection Support</p>
-      </div>
-      <div class="stat-box" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
-        <h3>Delhi-NCR</h3>
-        <p>Comprehensive Coverage Area</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about-section" id="about">
-    <div class="about-content" data-aos="fade-right" data-aos-duration="1000">
-      <h2>Professional Fire Fighting & Safety <span>Solutions in New Delhi</span></h2>
-      <p>Operating from Govind Puri, New Delhi (near Kalkaji), DS Safety Systems has established itself as an industry leader in comprehensive fire protection engineering, equipment supply, and statutory maintenance.</p>
-      <p>We protect commercial office spaces, manufacturing units, retail establishments, educational institutions, and residential housing complexes with state-of-the-art safety mechanisms built to safeguard human lives and valuable assets.</p>
-      
-      <div class="about-badges">
-        <div class="badge-item"><span>✓</span> Certified Equipment</div>
-        <div class="badge-item"><span>✓</span> Expert Engineers</div>
-        <div class="badge-item"><span>✓</span> Annual Maintenance (AMC)</div>
-        <div class="badge-item"><span>✓</span> Rapid Turnaround</div>
-      </div>
-
-      <a href="#contact" class="btn-primary-custom">Schedule a Site Audit</a>
-    </div>
-    
-    <div class="about-image-wrapper" data-aos="fade-left" data-aos-duration="1000">
-      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Professional Safety Engineering Team">
-    </div>
-  </section>
-
-  <!-- Products & Services Section -->
-  <section class="products-section" id="products">
-    <div class="section-title-container" data-aos="fade-up" data-aos-duration="800">
-      <h2>Our Core <span>Products & Services</span></h2>
-      <p>Engineered for maximum reliability, absolute compliance, and prompt operational readiness during any critical fire emergency.</p>
-    </div>
-    <div class="products-grid">
-      <div class="product-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Fire Extinguishers Supply and Refilling">
-        <div class="product-card-body">
-          <h3>Fire Extinguishers</h3>
-          <p>ABC Powder, CO2, Foam, Water, and Clean Agent extinguishers supplied, pressure tested, and refilled according to strict national safety codes.</p>
-          <a href="#contact" class="card-link">Inquire Now &rarr;</a>
-        </div>
-      </div>
-      <div class="product-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Advanced Fire Alarm Systems">
-        <div class="product-card-body">
-          <h3>Fire Alarm Systems</h3>
-          <p>Advanced smoke detectors, thermal sensors, manual call points, and intelligent control panels configured for instant hazard detection.</p>
-          <a href="#contact" class="card-link">Inquire Now &rarr;</a>
-        </div>
-      </div>
-      <div class="product-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-        <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="Hydrant and Sprinkler Networks">
-        <div class="product-card-body">
-          <h3>Hydrant & Sprinklers</h3>
-          <p>Heavy-duty water hydrant setups, landing valves, flexible hose reels, fire pumps, and overhead automatic sprinkler systems.</p>
-          <a href="#contact" class="card-link">Inquire Now &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="why-us-section">
-    <div class="section-title-container" data-aos="fade-up" data-aos-duration="800">
-      <h2 style="color: #ffffff;">Why Choose <span>DS Safety Systems</span></h2>
-      <p style="color: #94a3b8;">Discover what makes us the trusted fire safety partner for businesses across New Delhi.</p>
-    </div>
-    <div class="why-us-grid">
-      <div class="why-us-feature" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <div class="why-us-icon">🛡️</div>
-        <div class="why-us-text">
-          <h3>Statutory Compliance</h3>
-          <p>All products, installations, and maintenance routines adhere strictly to government fire safety mandates and insurance standards.</p>
-        </div>
-      </div>
-      <div class="why-us-feature" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-        <div class="why-us-icon">⚡</div>
-        <div class="why-us-text">
-          <h3>Rapid Local Deployment</h3>
-          <p>Based right in Govind Puri, near Kalkaji, our team is positioned to respond instantly across South Delhi and the wider NCR.</p>
-        </div>
-      </div>
-      <div class="why-us-feature" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
-        <div class="why-us-icon">📋</div>
-        <div class="why-us-text">
-          <h3>Comprehensive AMC Plans</h3>
-          <p>Scheduled preventive maintenance visits, testing, and servicing keeping your infrastructure operational 365 days a year.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Detailed Knowledge & Compliance Hub (Interactive Accordion) -->
-  <section class="knowledge-section" id="compliance">
-    <div class="knowledge-wrapper">
-      <div class="knowledge-content" data-aos="fade-right" data-aos-duration="1000">
-        <h2>Fire Safety Knowledge & <span>Compliance FAQ</span></h2>
-        <p>Understanding statutory fire safety obligations is essential for every commercial establishment, office building, and warehouse in New Delhi.</p>
-        <p>Explore answers to common questions regarding equipment upkeep, legal mandates, and safety protocols.</p>
-      </div>
-
-      <div class="accordion" data-aos="fade-left" data-aos-duration="1000">
-        <div class="accordion-item active">
-          <div class="accordion-header">How often must fire extinguishers be inspected and refilled? <span class="acc-icon">-</span></div>
-          <div class="accordion-body">
-            Fire extinguishers require a visual inspection every month and a certified professional inspection annually. Refilling is mandatory immediately after any use, or as per manufacturer guidelines (typically every 3 to 5 years depending on the agent type like ABC Powder or CO2).
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">What services are included under your Annual Maintenance Contract (AMC)? <span class="acc-icon">+</span></div>
-          <div class="accordion-body">
-            Our comprehensive AMC covers regular scheduled visits, pressure testing of extinguishers, operational testing of fire alarm control panels, valve lubrication for hydrants, minor repairs, and issuance of compliance verification logs for your records.
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">How quickly can your team arrive for an emergency inspection in South Delhi? <span class="acc-icon">+</span></div>
-          <div class="accordion-body">
-            Because our headquarters are centrally located in Govind Puri, New Delhi (near Kalkaji), our technical team can typically dispatch and arrive at sites across South Delhi within hours of an emergency inquiry.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials-section">
-    <div class="section-title-container" data-aos="fade-up" data-aos-duration="800">
-      <h2>Client <span>Testimonials</span></h2>
-      <p>Read feedback from property managers and business owners who trust us with their life safety infrastructure.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-        <div>
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"DS Safety Systems manages our commercial office park's fire safety AMC. Their technicians are extremely knowledgeable, punctual, and thorough."</p>
-        </div>
-        <div class="testimonial-author">
-          <h4>Rajesh Sharma</h4>
-          <p>Facility Director, Apex Corporate Hub</p>
-        </div>
-      </div>
-      <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-        <div>
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"We fitted our entire logistics warehouse with fire hydrants and extinguishers through DS Safety Systems. Uncompromised quality and fair pricing."</p>
-        </div>
-        <div class="testimonial-author">
-          <h4>Amit Verma</h4>
-          <p>Operations Head, Metro Logistics</p>
-        </div>
-      </div>
-      <div class="testimonial-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-        <div>
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Their rapid response during our annual compliance audit saved us considerable time. Truly reliable fire protection partners in New Delhi."</p>
-        </div>
-        <div class="testimonial-author">
-          <h4>Priya Malhotra</h4>
-          <p>Society President, Windsor Towers</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact-section" id="contact">
-    <div class="contact-wrapper">
-      <div class="contact-info-side" data-aos="fade-right" data-aos-duration="1000">
-        <h2>Get In Touch With <span>Our Experts</span></h2>
-        <p>Reach out to us today for fire safety equipment inquiries, installation estimates, or Annual Maintenance Contracts. We are ready to assist you.</p>
-        
-        <div class="contact-details-list">
-          <div class="contact-detail-item">
-            <div class="icon-box">📍</div>
-            <div>
-              <h4>Office Location</h4>
-              <p>Govind Puri, New Delhi (Near Kalkaji)</p>
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Complete Fire Safety Solutions You Can Trust</h1>
+                        <p class="hero-description">Protecting people, property and businesses with reliable fire safety equipment, installation, inspection and maintenance solutions.</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                            <a href="#services" class="btn btn-secondary">Our Services</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="/images/hero.jpg" alt="DS Safety Systems Professional Team & Equipment" class="hero-image">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="contact-detail-item">
-            <div class="icon-box">📞</div>
-            <div>
-              <h4>Direct Phone</h4>
-              <p><a href="tel:9818701683" style="font-weight:700;">9818701683</a></p>
-            </div>
-          </div>
-          <div class="contact-detail-item">
-            <div class="icon-box">✉️</div>
-            <div>
-              <h4>Email Address</h4>
-              <p><a href="mailto:Dssafetysystems@hotmail.com">Dssafetysystems@hotmail.com</a></p>
-            </div>
-          </div>
         </div>
+    </section>
 
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.5!2d77.25!3d28.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zGovindpuri%2C+New+Delhi!5e0!3m2!1sen!2sin!4v1600000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- ==========================================================================
+       SERVICES SECTION
+       ========================================================================== -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Professional Services</h2>
+                <p class="section-desc">Comprehensive fire safety engineering, compliance, and upkeep designed to keep your establishment fully protected.</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Service 1 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/fire-extinguishers.jpg" alt="Fire Extinguishers">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fire Extinguishers</h3>
+                        <p class="card-text">Supply and professional mounting of top-tier portable extinguishers suited for various fire classes.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/co2-extinguishers.jpg" alt="CO2 Fire Extinguishers">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">CO₂ Fire Extinguishers</h3>
+                        <p class="card-text">Specialized clean agent systems ideal for electrical equipment and server room fire protection.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/fire-alarm.jpg" alt="Fire Alarm Systems">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fire Alarm Systems</h3>
+                        <p class="card-text">Advanced addressable and conventional warning networks ensuring early danger detection.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/smoke-detectors.jpg" alt="Smoke Detectors">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Smoke Detectors</h3>
+                        <p class="card-text">High-sensitivity optical and thermal detection units for rapid response across all zones.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/fire-hydrant.jpg" alt="Fire Hydrant Systems">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fire Hydrant Systems</h3>
+                        <p class="card-text">Robust high-pressure water delivery infrastructures designed for heavy-duty commercial safety.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/fire-sprinkler.jpg" alt="Fire Sprinkler Systems">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fire Sprinkler Systems</h3>
+                        <p class="card-text">Automated ceiling activation grids engineered to suppress localized flames immediately.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/amc-maintenance.jpg" alt="AMC & Maintenance">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">AMC & Maintenance</h3>
+                        <p class="card-text">Comprehensive annual maintenance contracts ensuring lifelong peak operational performance.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/installation.jpg" alt="Installation">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Installation</h3>
+                        <p class="card-text">Expert setup and calibration by certified technicians conforming to strict safety codes.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/services/inspection.jpg" alt="Inspection & Servicing">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Inspection & Servicing</h3>
+                        <p class="card-text">Rigorous statutory audits, testing, and system check-ups to guarantee code compliance.</p>
+                        <a href="#contact" class="card-link">Enquire Now &rarr;</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="contact-container" data-aos="fade-left" data-aos-duration="1000">
-        <h3 style="font-family: 'Outfit', sans-serif; font-size: 26px; color: var(--dark); margin-bottom: 8px;">Request a Free Quote</h3>
-        <p style="color: var(--gray); font-size: 15px; margin-bottom: 15px;">Complete the form below and our team will get back to you promptly.</p>
-        
-        <form class="contact-form" id="quoteForm">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required placeholder="Your Phone">
-          </div>
-          <div class="form-group full-width">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="Your Email">
-          </div>
-          <div class="form-group full-width">
-            <label for="message">Requirement Details / Message</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your property type and requirements..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Submit Request</button>
-          <div class="form-status" id="formStatus">Thank you! Your message has been sent successfully. We will contact you soon.</div>
-        </form>
-      </div>
+    <!-- ==========================================================================
+       PRODUCTS SECTION
+       ========================================================================== -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Catalog</span>
+                <h2 class="section-title">Our Certified Safety Products</h2>
+                <p class="section-desc">Reliable, industrial-grade fire safety hardware built for high performance in critical moments.</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Product 1 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/abc-extinguisher.jpg" alt="ABC Fire Extinguishers">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">ABC Fire Extinguishers</h3>
+                        <p class="card-text">Multi-purpose dry powder units effective on Class A, B, and C fires.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/co2-product.jpg" alt="CO₂ Fire Extinguishers">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">CO₂ Fire Extinguishers</h3>
+                        <p class="card-text">Residue-free carbon dioxide suppressors for specialized asset security.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/dcp-extinguisher.jpg" alt="DCP Fire Extinguishers">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">DCP Fire Extinguishers</h3>
+                        <p class="card-text">Dry Chemical Powder systems designed for rapid knockdown action.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/foam-extinguisher.jpg" alt="Water/FOAM Extinguishers">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Water/FOAM Extinguishers</h3>
+                        <p class="card-text">Aqueous film-forming foam units optimized for flammable liquid hazards.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/smoke-detector-prod.jpg" alt="Smoke Detectors">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Smoke Detectors</h3>
+                        <p class="card-text">Commercial-grade optical sensing units with instant control panel linkage.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/fire-alarm-prod.jpg" alt="Fire Alarm Equipment">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fire Alarm Equipment</h3>
+                        <p class="card-text">Control panels, manual call points, and high-decibel alert horns.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/hydrant-prod.jpg" alt="Fire Hydrant Equipment">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fire Hydrant Equipment</h3>
+                        <p class="card-text">Landing valves, hoses, nozzles, and heavy-duty water delivery kits.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="/images/products/sprinkler-prod.jpg" alt="Fire Sprinkler Equipment">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Fire Sprinkler Equipment</h3>
+                        <p class="card-text">Quartzoid bulb sprinkler heads, valves, and flow control fixtures.</p>
+                        <a href="#contact" class="card-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       ABOUT / WHY CHOOSE US
+       ========================================================================== -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Excellence</span>
+                <h2 class="section-title">Why Choose DS Safety Systems</h2>
+                <p class="section-desc">We deliver uncompromised reliability, adherence to rigorous regulatory guidelines, and dedicated support.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-number">01</div>
+                    <h3 class="feature-title">Certified Expertise</h3>
+                    <p class="feature-desc">Our certified engineers and field technicians bring years of specialized safety deployment experience.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-number">02</div>
+                    <h3 class="feature-title">Complete Compliance</h3>
+                    <p class="feature-desc">All installations and products strictly follow national and international fire safety codes.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-number">03</div>
+                    <h3 class="feature-title">End-to-End Support</h3>
+                    <p class="feature-desc">From initial site evaluation to layout planning, setup, and proactive AMC servicing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CTA BANNER SECTION
+       ========================================================================== -->
+    <div class="cta-banner-wrapper" id="contact">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Secure Your Premises With DS Safety Systems Today</h2>
+                <p>Contact our fire safety specialists for customized protection plans, equipment audits, or immediate project quotations.</p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="tel:+1234567890" class="btn btn-primary">Call Us Now</a>
+                    <a href="mailto:info@dssafetysystems.com" class="btn btn-secondary">Email Enquiry</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- Floating Direct Call Button -->
-  <a href="tel:9818701683" class="floating-call-btn" title="Call Us Now">
-    📞
-  </a>
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-container" style="margin-bottom: 20px;">
+                        <img src="/images/logo.png" alt="DS Safety Systems Logo">
+                    </div>
+                    <p>DS Safety Systems provides comprehensive fire protection infrastructure, gear, and maintenance solutions to secure your commercial and industrial assets.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#services">Services</a>
+                        <a href="#products">Products</a>
+                        <a href="#about">About Us</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Core Solutions</h3>
+                    <div class="footer-links">
+                        <a href="#services">Fire Extinguishers</a>
+                        <a href="#services">Alarm Systems</a>
+                        <a href="#services">Hydrants & Sprinklers</a>
+                        <a href="#services">AMC & Servicing</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Get in Touch</h3>
+                    <p>Professional safety evaluations and emergency consultation services available.</p>
+                    <div class="footer-links">
+                        <a href="tel:+1234567890">Phone: +1 (234) 567-890</a>
+                        <a href="mailto:info@dssafetysystems.com">Email: info@dssafetysystems.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DS Safety Systems. All rights reserved.</p>
+                <p>Designed for Professional Fire Safety Excellence</p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Footer Section -->
-  <section class="site-footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h3>DS Safety Systems</h3>
-        <p>Your trusted partner for certified fire protection solutions, equipment supply, professional installations, and comprehensive AMC services across New Delhi.</p>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#products">Products & Services</a></li>
-          <li><a href="#compliance">Safety Hub</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Our Solutions</h3>
-        <ul class="footer-links">
-          <li><a href="#products">Fire Extinguishers</a></li>
-          <li><a href="#products">Fire Alarm Systems</a></li>
-          <li><a href="#products">Hydrant & Sprinkler Networks</a></li>
-          <li><a href="#products">Annual Maintenance (AMC)</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Contact Info</h3>
-        <ul class="footer-links">
-          <li>📍 Govind Puri, New Delhi (Kalkaji)</li>
-          <li>📞 <a href="tel:9818701683" style="color:inherit; font-weight:600;">9818701683</a></li>
-          <li>✉️ <a href="mailto:Dssafetysystems@hotmail.com" style="color:inherit;">Dssafetysystems@hotmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 DS Safety Systems. All Rights Reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
-    </div>
-  </section>
+    <!-- ==========================================================================
+       JAVASCRIPT
+       ========================================================================== -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-  <!-- JavaScript for Interactivity & Animations -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Initialize AOS Animations
-    AOS.init({
-      once: true,
-      offset: 100
-    });
-
-    // Mobile Menu Toggle Drawer
-    const mobileMenu = document.getElementById('mobile-menu');
-    const headerGroup = document.getElementById('header-group');
-
-    mobileMenu.addEventListener('click', () => {
-      headerGroup.classList.toggle('active');
-    });
-
-    // Sticky Header Scroll State Effect
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('mainHeader');
-      if (window.scrollY > 40) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Interactive Accordion Functionality
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    accordionHeaders.forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.parentElement;
-        const icon = header.querySelector('.acc-icon');
-        
-        // Toggle current item
-        const isActive = item.classList.contains('active');
-        
-        // Close all accordion items
-        document.querySelectorAll('.accordion-item').forEach(accItem => {
-          accItem.classList.remove('active');
-          accItem.querySelector('.acc-icon').textContent = '+';
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
 
-        // If it wasn't active, open it
-        if (!isActive) {
-          item.classList.add('active');
-          icon.textContent = '-';
-        }
-      });
-    });
-
-    // Contact Form Submission Handler Simulation
-    const quoteForm = document.getElementById('quoteForm');
-    const formStatus = document.getElementById('formStatus');
-
-    quoteForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      formStatus.classList.add('success');
-      quoteForm.reset();
-      setTimeout(() => {
-        formStatus.classList.remove('success');
-      }, 6000);
-    });
-  </script>
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
