@@ -88,17 +88,54 @@
             height: 80px;
         }
 
+        /* Professional Built-In Brand Logo Design */
         .logo-container {
             display: flex;
             align-items: center;
-            max-width: 180px;
+            gap: 12px;
         }
 
-        .logo-container img {
-            width: 100%;
-            height: auto;
-            max-height: 50px;
-            object-fit: contain;
+        .brand-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ef4444, #991b1b);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+            flex-shrink: 0;
+        }
+
+        .brand-logo-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #ffffff;
+        }
+
+        .brand-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .brand-name span {
+            color: var(--primary-red);
+        }
+
+        .brand-tagline {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            font-weight: 600;
         }
 
         .nav-menu {
@@ -628,7 +665,6 @@
             }
         }
 
-        /* Specific mobile optimization for 320px, 360px, 375px, 390px, 430px */
         @media (max-width: 480px) {
             :root {
                 --container-width: min(100% - 24px, 1400px);
@@ -656,7 +692,15 @@
     <header class="site-header">
         <div class="container nav-wrapper">
             <a href="#" class="logo-container">
-                <img src="/images/logo.png" alt="DS Safety Systems Logo">
+                <div class="brand-logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C12 2 7 8 7 13C7 16.31 9.69 19 13 19C16.31 19 19 16.31 19 13C19 8 14 2 12 2ZM12 17C10.9 17 10 16.1 10 15C10 13.5 12 11 12 11C12 11 14 13.5 14 15C14 16.1 13.1 17 12 17Z"/>
+                    </svg>
+                </div>
+                <div class="brand-logo-text">
+                    <div class="brand-name">DS <span>SAFETY</span></div>
+                    <div class="brand-tagline">Systems</div>
+                </div>
             </a>
             
             <nav class="nav-menu" id="navMenu">
@@ -711,7 +755,6 @@
             </div>
 
             <div class="grid-3">
-                <!-- Service 1 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/fire-extinguishers.jpg" alt="Fire Extinguishers">
@@ -723,7 +766,6 @@
                     </div>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/co2-extinguishers.jpg" alt="CO2 Fire Extinguishers">
@@ -735,7 +777,6 @@
                     </div>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/fire-alarm.jpg" alt="Fire Alarm Systems">
@@ -747,7 +788,6 @@
                     </div>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/smoke-detectors.jpg" alt="Smoke Detectors">
@@ -759,7 +799,6 @@
                     </div>
                 </div>
 
-                <!-- Service 5 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/fire-hydrant.jpg" alt="Fire Hydrant Systems">
@@ -771,7 +810,6 @@
                     </div>
                 </div>
 
-                <!-- Service 6 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/fire-sprinkler.jpg" alt="Fire Sprinkler Systems">
@@ -783,7 +821,6 @@
                     </div>
                 </div>
 
-                <!-- Service 7 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/amc-maintenance.jpg" alt="AMC & Maintenance">
@@ -795,7 +832,6 @@
                     </div>
                 </div>
 
-                <!-- Service 8 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/installation.jpg" alt="Installation">
@@ -807,7 +843,6 @@
                     </div>
                 </div>
 
-                <!-- Service 9 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/services/inspection.jpg" alt="Inspection & Servicing">
@@ -834,7 +869,6 @@
             </div>
 
             <div class="grid-3">
-                <!-- Product 1 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/abc-extinguisher.jpg" alt="ABC Fire Extinguishers">
@@ -846,7 +880,6 @@
                     </div>
                 </div>
 
-                <!-- Product 2 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/co2-product.jpg" alt="CO₂ Fire Extinguishers">
@@ -858,7 +891,6 @@
                     </div>
                 </div>
 
-                <!-- Product 3 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/dcp-extinguisher.jpg" alt="DCP Fire Extinguishers">
@@ -870,7 +902,6 @@
                     </div>
                 </div>
 
-                <!-- Product 4 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/foam-extinguisher.jpg" alt="Water/FOAM Extinguishers">
@@ -882,7 +913,6 @@
                     </div>
                 </div>
 
-                <!-- Product 5 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/smoke-detector-prod.jpg" alt="Smoke Detectors">
@@ -894,7 +924,6 @@
                     </div>
                 </div>
 
-                <!-- Product 6 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/fire-alarm-prod.jpg" alt="Fire Alarm Equipment">
@@ -906,7 +935,6 @@
                     </div>
                 </div>
 
-                <!-- Product 7 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/hydrant-prod.jpg" alt="Fire Hydrant Equipment">
@@ -918,7 +946,6 @@
                     </div>
                 </div>
 
-                <!-- Product 8 -->
                 <div class="card">
                     <div class="card-img-wrapper">
                         <img src="/images/products/sprinkler-prod.jpg" alt="Fire Sprinkler Equipment">
@@ -988,7 +1015,15 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo-container" style="margin-bottom: 20px;">
-                        <img src="/images/logo.png" alt="DS Safety Systems Logo">
+                        <div class="brand-logo-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C12 2 7 8 7 13C7 16.31 9.69 19 13 19C16.31 19 19 16.31 19 13C19 8 14 2 12 2ZM12 17C10.9 17 10 16.1 10 15C10 13.5 12 11 12 11C12 11 14 13.5 14 15C14 16.1 13.1 17 12 17Z"/>
+                            </svg>
+                        </div>
+                        <div class="brand-logo-text">
+                            <div class="brand-name">DS <span>SAFETY</span></div>
+                            <div class="brand-tagline">Systems</div>
+                        </div>
                     </div>
                     <p>DS Safety Systems provides comprehensive fire protection infrastructure, gear, and maintenance solutions to secure your commercial and industrial assets.</p>
                 </div>
