@@ -268,7 +268,14 @@
   border: 1px solid rgba(217, 56, 48, 0.4);
   box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
 }
-
+<div class="hero-section">
+  <div class="hero-slider">
+    <img src="hero-banner.jpg.png" alt="Hero Banner 1" class="hero-banner-img active">
+    <img src="2bg.png" alt="Hero Banner 2" class="hero-banner-img">
+  </div>
+  <button class="slider-btn prev-btn">&#10094;</button>
+  <button class="slider-btn next-btn">&#10095;</button>
+</div>
 @media (max-width: 768px) {
   .hero-section {
     padding: 10px 8px;
@@ -1355,3 +1362,28 @@
   </script>
 </body>
 </html>
+<script>
+  const slides = document.querySelectorAll('.hero-banner-img');
+  const nextBtn = document.querySelector('.next-btn');
+  const prevBtn = document.querySelector('.prev-btn');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  });
+</script>
