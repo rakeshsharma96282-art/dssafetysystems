@@ -268,14 +268,7 @@
   border: 1px solid rgba(217, 56, 48, 0.4);
   box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
 }
-<div class="hero-section">
-  <div class="hero-slider">
-    <img src="hero-banner.jpg.png" alt="Hero Banner 1" class="hero-banner-img active">
-    <img src="2bg.png" alt="Hero Banner 2" class="hero-banner-img">
-  </div>
-  <button class="slider-btn prev-btn">&#10094;</button>
-  <button class="slider-btn next-btn">&#10095;</button>
-</div>
+
 @media (max-width: 768px) {
   .hero-section {
     padding: 10px 8px;
@@ -975,7 +968,7 @@
         grid-template-columns: 1fr;
         gap: 30px;
       }
-
+      
       .contact-form {
         grid-template-columns: 1fr;
       }
@@ -1300,93 +1293,6 @@
       </div>
     </div>
   </site-footer>
-
-  <!-- JavaScript for Mobile Menu & Form Submission Handling -->
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const headerGroup = document.getElementById('header-group');
-
-    mobileMenu.addEventListener('click', () => {
-      headerGroup.classList.toggle('active');
-    });
-
-    // Close mobile menu when a nav link is clicked
-    document.querySelectorAll('.nav-links a, .btn-get-quote').forEach(link => {
-      link.addEventListener('click', () => {
-        headerGroup.classList.remove('active');
-      });
-    });
-
-    // AJAX form submission for Formspree with status message
-    const form = document.getElementById('quoteForm');
-    const formStatus = document.getElementById('formStatus');
-
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: {
-              'Accept': 'json'
-          }
-        });
-        
-        if (response.ok) {
-          formStatus.textContent = "Thank you! Your inquiry has been sent successfully.";
-          formStatus.className = "form-status success";
-          form.reset();
-        } else {
-          const data = await response.json();
-          if (Object.hasOwn(data, 'errors')) {
-            formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
-          } else {
-            formStatus.textContent = "Oops! There was a problem submitting your form.";
-          }
-          formStatus.className = "form-status";
-          formStatus.style.display = "block";
-          formStatus.style.color = "#d93830";
-          formStatus.style.background = "#fde8e8";
-        }
-      } catch (error) {
-        formStatus.textContent = "Oops! There was a problem submitting your form.";
-        formStatus.className = "form-status";
-        formStatus.style.display = "block";
-        formStatus.style.color = "#d93830";
-        formStatus.style.background = "#fde8e8";
-      }
-    });
-  </script>
-</body>
-</html>
-<script>
-  const slides = document.querySelectorAll('.hero-banner-img');
-  const nextBtn = document.querySelector('.next-btn');
-  const prevBtn = document.querySelector('.prev-btn');
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) {
-        slide.classList.add('active');
-      }
-    });
-  }
-
-  nextBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  });
-
-  prevBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  });
-</script>
 <!-- Product Listing Section -->
     <section class="products-section">
       <div class="products-container">
