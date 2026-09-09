@@ -208,7 +208,7 @@ html {
   border-radius: 2px;
 }
 
-/* Hero Banner Section with Blurred Background */
+/* Hero Banner Section with Blurred Background Image */
 .hero-section {
   width: 100%;
   background-color: #111;
@@ -220,8 +220,6 @@ html {
   padding: 20px 30px;
 }
 
-/* Creates the blurred background using the banner image itself */
-/* Creates a dark blurred backdrop */
 .hero-section::before {
   content: '';
   position: absolute;
@@ -229,18 +227,27 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: var(--banner-bg);
+  background-image: url('bg.png');
   background-size: cover;
   background-position: center;
-  filter: blur(15px) brightness(0.6);
-  transform: scale(1.1); /* Prevents blur edges from showing */
-  background: radial-gradient(circle, #2a2a2a 0%, #0a0a0a 100%);
+  filter: blur(12px) brightness(0.6);
+  transform: scale(1.1);
   z-index: 1;
 }
 
 .hero-banner-img {
+.hero-slider {
+  position: relative;
   width: 100%;
   max-width: 1200px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner-img {
+  width: 100%;
   height: auto;
   max-height: 72vh;
   object-fit: cover;
@@ -248,12 +255,60 @@ html {
   display: block;
   position: relative;
   z-index: 2;
+  display: none;
   border-radius: 14px;
-  border: 1px solid rgba(217, 56, 48, 0.4);
-  box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
+  border: 2px solid rgba(255, 50, 40, 0.9);
+  box-shadow: 0 0 35px rgba(255, 40, 30, 0.8), 0 0 70px rgba(255, 0, 0, 0.4);
 }
 
-/* Mobile Adjustments */
+.hero-banner-img.active {
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255, 50, 40, 0.8);
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: rgba(217, 56, 48, 0.8);
+}
+
+.prev-btn { left: 45px; }
+.next-btn { right: 45px; }
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 10px 8px;
+  }
+  .hero-banner-img {
+    max-height: 48vh;
+    border-radius: 10px;
+  }
+  .prev-btn { left: 15px; }
+  .next-btn { right: 15px; }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 10px 8px;
+  }
+  .hero-banner-img {
+    max-height: 48vh;
+    border-radius: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
     padding: 10px 8px;
@@ -956,168 +1011,4 @@ html {
   .floating-call-btn {
     display: flex;
   }
-}
-.products-section {
-  padding: 60px 20px;
-  background-color: #0b0b0b;
-  color: #fff;
-}
-
-.products-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 40px;
-  color: #ff3228;
-  letter-spacing: 1px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.product-card {
-  background-color: #1a1a1a;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 50, 40, 0.4);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255, 50, 40, 0.9);
-  box-shadow: 0 0 25px rgba(255, 40, 30, 0.6);
-}
-
-.product-img-wrap {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-}
-
-.product-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.product-card:hover .product-img-wrap img {
-  transform: scale(1.05);
-}
-
-.product-content {
-  padding: 20px;
-}
-
-.product-content h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.product-content p {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.capacity-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  color: #ccc;
-  font-size: 14px;
-}
-
-.capacity-options {
-  display: flex;
-  gap: 8px;
-}
-
-.cap-btn {
-  background-color: #111;
-  color: #aaa;
-  border: 1px solid rgba(255, 50, 40, 0.3);
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.cap-btn.active, .cap-btn:hover {
-  background-color: #ff3228;
-  color: #fff;
-  border-color: #ff3228;
-  box-shadow: 0 0 10px rgba(255, 50, 40, 0.5);
-}
-
-.quantity-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  color: #ccc;
-  font-size: 14px;
-}
-
-.qty-selector {
-  display: flex;
-  align-items: center;
-  border: 1px solid rgba(255, 50, 40, 0.3);
-  border-radius: 6px;
-  overflow: hidden;
-  background-color: #111;
-}
-
-.qty-btn {
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-.qty-btn:hover {
-  background-color: #ff3228;
-}
-
-.qty-input {
-  width: 40px;
-  text-align: center;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.product-btn {
-  display: block;
-  text-align: center;
-  background-color: #ff3228;
-  color: #fff;
-  padding: 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
-}
-
-.product-btn:hover {
-  background-color: #e02a20;
-  box-shadow: 0 0 12px rgba(255, 50, 40, 0.6);
 }
