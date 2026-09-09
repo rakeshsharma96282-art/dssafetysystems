@@ -227,92 +227,19 @@
       border-radius: 2px;
     }
 
-    /* Hero Section with Background Image */
+    /* Hero Banner Image Section (Visible & Stretched) */
     .hero-section {
-      position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('hero-banner.jpg.png.png') no-repeat center center/cover;
-      color: white;
-      padding: 130px 25px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
+      background-color: #000;
+      line-height: 0; /* Prevents gaps underneath images */
     }
 
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background-color: rgba(217, 56, 48, 0.85);
-      color: white;
-      padding: 6px 14px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-    }
-
-    .hero-section h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 42px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    .hero-section h1 span {
-      color: #ff6b63;
-    }
-
-    .hero-section p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #e0e0e0;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-hero-primary {
-      background-color: #d93830;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 4px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-hero-primary:hover {
-      background-color: #b52b24;
-    }
-
-    .btn-hero-secondary {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-      padding: 12px 28px;
-      border-radius: 4px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    .btn-hero-secondary:hover {
-      background-color: white;
-      color: #1a1a1a;
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      max-height: 85vh;
+      object-fit: cover;
+      display: block;
     }
 
     /* Client Logo Marquee Section */
@@ -906,7 +833,7 @@
       color: #d93830;
     }
 
-    /* Mobile Responsiveness */
+    /* Mobile Responsiveness Rules */
     @media (max-width: 1200px) {
       .top-bar { 
         flex-direction: column; 
@@ -967,16 +894,6 @@
       .nav-links li { width: 100%; padding: 10px 0; border-bottom: 1px solid #f0f0f0; text-align: center; animation: none; opacity: 1; }
       .divider { display: none; }
       .btn-get-quote { width: 100%; text-align: center; }
-
-      .hero-section {
-        padding: 80px 20px;
-      }
-      .hero-section h1 {
-        font-size: 32px;
-      }
-      .hero-section p {
-        font-size: 16px;
-      }
 
       .about-container,
       .contact-wrapper {
@@ -1053,17 +970,9 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section: Fully Visible Banner Image -->
   <section class="hero-section">
-    <div class="hero-content">
-      <span class="hero-badge">Certified Fire Protection Experts</span>
-      <h1>Protecting What Matters Most with <span>Advanced Fire Safety</span> Solutions</h1>
-      <p>Providing professional installation, maintenance, and comprehensive Annual Maintenance Contracts (AMC) for commercial and residential safety standards.</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-hero-primary">Get Instant Quote</a>
-        <a href="#products" class="btn-hero-secondary">Explore Products</a>
-      </div>
-    </div>
+    <img src="hero-banner.jpg.png.png" alt="DS Safety Systems Hero Banner" class="hero-banner-img">
   </section>
 
   <!-- Client Logo Marquee Trust Bar -->
@@ -1095,7 +1004,7 @@
       <div class="about-card-box">
         <h3>Committed to Safety</h3>
         <p>Fire safety isn't just an obligation—it's a critical shield for human lives and property investments. We ensure your systems are verified, tested, and ready to respond instantly when seconds count.</p>
-        <a href="tel:9818701683" class="btn-hero-primary" style="display: inline-block;">Speak With An Expert</a>
+        <a href="tel:9818701683" class="btn-contact" style="display: inline-block;">Speak With An Expert</a>
       </div>
     </div>
   </section>
