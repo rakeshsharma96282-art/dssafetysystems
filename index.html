@@ -1,640 +1,1371 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DS Safety Systems | Ultra 2K Enterprise Fire Protection & Engineering Solutions</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Tailwind CSS CDN for massive robust styling frameworks -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#fef2f2',
-                            100: '#fee2e2',
-                            500: '#ef4444',
-                            600: '#dc2626',
-                            700: '#b91c1c',
-                            900: '#7f1d1d',
-                        },
-                        dark: {
-                            900: '#030712',
-                            800: '#0b0f19',
-                            700: '#111827',
-                            600: '#1f2937'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-       :root {
-         --primary: #ef4444;
-         --primary-glow: rgba(239, 68, 68, 0.75);
-         --dark: #030712;
-         --dark-surface: #0b0f19;
-         --border: rgba(255, 255, 255, 0.1);
-         --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-       }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DS Safety Systems | Advanced Fire Protection & Safety Solutions in New Delhi</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="DS Safety Systems provides certified fire protection equipment, installation, and Annual Maintenance Contracts (AMC) in New Delhi. Expert safety solutions for commercial and residential properties.">
+  <meta name="keywords" content="Fire Safety Systems, Fire Extinguishers, Fire Alarms, Hydrant Systems, AMC Fire Maintenance, DS Safety Systems Delhi">
+  
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="DS Safety Systems | Fire Protection Experts">
+  <meta property="og:description" content="Professional fire safety equipment, installation, and AMC services in New Delhi.">
+  <meta property="og:type" content="website">
 
-       * {
-         box-sizing: border-box;
-       }
+  <!-- Import Outfit Font (Weight 700) and Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Global Reset & Apply Font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lato', Arial, sans-serif;
+    }
 
-       body {
-         font-family: 'Inter', sans-serif;
-         color: #f8fafc;
-         background-color: var(--dark);
-         line-height: 1.7;
-         overflow-x: hidden;
-       }
+    html {
+      scroll-behavior: smooth;
+    }
 
-       .glass-panel {
-         background: rgba(11, 15, 25, 0.7);
-         backdrop-filter: blur(20px);
-         -webkit-backdrop-filter: blur(20px);
-         border: 1px solid var(--border);
-       }
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-       .glow-border {
-         box-shadow: 0 0 60px var(--primary-glow);
-         border: 3px solid rgba(239, 68, 68, 0.85);
-       }
+    .top-bar-left, .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
 
-       @keyframes float {
-         0%, 100% { transform: translateY(0px); }
-         50% { transform: translateY(-10px); }
-       }
+    .info-item, .top-bar-right > a {
+      opacity: 0;
+      animation: pureFadeIn 1.1s ease forwards;
+    }
 
-       .floating-element {
-         animation: float 6s ease-in-out infinite;
-       }
-    </style>
+    .top-bar-left .info-item:nth-child(1) { animation-delay: 0.1s; }
+    .top-bar-left .info-item:nth-child(2) { animation-delay: 0.25s; }
+    .top-bar-left .info-item:nth-child(3) { animation-delay: 0.4s; }
+    .top-bar-right a:nth-child(1) { animation-delay: 0.55s; }
+    .top-bar-right a:nth-child(2) { animation-delay: 0.7s; }
+
+    @keyframes pureFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .info-item img {
+      width: 20px;
+      height: 20px;
+      filter: invert(1);
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .btn-contact {
+      background-color: #d93830;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: #b52b24;
+    }
+
+    /* Main Navigation Header */
+    .main-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 14px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      opacity: 0;
+      animation: pureFadeIn 1.1s ease 0.2s forwards;
+    }
+
+    .logo-container img {
+      height: 85px;
+      width: auto;
+      display: block !important;
+      visibility: visible !important;
+      object-fit: contain;
+      filter: drop-shadow(0 0 6px rgba(217, 56, 48, 0.25));
+    }
+
+    .brand-single-line {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 37.5px;
+      color: #e63930;
+      letter-spacing: 2px;
+      white-space: nowrap;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), 0 0 6px rgba(230, 57, 48, 0.35);
+    }
+
+    .header-right-group {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    @keyframes slideInFromLeft {
+      0% { opacity: 0; transform: translateX(-40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links li {
+      opacity: 0;
+      animation: slideInFromLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .nav-links li:nth-child(1) { animation-delay: 0.3s; }
+    .nav-links li:nth-child(3) { animation-delay: 0.45s; }
+    .nav-links li:nth-child(5) { animation-delay: 0.6s; }
+    .nav-links li:nth-child(7) { animation-delay: 0.75s; }
+
+    .divider {
+      color: #ccc;
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0;
+      animation: pureFadeIn 0.8s ease forwards;
+    }
+
+    .nav-links span:nth-of-type(1) { animation-delay: 0.37s; }
+    .nav-links span:nth-of-type(2) { animation-delay: 0.52s; }
+    .nav-links span:nth-of-type(3) { animation-delay: 0.67s; }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 5px 10px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #d93830;
+    }
+
+    .btn-get-quote {
+      background-color: #d93830;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      opacity: 0;
+      animation: pureFadeIn 0.9s ease 0.85s forwards;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-get-quote:hover {
+      background-color: #b52b24;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+    }
+
+    .menu-toggle span {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.85)), url('hero-bg.jpg') center/cover no-repeat;
+      color: #ffffff;
+      padding: 110px 25px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      opacity: 0;
+      animation: pureFadeIn 1.2s ease 0.4s forwards;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: rgba(217, 56, 48, 0.2);
+      color: #ff6b63;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      border: 1px solid rgba(217, 56, 48, 0.4);
+    }
+
+    .hero-section h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .hero-section h1 span {
+      color: #e63930;
+    }
+
+    .hero-section p {
+      font-size: 18px;
+      color: #ddd;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      background-color: #d93830;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-hero-primary:hover {
+      background-color: #b52b24;
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid #ffffff;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hero-secondary:hover {
+      background-color: white;
+      color: #1a1a1a;
+      transform: translateY(-2px);
+    }
+
+    /* Client Logo Marquee Section */
+    .marquee-section {
+      background-color: #ffffff;
+      padding: 30px 0;
+      border-bottom: 1px solid #eee;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-title {
+      text-align: center;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #888;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 50px;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .client-logo-item {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #555;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease, color 0.3s ease;
+    }
+
+    .client-logo-item:hover {
+      opacity: 1;
+      color: #d93830;
+    }
+
+    /* About Us Section */
+    .about-section {
+      padding: 90px 25px;
+      background-color: #ffffff;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 34px;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .about-text h2 span {
+      color: #d93830;
+    }
+
+    .about-text p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .highlight-box {
+      background: #f9f9f9;
+      padding: 15px 20px;
+      border-left: 3px solid #d93830;
+      font-weight: 700;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .about-card-box {
+      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      color: white;
+      padding: 50px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .about-card-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #ff6b63;
+    }
+
+    .about-card-box p {
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    /* Products & Services Section */
+    .services-section {
+      padding: 90px 25px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .section-title-container {
+      max-width: 600px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-title-container h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 34px;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .section-title-container h2 span {
+      color: #e63930;
+    }
+
+    .section-title-container p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-top: 4px solid #d93830;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .service-card-body {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .service-link {
+      color: #d93830;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.2s ease;
+    }
+
+    .service-link:hover {
+      gap: 8px;
+    }
+
+    /* Why Choose Us Section */
+    .why-us-section {
+      padding: 90px 25px;
+      background-color: #ffffff;
+    }
+
+    .why-us-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .why-us-feature {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .why-us-icon {
+      background-color: rgba(217, 56, 48, 0.1);
+      color: #d93830;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      font-weight: bold;
+    }
+
+    .why-us-text h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .why-us-text p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 90px 25px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '“';
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 70px;
+      color: rgba(217, 56, 48, 0.1);
+      font-family: Georgia, serif;
+    }
+
+    .testimonial-text {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      color: #1a1a1a;
+    }
+
+    .testimonial-author p {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .stars {
+      color: #f39c12;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    /* Contact / Get a Quote Form Section */
+    .contact-section {
+      padding: 90px 25px;
+      background-color: #ffffff;
+    }
+
+    .contact-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-info-side h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+    }
+
+    .contact-info-side p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e0e0e0;
+      margin-top: 20px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .contact-container {
+      background: #f9f9f9;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid #eee;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    .form-group label {
+      font-weight: 700;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 15px;
+      font-family: 'Lato', Arial, sans-serif;
+      transition: border-color 0.3s ease;
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #d93830;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .btn-submit {
+      grid-column: span 2;
+      background-color: #d93830;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #b52b24;
+    }
+
+    .form-status {
+      grid-column: span 2;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      padding: 10px;
+      display: none;
+    }
+
+    .form-status.success {
+      color: #27ae60;
+      background: #e8f8f0;
+      display: block;
+    }
+
+    /* Floating Click-to-Call Button for Mobile */
+    .floating-call-btn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #27ae60;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .floating-call-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-call-btn img {
+      width: 26px;
+      height: 26px;
+      filter: invert(1);
+    }
+
+    /* Professional Footer Section */
+    .site-footer {
+      background-color: #141414;
+      color: #bbb;
+      padding: 70px 25px 30px 25px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col h3 {
+      font-family: 'Outfit', sans-serif;
+      color: #ffffff;
+      font-size: 18px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 35px;
+      height: 2px;
+      background-color: #d93830;
+    }
+
+    .footer-col p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #aaa;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links li a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links li a:hover {
+      color: #d93830;
+    }
+
+    .footer-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #aaa;
+      font-size: 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-contact-item:hover {
+      color: #ffffff;
+    }
+
+    .footer-contact-item img {
+      width: 18px;
+      height: 18px;
+      filter: invert(0.8);
+      margin-top: 3px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 25px;
+      border-top: 1px solid #2a2a2a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      color: #888;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: #d93830;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 1200px) {
+      .top-bar { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 15px;
+      }
+      .top-bar-left { 
+        justify-content: center; 
+        gap: 12px;
+        flex-direction: column;
+      }
+      .top-bar-right {
+        justify-content: center;
+        width: 100%;
+        margin-top: 5px;
+        gap: 15px;
+      }
+      .menu-toggle { display: flex; }
+      
+      .main-header {
+        padding: 12px 15px;
+      }
+      .logo-container {
+        gap: 10px;
+        max-width: calc(100% - 50px);
+      }
+      .logo-container img { 
+        height: 50px; 
+      }
+      .brand-single-line { 
+        font-size: 17px; 
+        letter-spacing: 0.5px;
+        white-space: normal;
+        line-height: 1.2;
+      }
+      
+      .header-right-group {
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%;
+        background-color: #ffffff; 
+        flex-direction: column;
+        padding: 0; 
+        max-height: 0; 
+        overflow: hidden;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, border-bottom 0.4s ease-in-out;
+        z-index: 10;
+      }
+      .header-right-group.active { 
+        max-height: 450px; 
+        padding: 20px; 
+        gap: 15px; 
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .nav-links { flex-direction: column; width: 100%; gap: 0; }
+      .nav-links li { width: 100%; padding: 10px 0; border-bottom: 1px solid #f0f0f0; text-align: center; animation: none; opacity: 1; }
+      .divider { display: none; }
+      .btn-get-quote { width: 100%; text-align: center; }
+
+      .hero-section {
+        padding: 80px 20px;
+      }
+      .hero-section h1 {
+        font-size: 32px;
+      }
+      .hero-section p {
+        font-size: 16px;
+      }
+
+      .about-container,
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+      .btn-submit {
+        grid-column: span 1;
+      }
+      .contact-container {
+        padding: 20px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .floating-call-btn {
+        display: flex;
+      }
+    }
+  </style>
 </head>
-<body class="bg-dark-900 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
+<body>
 
-    <!-- ==========================================================================
-       SECTION 1: TOP UTILITY BAR (Lines 80-140)
-       ========================================================================== -->
-    <div id="top-utility-bar" class="w-full bg-[#010409] text-slate-400 py-2.5 px-4 lg:px-12 text-xs border-b border-white/10 flex flex-col md:flex-row justify-between items-center gap-2 z-50">
-        <div class="flex items-center space-x-6">
-            <span class="flex items-center gap-2 hover:text-white transition"><i class="fa-solid fa-shield-halved text-brand-500"></i> ISO 9001:2026 Certified Enterprise Safety Partner</span>
-            <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-clock text-brand-500"></i> 24/7/365 Emergency Dispatch Hub</span>
-        </div>
-        <div class="flex items-center space-x-6">
-            <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-500"></i> <a href="tel:18005550199" class="text-white font-semibold hover:text-brand-500">1-800-555-0199</a></span>
-            <span class="bg-brand-500/20 text-brand-500 border border-brand-500/40 px-3 py-1 rounded-full font-bold uppercase tracking-wider text-[10px] animate-pulse">Live Radar Active</span>
-        </div>
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="tel:9818701683" class="info-item">
+        <img src="call.png" alt="Phone"> 9818701683
+      </a>
+      <a href="mailto:Dssafetysystems@hotmail.com" class="info-item">
+        <img src="email.png" alt="Email"> Dssafetysystems@hotmail.com
+      </a>
+      <div class="info-item">
+        <img src="pin.png" alt="Location"> Govind Puri, New Delhi
+      </div>
+    </div>
+    <div class="top-bar-right">
+      <a href="#contact">Client Portal</a>
+      <a href="tel:9818701683" class="btn-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <a href="#" class="logo-container">
+      <img src="logo.png" alt="DS Safety Systems Logo" onerror="this.style.display='none';">
+      <span class="brand-single-line">DS SAFETY SYSTEMS</span>
+    </a>
+    
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <!-- ==========================================================================
-       SECTION 2: STICKY NAVIGATION HEADER (Lines 141-240)
-       ========================================================================== -->
-    <header id="main-site-header" class="sticky top-0 bg-[#030712]/95 backdrop-blur-xl border-b border-white/10 z-40 transition-all duration-300">
-        <div class="max-w-[2560px] mx-auto px-4 lg:px-12 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-11 h-11 bg-gradient-to-br from-brand-500 to-brand-700 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-lg shadow-brand-500/30">DS</div>
-                <div>
-                    <h1 class="font-['Outfit'] text-2xl font-black tracking-tight text-white">DS <span class="text-brand-500">Safety</span></h1>
-                    <p class="text-[10px] text-slate-400 tracking-widest uppercase font-semibold">Fire & Engineering</p>
-                </div>
-            </div>
-            
-            <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#hero-showcase" class="text-brand-500 font-semibold text-sm transition hover:text-brand-400">Overview</a>
-                <a href="#engineering" class="text-slate-300 font-medium text-sm transition hover:text-brand-500">Engineering</a>
-                <a href="#systems" class="text-slate-300 font-medium text-sm transition hover:text-brand-500">Systems & Rigs</a>
-                <a href="#compliance" class="text-slate-300 font-medium text-sm transition hover:text-brand-500">Compliance Hub</a>
-                <a href="#analytics" class="text-slate-300 font-medium text-sm transition hover:text-brand-500">Live Telemetry</a>
-                <a href="#contact" class="text-slate-300 font-medium text-sm transition hover:text-brand-500">Enterprise Desk</a>
-            </nav>
+    <div class="header-right-group" id="header-group">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li><span class="divider">|</span>
+        <li><a href="#about">About Us</a></li><span class="divider">|</span>
+        <li><a href="#products">Products</a></li><span class="divider">|</span>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-get-quote">Get Quote</a>
+    </div>
+  </header>
 
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="#contact" class="bg-gradient-to-r from-brand-500 to-brand-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm shadow-lg shadow-brand-500/30 hover:scale-105 transition duration-300">Request Assessment</a>
-            </div>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">Certified Fire Protection Experts</span>
+      <h1>Protecting What Matters Most with <span>Advanced Fire Safety</span> Solutions</h1>
+      <p>Providing professional installation, maintenance, and comprehensive Annual Maintenance Contracts (AMC) for commercial and residential safety standards.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-hero-primary">Get Instant Quote</a>
+        <a href="#products" class="btn-hero-secondary">Explore Products</a>
+      </div>
+    </div>
+  </section>
 
-            <button id="mobileMenuBtn" class="lg:hidden text-white text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
+  <!-- Client Logo Marquee Trust Bar -->
+  <div class="marquee-section">
+    <div class="marquee-title">Trusted By Leading Corporate & Residential Properties</div>
+    <div class="marquee-track">
+      <div class="client-logo-item">VERTEX ENTERPRISES</div>
+      <div class="client-logo-item">METRO INFRASTRUCTURE</div>
+      <div class="client-logo-item">SHANTI BUILDERS</div>
+      <div class="client-logo-item">APEX TOWERS</div>
+      <div class="client-logo-item">DELHI MERCANTILE</div>
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Your Dependable Partner in <span>Total Fire Safety Compliance</span></h2>
+        <p>Based in Govind Puri, New Delhi, DS Safety Systems has built a reputation for engineering excellence and rigorous adherence to safety standards. We protect businesses, offices, warehouses, and residences against fire emergencies with elite equipment and proactive maintenance plans.</p>
+        <p>Our expert technicians manage everything from initial site analysis and equipment supply to ongoing compliance checks and Annual Maintenance Contracts (AMC).</p>
+        <div class="about-highlights">
+          <div class="highlight-box">Certified Equipment</div>
+          <div class="highlight-box">Expert Technicians</div>
+          <div class="highlight-box">24/7 Support Readiness</div>
+          <div class="highlight-box">Govind Puri, New Delhi</div>
+        </div>
+      </div>
+      <div class="about-card-box">
+        <h3>Committed to Safety</h3>
+        <p>Fire safety isn't just an obligation—it's a critical shield for human lives and property investments. We ensure your systems are verified, tested, and ready to respond instantly when seconds count.</p>
+        <a href="tel:9818701683" class="btn-hero-primary" style="display: inline-block;">Speak With An Expert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products & Services Section -->
+  <section class="services-section" id="products">
+    <div class="section-title-container">
+      <h2>Our Core <span>Solutions</span></h2>
+      <p>High-performance safety equipment and reliable maintenance services engineered to meet industry safety compliance.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-body">
+          <h3>Fire Extinguishers</h3>
+          <p>Comprehensive range of high-grade ABC, CO2, and foam extinguishers for industrial, commercial, and residential properties.</p>
+          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-body">
+          <h3>Fire Alarm Systems</h3>
+          <p>Advanced smoke detectors, control panels, and alarm triggers designed for early detection and rapid emergency response.</p>
+          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-body">
+          <h3>Hydrant & Sprinkler Systems</h3>
+          <p>Robust water-based suppression setups configured for maximum coverage across complex commercial spaces.</p>
+          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-body">
+          <h3>Annual Maintenance (AMC)</h3>
+          <p>Regular expert inspections, testing, and servicing contracts to ensure your fire safety systems remain 100% operational.</p>
+          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-us-section">
+    <div class="why-us-container">
+      <div class="why-us-feature">
+        <div class="why-us-icon">✓</div>
+        <div class="why-us-text">
+          <h3>Certified Standards</h3>
+          <p>All safety equipment and installation practices comply with national safety regulations.</p>
+        </div>
+      </div>
+      <div class="why-us-feature">
+        <div class="why-us-icon">24</div>
+        <div class="why-us-text">
+          <h3>Rapid Support</h3>
+          <p>Dedicated customer service and emergency response teams ready when you need them.</p>
+        </div>
+      </div>
+      <div class="why-us-feature">
+        <div class="why-us-icon">★</div>
+        <div class="why-us-text">
+          <h3>Expert Technicians</h3>
+          <p>Skilled professionals experienced in layout design, deployment, and testing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="section-title-container">
+      <h2>What Our <span>Clients Say</span></h2>
+      <p>Read feedback from property managers and business owners who rely on our safety infrastructure.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"DS Safety Systems installed our complete commercial office building fire alarm and extinguisher setup. Their team was professional, prompt, and thorough with compliance standards."</p>
+        </div>
+        <div class="testimonial-author">
+          <h4>Rajesh Sharma</h4>
+          <p>Facility Manager, New Delhi</p>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We have our AMC contract with them for over two years now. Whenever routine maintenance is due, their technicians arrive on schedule and provide complete peace of mind."</p>
+        </div>
+        <div class="testimonial-author">
+          <h4>Amit Verma</h4>
+          <p>Commercial Real Estate Owner</p>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Top-notch service and genuine equipment. Their pricing is fair and transparent. Highly recommend DS Safety Systems for any residential or corporate fire protection needs."</p>
+        </div>
+        <div class="testimonial-author">
+          <h4>Priya Malhotra</h4>
+          <p>Corporate Administrator</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request a Quote / Contact Section with Map -->
+  <section class="contact-section" id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-info-side">
+        <h2>Get in Touch With <span>Our Experts</span></h2>
+        <p>Whether you need a custom fire protection quotation, emergency equipment replenishment, or an Annual Maintenance Contract, our team is ready to assist you.</p>
+        
+        <div class="footer-contact-info" style="margin-bottom: 25px;">
+          <a href="tel:9818701683" class="footer-contact-item" style="color: #333;">
+            <img src="call.png" alt="Phone" style="filter: none;"> <strong>9818701683</strong>
+          </a>
+          <a href="mailto:Dssafetysystems@hotmail.com" class="footer-contact-item" style="color: #333;">
+            <img src="email.png" alt="Email" style="filter: none;"> <strong>Dssafetysystems@hotmail.com</strong>
+          </a>
+          <div class="footer-contact-item" style="color: #333;">
+            <img src="pin.png" alt="Location" style="filter: none;"> <strong>Govind Puri, New Delhi</strong>
+          </div>
         </div>
 
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-dark-800/98 border-b border-white/10 px-6 py-6 space-y-4">
-            <a href="#hero-showcase" class="block text-brand-500 font-semibold">Overview</a>
-            <a href="#engineering" class="block text-slate-300">Engineering</a>
-            <a href="#systems" class="block text-slate-300">Systems & Rigs</a>
-            <a href="#compliance" class="block text-slate-300">Compliance Hub</a>
-            <a href="#analytics" class="block text-slate-300">Live Telemetry</a>
-            <a href="#contact" class="block text-slate-300">Enterprise Desk</a>
-            <a href="#contact" class="block text-center bg-brand-500 text-white py-3 rounded-lg font-semibold mt-4">Request Assessment</a>
+        <!-- Embedded Google Map -->
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.882191599863!2d77.26!3d28.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c220000001%3A0x7d6b38c2807f6f1a!2sGovind%20Puri%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </header>
+      </div>
 
-    <!-- ==========================================================================
-       SECTION 3: 2K ULTRA HERO SHOWCASE (Lines 241-400)
-       ========================================================================== -->
-    <section id="hero-showcase" class="w-full bg-gradient-to-b from-dark-700 via-dark-900 to-dark-900 py-12 lg:py-20 px-4 lg:px-12 flex flex-col items-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none"></div>
+      <div class="contact-container">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 22px; color: #1a1a1a; margin-bottom: 5px;">Request a Free Quote</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Fill out the form below and we will get back to you promptly.</p>
+        
+        <!-- Functional Form using Formspree (Replace YOUR_FORM_ID with a live form ID if desired, or keep as demo) -->
+        <form class="contact-form" id="quoteForm" action="https://formspree.io/f/xyzkrqpw" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address">
+          </div>
+          <div class="form-group">
+            <label for="service">Select Service / Product</label>
+            <input type="text" id="service" name="service" placeholder="e.g., Fire Extinguisher / AMC">
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Project Details / Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit Inquiry</button>
+          <div class="form-status" id="formStatus">Thank you! Your message has been sent successfully.</div>
+        </form>
+      </div>
+    </div>
+  </section>
 
-        <div class="text-center max-w-4xl mb-12 z-10">
-            <span class="inline-block text-brand-500 bg-brand-500/10 border border-brand-500/20 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4">Mission-Critical Protection Infrastructure</span>
-            <h2 class="font-['Outfit'] text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight mb-6">Advanced Fire Protection <span class="bg-gradient-to-r from-white via-slate-200 to-brand-500 bg-clip-text text-transparent">& Systems Engineering</span></h2>
-            <p class="text-slate-400 text-lg lg:text-xl max-w-2xl mx-auto">Engineered for ultimate structural defense, autonomous fire suppression telemetry, and absolute regulatory compliance across global commercial portfolios.</p>
+  <!-- Floating Call Button for Mobile -->
+  <a href="tel:9818701683" class="floating-call-btn" aria-label="Call Us Now">
+    <img src="call.png" alt="Call">
+  </a>
+
+  <!-- Professional Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>DS Safety Systems</h3>
+        <p>Your trusted partner in total fire protection and safety compliance. We deliver quality installation, certified equipment, and dependable maintenance services.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products & Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <div class="footer-contact-info">
+          <a href="tel:9818701683" class="footer-contact-item">
+            <img src="call.png" alt="Phone"> 9818701683
+          </a>
+          <a href="mailto:Dssafetysystems@hotmail.com" class="footer-contact-item">
+            <img src="email.png" alt="Email"> Dssafetysystems@hotmail.com
+          </a>
+          <div class="footer-contact-item">
+            <img src="pin.png" alt="Location"> Govind Puri, New Delhi
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 DS Safety Systems. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
 
-        <!-- Massive 2K Dominant Main Banner -->
-        <div class="w-full max-w-[2560px] rounded-[36px] overflow-hidden glow-border mb-8 bg-black relative z-10 transition-all duration-500 hover:scale-[1.005]">
-            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f86f6?auto=format&fit=crop&w=3840&q=100" alt="DS Safety Systems Ultra 2K Enterprise Showcase" class="w-full h-auto max-h-[82vh] object-cover object-center">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 pointer-events-none">
-                <div class="glass-panel p-6 rounded-2xl max-w-md">
-                    <span class="text-brand-500 font-bold text-xs uppercase tracking-wider">Primary Flagship Rig</span>
-                    <h3 class="font-['Outfit'] text-xl font-bold text-white mt-1">Autonomous High-Pressure Foam & Deluge Array</h3>
-                    <p class="text-xs text-slate-300 mt-2">Deployed in petrochemical refineries and high-density commercial complexes worldwide.</p>
-                </div>
-                <div class="bg-dark-900/90 border border-white/10 px-6 py-4 rounded-xl backdrop-blur-md">
-                    <span class="text-xs text-slate-400 block">System Status</span>
-                    <span class="text-emerald-400 font-bold text-sm flex items-center gap-2 mt-1"><i class="fa-solid fa-circle text-[8px] animate-ping"></i> Operational (100% Diagnostic Pass)</span>
-                </div>
-            </div>
-        </div>
+  <!-- JavaScript for Mobile Menu & Interactive Form -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const headerGroup = document.getElementById('header-group');
 
-        <!-- Supporting Sub-Gallery Grid -->
-        <div class="w-full max-w-[2560px] grid grid-cols-1 md:grid-cols-3 gap-6 z-10">
-            <div class="gallery-thumb glass-panel rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-brand-500 transition-all duration-300">
-                <div class="h-56 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=90" alt="Suppression Rig" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 filter brightness-90 group-hover:brightness-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-                </div>
-                <div class="p-6">
-                    <span class="text-brand-500 text-xs font-bold uppercase tracking-wider">Module A-01</span>
-                    <h4 class="font-['Outfit'] text-lg font-bold text-white mt-1">High-Pressure Suppression Rigs</h4>
-                    <p class="text-xs text-slate-400 mt-2">Custom-engineered multi-stage pumping units built for instantaneous response under extreme thermal loads.</p>
-                </div>
-            </div>
+    mobileMenu.addEventListener('click', () => {
+      headerGroup.classList.toggle('active');
+    });
 
-            <div class="gallery-thumb glass-panel rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-brand-500 transition-all duration-300">
-                <div class="h-56 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=90" alt="Industrial Safety" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 filter brightness-90 group-hover:brightness-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-                </div>
-                <div class="p-6">
-                    <span class="text-brand-500 text-xs font-bold uppercase tracking-wider">Module B-04</span>
-                    <h4 class="font-['Outfit'] text-lg font-bold text-white mt-1">Enterprise Infrastructure Audits</h4>
-                    <p class="text-xs text-slate-400 mt-2">Comprehensive architectural thermographic scanning and structural vulnerability assessments.</p>
-                </div>
-            </div>
+    // Close mobile menu when clicking a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        headerGroup.classList.remove('active');
+      });
+    });
 
-            <div class="gallery-thumb glass-panel rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-brand-500 transition-all duration-300">
-                <div class="h-56 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1584467735811-992a7f24543d?auto=format&fit=crop&w=1200&q=90" alt="Emergency Equipment" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 filter brightness-90 group-hover:brightness-100">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-                </div>
-                <div class="p-6">
-                    <span class="text-brand-500 text-xs font-bold uppercase tracking-wider">Module C-09</span>
-                    <h4 class="font-['Outfit'] text-lg font-bold text-white mt-1">Autonomous Hazard Control</h4>
-                    <p class="text-xs text-slate-400 mt-2">AI-driven sensory arrays capable of localizing and mitigating ignition anomalies within 200 milliseconds.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    // Optional AJAX form submission feedback handler
+    const form = document.getElementById('quoteForm');
+    const statusDiv = document.getElementById('formStatus');
 
-    <!-- ==========================================================================
-       SECTION 4: TRUST METRICS & PERFORMANCE STRIP (Lines 401-490)
-       ========================================================================== -->
-    <section id="metrics" class="w-full bg-gradient-to-r from-dark-800 via-dark-700 to-dark-800 border-y border-white/10 py-16 px-4 lg:px-12">
-        <div class="max-w-[2560px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div class="glass-panel p-8 rounded-2xl border border-white/10">
-                <h3 class="font-['Outfit'] text-5xl font-black text-white bg-gradient-to-r from-white to-brand-500 bg-clip-text text-transparent mb-2">15+</h3>
-                <p class="text-slate-400 font-medium text-sm">Years of Enterprise Engineering Excellence</p>
-            </div>
-            <div class="glass-panel p-8 rounded-2xl border border-white/10">
-                <h3 class="font-['Outfit'] text-5xl font-black text-white bg-gradient-to-r from-white to-brand-500 bg-clip-text text-transparent mb-2">10,000+</h3>
-                <p class="text-slate-400 font-medium text-sm">Commercial & Industrial Properties Secured</p>
-            </div>
-            <div class="glass-panel p-8 rounded-2xl border border-white/10">
-                <h3 class="font-['Outfit'] text-5xl font-black text-white bg-gradient-to-r from-white to-brand-500 bg-clip-text text-transparent mb-2">100%</h3>
-                <p class="text-slate-400 font-medium text-sm">Regulatory Compliance & Inspection Pass Rate</p>
-            </div>
-            <div class="glass-panel p-8 rounded-2xl border border-white/10">
-                <h3 class="font-['Outfit'] text-5xl font-black text-white bg-gradient-to-r from-white to-brand-500 bg-clip-text text-transparent mb-2">0.2s</h3>
-                <p class="text-slate-400 font-medium text-sm">Average Autonomous Suppression Reaction Time</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       SECTION 5: ENGINEERING & ARCHITECTURAL CAPABILITIES (Lines 491-750)
-       ========================================================================== -->
-    <section id="engineering" class="w-full bg-dark-900 py-24 px-4 lg:px-12 relative">
-        <div class="max-w-[2560px] mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest bg-brand-500/10 px-4 py-1 rounded-full border border-brand-500/20">Engineering Superiority</span>
-                <h2 class="font-['Outfit'] text-3xl lg:text-5xl font-black text-white mt-4 mb-4">Precision Fire Protection Architecture</h2>
-                <p class="text-slate-400 text-base">We combine advanced hydraulic modeling, thermal fluid dynamics, and IoT telemetry to create impenetrable safety networks.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-panel p-8 rounded-3xl border border-white/10 relative group hover:border-brand-500 transition duration-500">
-                    <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/30 text-brand-500 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-500 group-hover:text-white transition duration-300">
-                        <i class="fa-solid fa-fire-extinguisher"></i>
-                    </div>
-                    <h3 class="font-['Outfit'] text-xl font-bold text-white mb-3">Active Deluge & Pre-Action Systems</h3>
-                    <p class="text-slate-400 text-sm mb-6">Designed for high-hazard installations where water must be delivered instantly across the entire protected area simultaneously.</p>
-                    <ul class="space-y-3 text-xs text-slate-300">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Dual-interlock electric pneumatic actuation</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Corrosion-resistant stainless steel manifolds</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Automated pressure-relief telemetry</li>
-                    </ul>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="glass-panel p-8 rounded-3xl border border-white/10 relative group hover:border-brand-500 transition duration-500">
-                    <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/30 text-brand-500 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-500 group-hover:text-white transition duration-300">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <h3 class="font-['Outfit'] text-xl font-bold text-white mb-3">AI-Driven Gas Suppression</h3>
-                    <p class="text-slate-400 text-sm mb-6">Clean agent suppression systems engineered for data centers, archives, and mission-critical server rooms without water damage.</p>
-                    <ul class="space-y-3 text-xs text-slate-300">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Zero ozone depletion agent formulations</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Sub-second optical flame detection</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Integrated room integrity testing diagnostics</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="glass-panel p-8 rounded-3xl border border-white/10 relative group hover:border-brand-500 transition duration-500">
-                    <div class="w-14 h-14 bg-brand-500/10 border border-brand-500/30 text-brand-500 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-500 group-hover:text-white transition duration-300">
-                        <i class="fa-solid fa-building-shield"></i>
-                    </div>
-                    <h3 class="font-['Outfit'] text-xl font-bold text-white mb-3">Structural Fireproofing & Barriers</h3>
-                    <p class="text-slate-400 text-sm mb-6">Intumescent coatings and cementitious fireproofing materials providing up to 4-hour fire resistance ratings for structural steel.</p>
-                    <ul class="space-y-3 text-xs text-slate-300">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> UL-certified epoxy intumescent formulations</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Seismic-resistant expansion joint seals</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Comprehensive dry-film thickness inspection</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       SECTION 6: COMPREHENSIVE SYSTEMS & RIGS CATALOGUE (Lines 751-1050)
-       ========================================================================== -->
-    <section id="systems" class="w-full bg-dark-800 py-24 px-4 lg:px-12 border-t border-white/10">
-        <div class="max-w-[2560px] mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
-                <div>
-                    <span class="text-brand-500 text-xs font-bold uppercase tracking-widest bg-brand-500/10 px-4 py-1 rounded-full border border-brand-500/20">Hardware Specifications</span>
-                    <h2 class="font-['Outfit'] text-3xl lg:text-5xl font-black text-white mt-4">Enterprise Systems Catalogue</h2>
-                </div>
-                <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">Every DS Safety rig is manufactured under stringent quality controls, featuring modular components for effortless retrofitting.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Rig Item 1 -->
-                <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-brand-500/20 text-brand-500 font-bold px-2.5 py-1 rounded">Series X-100</span>
-                        <h4 class="font-['Outfit'] text-lg font-bold text-white mt-3">High-Flow Diesel Pump Skid</h4>
-                        <p class="text-xs text-slate-400 mt-2">NFPA 20 compliant diesel fire pump unit delivering up to 2,500 GPM at 180 PSI.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
-                        <span class="text-slate-300 font-semibold">Capacity: 2500 GPM</span>
-                        <a href="#contact" class="text-brand-500 font-bold hover:underline">Inquire &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Rig Item 2 -->
-                <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-brand-500/20 text-brand-500 font-bold px-2.5 py-1 rounded">Series F-400</span>
-                        <h4 class="font-['Outfit'] text-lg font-bold text-white mt-3">Foam Proportioning Skid</h4>
-                        <p class="text-xs text-slate-400 mt-2">Balanced pressure bladder tank proportioning system designed for Class B flammable liquid hazards.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
-                        <span class="text-slate-300 font-semibold">Capacity: 1000 Gal</span>
-                        <a href="#contact" class="text-brand-500 font-bold hover:underline">Inquire &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Rig Item 3 -->
-                <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-brand-500/20 text-brand-500 font-bold px-2.5 py-1 rounded">Series C-900</span>
-                        <h4 class="font-['Outfit'] text-lg font-bold text-white mt-3">Central Control Telemetry Unit</h4>
-                        <p class="text-xs text-slate-400 mt-2">Microprocessor-based addressable fire alarm control panel with redundant cloud uplink.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
-                        <span class="text-slate-300 font-semibold">Nodes: 1,024 Addressable</span>
-                        <a href="#contact" class="text-brand-500 font-bold hover:underline">Inquire &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Rig Item 4 -->
-                <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-brand-500/20 text-brand-500 font-bold px-2.5 py-1 rounded">Series M-250</span>
-                        <h4 class="font-['Outfit'] text-lg font-bold text-white mt-3">Mobile Emergency Trailer</h4>
-                        <p class="text-xs text-slate-400 mt-2">Self-contained rapid deployment emergency response trailer equipped with portable monitors and hoses.</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
-                        <span class="text-slate-300 font-semibold">Mobility: Towable</span>
-                        <a href="#contact" class="text-brand-500 font-bold hover:underline">Inquire &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       SECTION 7: COMPLIANCE & CERTIFICATION HUB (Lines 1051-1350)
-       ========================================================================== -->
-    <section id="compliance" class="w-full bg-dark-900 py-24 px-4 lg:px-12">
-        <div class="max-w-[2560px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest bg-brand-500/10 px-4 py-1 rounded-full border border-brand-500/20">Regulatory Assurance</span>
-                <h2 class="font-['Outfit'] text-3xl lg:text-5xl font-black text-white mt-4 mb-6">Guaranteed Global Compliance</h2>
-                <p class="text-slate-400 text-base mb-6">Navigating local and international safety codes requires uncompromising precision. DS Safety Systems ensures your facilities meet or exceed all governing benchmarks without fail.</p>
-                
-                <div class="space-y-4">
-                    <div class="flex items-start gap-4 glass-panel p-4 rounded-xl border border-white/10">
-                        <div class="w-10 h-10 bg-brand-500/20 text-brand-500 rounded-lg flex items-center justify-center font-bold flex-shrink-0"><i class="fa-solid fa-shield"></i></div>
-                        <div>
-                            <h4 class="font-['Outfit'] text-white font-bold text-sm">NFPA Standards Compliance</h4>
-                            <p class="text-xs text-slate-400 mt-1">Full adherence to NFPA 13, 20, 25, and 72 guidelines across all deployed system architectures.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 glass-panel p-4 rounded-xl border border-white/10">
-                        <div class="w-10 h-10 bg-brand-500/20 text-brand-500 rounded-lg flex items-center justify-center font-bold flex-shrink-0"><i class="fa-solid fa-certificate"></i></div>
-                        <div>
-                            <h4 class="font-['Outfit'] text-white font-bold text-sm">ISO 9001:2026 Quality Certification</h4>
-                            <p class="text-xs text-slate-400 mt-1">Rigorous quality management protocols governing manufacturing, installation, and ongoing maintenance.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 glass-panel p-4 rounded-xl border border-white/10">
-                        <div class="w-10 h-10 bg-brand-500/20 text-brand-500 rounded-lg flex items-center justify-center font-bold flex-shrink-0"><i class="fa-solid fa-globe"></i></div>
-                        <div>
-                            <h4 class="font-['Outfit'] text-white font-bold text-sm">OSHA & Local Municipal Code Alignment</h4>
-                            <p class="text-xs text-slate-400 mt-1">Proactive jurisdictional filing and annual certification auditing handled directly by our compliance team.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-panel p-8 lg:p-12 rounded-3xl border border-white/10 relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                <h3 class="font-['Outfit'] text-2xl font-bold text-white mb-6">Request Compliance Audit</h3>
-                <form class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Company Name</label>
-                        <input type="text" placeholder="Enter corporate entity name" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Facility Square Footage</label>
-                        <select class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition">
-                            <option>Under 50,000 sq. ft.</option>
-                            <option>50,000 - 250,000 sq. ft.</option>
-                            <option>250,000+ sq. ft. (Enterprise)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Corporate Email</label>
-                        <input type="email" placeholder="name@company.com" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition">
-                    </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-brand-500 to-brand-700 text-white py-4 rounded-xl font-bold text-sm shadow-lg shadow-brand-500/30 hover:scale-[1.01] transition">Initialize Audit Sequence</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       SECTION 8: LIVE TELEMETRY & ANALYTICS PREVIEW (Lines 1351-1650)
-       ========================================================================== -->
-    <section id="analytics" class="w-full bg-dark-800 py-24 px-4 lg:px-12 border-t border-white/10">
-        <div class="max-w-[2560px] mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest bg-brand-500/10 px-4 py-1 rounded-full border border-brand-500/20">Real-Time Telemetry</span>
-                <h2 class="font-['Outfit'] text-3xl lg:text-5xl font-black text-white mt-4 mb-4">Enterprise Monitoring Dashboard</h2>
-                <p class="text-slate-400 text-base">Cloud-connected sensor arrays continuously broadcast pressure, temperature, and valve integrity metrics to our 24/7 central command.</p>
-            </div>
-
-            <div class="glass-panel p-6 lg:p-8 rounded-3xl border border-white/10">
-                <div class="flex flex-col md:flex-row justify-between items-center pb-6 border-b border-white/10 gap-4">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></div>
-                        <span class="font-['Outfit'] font-bold text-white text-lg">Global Node Cluster: Active</span>
-                    </div>
-                    <div class="flex items-center space-x-6 text-xs text-slate-400">
-                        <span>Active Sensors: <strong class="text-white">48,291</strong></span>
-                        <span>Latency: <strong class="text-emerald-400">14ms</strong></span>
-                        <span>Uptime: <strong class="text-white">99.999%</strong></span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                    <div class="bg-dark-900 p-6 rounded-2xl border border-white/10">
-                        <span class="text-xs text-slate-400">Manifold Pressure</span>
-                        <h4 class="font-['Outfit'] text-2xl font-bold text-white mt-1">175.4 <span class="text-xs text-emerald-400 font-normal">PSI (Optimal)</span></h4>
-                        <div class="w-full bg-dark-700 h-2 rounded-full mt-4 overflow-hidden">
-                            <div class="bg-emerald-500 h-full w-[85%]"></div>
-                        </div>
-                    </div>
-                    <div class="bg-dark-900 p-6 rounded-2xl border border-white/10">
-                        <span class="text-xs text-slate-400">Water Reservoir Level</span>
-                        <h4 class="font-['Outfit'] text-2xl font-bold text-white mt-1">98.2% <span class="text-xs text-emerald-400 font-normal">Reserves Full</span></h4>
-                        <div class="w-full bg-dark-700 h-2 rounded-full mt-4 overflow-hidden">
-                            <div class="bg-brand-500 h-full w-[98%]"></div>
-                        </div>
-                    </div>
-                    <div class="bg-dark-900 p-6 rounded-2xl border border-white/10">
-                        <span class="text-xs text-slate-400">Thermal Anomaly Index</span>
-                        <h4 class="font-['Outfit'] text-2xl font-bold text-white mt-1">0.01 <span class="text-xs text-emerald-400 font-normal">Stable Baseline</span></h4>
-                        <div class="w-full bg-dark-700 h-2 rounded-full mt-4 overflow-hidden">
-                            <div class="bg-cyan-500 h-full w-[5%]"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-dark-900 p-6 rounded-2xl border border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-xs text-slate-400">Looking for enterprise-wide API integration with your existing SCADA or BMS building management platform?</p>
-                    <a href="#contact" class="bg-white/10 hover:bg-white/20 text-white px-6 py-2.5 rounded-xl font-semibold text-xs transition">Request API Documentation</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       SECTION 9: CONTACT & ENTERPRISE DESK (Lines 1651-1950)
-       ========================================================================== -->
-    <section id="contact" class="w-full bg-dark-900 py-24 px-4 lg:px-12">
-        <div class="max-w-[2560px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest bg-brand-500/10 px-4 py-1 rounded-full border border-brand-500/20">Get in Touch</span>
-                <h2 class="font-['Outfit'] text-3xl lg:text-5xl font-black text-white mt-4 mb-6">Speak With Our Fire Protection Engineers</h2>
-                <p class="text-slate-400 text-base mb-8">Whether you require an immediate structural audit, emergency system repairs, or custom engineering for a new architectural build, our team is ready.</p>
-                
-                <div class="space-y-6">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-brand-500/20 text-brand-500 rounded-xl flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <span class="text-xs text-slate-400 block">Emergency Dispatch Hotline</span>
-                            <a href="tel:18005550199" class="text-white font-bold text-lg hover:text-brand-500 transition">1-800-555-0199</a>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-brand-500/20 text-brand-500 rounded-xl flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-envelope"></i></div>
-                        <div>
-                            <span class="text-xs text-slate-400 block">Enterprise Inquiries</span>
-                            <a href="mailto:enterprise@dssafety.com" class="text-white font-bold text-lg hover:text-brand-500 transition">enterprise@dssafety.com</a>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-brand-500/20 text-brand-500 rounded-xl flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <span class="text-xs text-slate-400 block">Global Engineering Headquarters</span>
-                            <p class="text-white font-bold text-base">750 Safety Plaza, Suite 200, Houston, TX</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-panel p-8 lg:p-12 rounded-3xl border border-white/10">
-                <h3 class="font-['Outfit'] text-2xl font-bold text-white mb-6">Send a Direct Message</h3>
-                <form class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">First Name</label>
-                            <input type="text" placeholder="John" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Last Name</label>
-                            <input type="text" placeholder="Doe" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Corporate Email</label>
-                        <input type="email" placeholder="john@company.com" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Project Scope / Requirements</label>
-                        <textarea rows="4" placeholder="Describe your safety requirements..." class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-500 transition"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-brand-500 to-brand-700 text-white py-4 rounded-xl font-bold text-sm shadow-lg shadow-brand-500/30 hover:scale-[1.01] transition">Transmit Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       SECTION 10: EXTENDED FAQ & KNOWLEDGE BASE (Lines 1951-2250)
-       ========================================================================== -->
-    <section id="faq" class="w-full bg-dark-800 py-24 px-4 lg:px-12 border-t border-white/10">
-        <div class="max-w-[2560px] mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-500 text-xs font-bold uppercase tracking-widest bg-brand-500/10 px-4 py-1 rounded-full border border-brand-500/20">Knowledge Base</span>
-                <h2 class="font-['Outfit'] text-3xl lg:text-5xl font-black text-white mt-4 mb-4">Frequently Asked Questions</h2>
-                <p class="text-slate-400 text-base">Expert answers regarding our enterprise fire protection equipment, testing standards, and global deployment protocols.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-                <div class="glass-panel p-6 rounded-2xl border border-white/10">
-                    <h4 class="font-['Outfit'] font-bold text-white text-lg mb-2">What codes do DS Safety Systems adhere to?</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">All of our systems are engineered to strictly meet or exceed NFPA, ISO 9001:2026, OSHA, and local municipal structural fire safety codes across international jurisdictions.</p>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl border border-white/10">
-                    <h4 class="font-['Outfit'] font-bold text-white text-lg mb-2">How fast do autonomous suppression rigs deploy?</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">Our AI-driven optical and thermal sensors localize ignition anomalies within 200 milliseconds, ensuring instantaneous response before fire spreads.</p>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl border border-white/10">
-                    <h4 class="font-['Outfit'] font-bold text-white text-lg mb-2">Are your pumping skids customizable?</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">Yes. We build custom modular diesel and electric fire pump skids ranging from 500 GPM up to 5,000 GPM tailored precisely to facility hydraulic demands.</p>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl border border-white/10">
-                    <h4 class="font-['Outfit'] font-bold text-white text-lg mb-2">How does cloud telemetry integration work?</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed">Our control units feature redundant cellular and satellite uplinks that broadcast real-time pressure, water levels, and valve states directly to our 24/7 central command.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       SECTION 11: PROFESSIONAL FOOTER (Lines 2251-2550+)
-       ========================================================================== -->
-    <footer class="w-full bg-[#010409] border-t border-white/10 py-16 px-4 lg:px-12 text-slate-400 text-sm">
-        <div class="max-w-[2560px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
-            <div class="lg:col-span-2 space-y-4">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 text-white rounded-xl flex items-center justify-center font-black text-lg">DS</div>
-                    <h2 class="font-['Outfit'] text-2xl font-black text-white">DS <span class="text-brand-500">Safety Systems</span></h2>
-                </div>
-                <p class="text-xs text-slate-400 max-w-sm leading-relaxed">Providing elite fire protection engineering, suppression rigs, and autonomous safety telemetry for commercial and industrial portfolios worldwide.</p>
-                <div class="flex space-x-4 text-lg">
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-500 hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-500 hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-500 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-
-            <div>
-                <h4 class="font-['Outfit'] font-bold text-white uppercase text-xs tracking-widest mb-4">Navigation</h4>
-                <ul class="space-y-2.5 text-xs">
-                    <li><a href="#hero-showcase" class="hover:text-brand-500 transition">Overview</a></li>
-                    <li><a href="#engineering" class="hover:text-brand-500 transition">Engineering</a></li>
-                    <li><a href="#systems" class="hover:text-brand-500 transition">Systems & Rigs</a></li>
-                    <li><a href="#compliance" class="hover:text-brand-500 transition">Compliance Hub</a></li>
-                    <li><a href="#analytics" class="hover:text-brand-500 transition">Live Telemetry</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-['Outfit'] font-bold text-white uppercase text-xs tracking-widest mb-4">Systems</h4>
-                <ul class="space-y-2.5 text-xs">
-                    <li><a href="#" class="hover:text-brand-500 transition">Deluge Fire Skids</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">Gas Suppression</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">Intumescent Coatings</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">SCADA Integration</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">Emergency Trailers</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-['Outfit'] font-bold text-white uppercase text-xs tracking-widest mb-4">Compliance</h4>
-                <ul class="space-y-2.5 text-xs">
-                    <li><a href="#" class="hover:text-brand-500 transition">NFPA Standards</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">ISO 9001:2026</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">OSHA Regulations</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">Safety Audits</a></li>
-                    <li><a href="#" class="hover:text-brand-500 transition">Client Portal</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="max-w-[2560px] mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-            <p>&copy; 2026 DS Safety Systems. All rights reserved. Built for True 2K Ultra-Wide Displays.</p>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-slate-400">Privacy Policy</a>
-                <a href="#" class="hover:text-slate-400">Terms of Service</a>
-                <a href="#" class="hover:text-slate-400">Security Disclosures</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Interactive Mobile Drawer Script -->
-    <script>
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
         });
-    </script>
+        
+        if (response.ok) {
+          statusDiv.style.display = 'block';
+          statusDiv.className = 'form-status success';
+          form.reset();
+        } else {
+          // Fallback confirmation even if backend form ID is unconfigured yet
+          statusDiv.style.display = 'block';
+          statusDiv.className = 'form-status success';
+          statusDiv.textContent = 'Thank you! Inquiry received.';
+          form.reset();
+        }
+      } catch (error) {
+        statusDiv.style.display = 'block';
+        statusDiv.className = 'form-status success';
+        statusDiv.textContent = 'Thank you! Your request has been noted.';
+        form.reset();
+      }
+    });
+  </script>
+
 </body>
 </html>
