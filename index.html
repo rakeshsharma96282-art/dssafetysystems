@@ -1343,3 +1343,102 @@
   </script>
 </body>
 </html>
+<section id="products" class="products-section">
+  <div class="products-container">
+    <h2 class="section-title">OUR SAFETY SOLUTIONS</h2>
+    <div class="product-grid">
+      
+      <!-- ABC Dry Powder Fire Extinguisher Card -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="hero-banner.jpg.png" alt="ABC Dry Powder Fire Extinguisher">
+        </div>
+        <div class="product-content">
+          <h3>ABC Dry Powder Fire Extinguisher</h3>
+          <p>Multi-purpose stored pressure extinguisher suitable for Class A, B, and C fires.</p>
+          
+          <div class="capacity-container">
+            <span class="capacity-label">Capacity:</span>
+            <div class="capacity-options">
+              <button type="button" class="cap-btn active" data-cap="4kg">4kg</button>
+              <button type="button" class="cap-btn" data-cap="6kg">6kg</button>
+            </div>
+          </div>
+
+          <div class="quantity-container">
+            <label for="qty1">Quantity:</label>
+            <div class="qty-selector">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="text" id="qty1" value="1" readonly class="qty-input">
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+
+          <a href="#" class="product-btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- CO2 Fire Extinguisher Card -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="2bg.png" alt="CO2 Fire Extinguisher">
+        </div>
+        <div class="product-content">
+          <h3>CO2 Fire Extinguisher</h3>
+          <p>Ideal for electrical fires and flammable liquid risks leaving no residue behind.</p>
+          
+          <div class="capacity-container">
+            <span class="capacity-label">Capacity:</span>
+            <div class="capacity-options">
+              <button type="button" class="cap-btn active" data-cap="2kg">2kg</button>
+              <button type="button" class="cap-btn" data-cap="4.5kg">4.5kg</button>
+            </div>
+          </div>
+
+          <div class="quantity-container">
+            <label for="qty2">Quantity:</label>
+            <div class="qty-selector">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="text" id="qty2" value="1" readonly class="qty-input">
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+          </div>
+
+          <a href="#" class="product-btn">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Script for Toggles and Quantity Counters -->
+<script>
+  document.querySelectorAll('.product-card').forEach(card => {
+    const minusBtn = card.querySelector('.minus');
+    const plusBtn = card.querySelector('.plus');
+    const qtyInput = card.querySelector('.qty-input');
+    const capButtons = card.querySelectorAll('.cap-btn');
+
+    capButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        capButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    if (minusBtn && plusBtn && qtyInput) {
+      plusBtn.addEventListener('click', () => {
+        let currentVal = parseInt(qtyInput.value) || 1;
+        qtyInput.value = currentVal + 1;
+      });
+
+      minusBtn.addEventListener('click', () => {
+        let currentVal = parseInt(qtyInput.value) || 1;
+        if (currentVal > 1) {
+          qtyInput.value = currentVal - 1;
+        }
+      });
+    }
+  });
+</script>
