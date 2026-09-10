@@ -967,3 +967,85 @@ footer a:hover, .footer-section a:hover, .site-footer a:hover, .footer-links li 
 .service-card, .product-card, .about-card-box, .contact-container {
   animation: subtleGlow 4s ease-in-out infinite;
 }
+/* Services Section */
+.services-section {
+  padding: 90px 25px;
+  background-color: #f9f9f9; /* A very light grey to contrast perfectly with the white About section */
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.section-header h2 span {
+  color: #d93830;
+}
+
+.section-header p {
+  color: #555;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive CSS Grid for Cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Service Card with Glow Animation */
+.service-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(230, 57, 48, 0.15);
+  position: relative;
+  transition: transform 0.3s ease;
+  
+  /* Calling your custom animation here */
+  animation: subtleGlow 4s ease-in-out infinite; 
+}
+
+/* Smooth lift effect on hover */
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Stylish watermark-style numbers */
+.service-icon {
+  font-family: 'Outfit', sans-serif;
+  font-size: 45px;
+  font-weight: 800;
+  color: rgba(217, 56, 48, 0.15); /* Faded brand red */
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.service-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
