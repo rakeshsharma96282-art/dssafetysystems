@@ -1190,3 +1190,8 @@ footer a, .footer-section a, .site-footer a {
 footer a:hover, .footer-section a:hover, .site-footer a:hover {
   color: #ff3228 !important;
 }
+/* Fix right-side overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
