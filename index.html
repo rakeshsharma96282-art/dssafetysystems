@@ -228,76 +228,44 @@
       border-radius: 2px;
     }
 
-/* Hero Banner Section with Blurred Background */
-/* Hero Banner Image Section with Built-in Blurred Background */
-.hero-section {
-  width: 100%;
-  background-color: #111;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 30px;
-}
+    /* Hero Banner Section with Blurred Background */
+    .hero-section {
+      width: 100%;
+      background-color: #111;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 30px;
+    }
 
-/* Creates a dark blurred backdrop */
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, #2a2a2a 0%, #0a0a0a 100%);
-  z-index: 1;
-}
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #2a2a2a 0%, #0a0a0a 100%);
+      z-index: 1;
+    }
 
-.hero-banner-img {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  max-height: 72vh;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  position: relative;
-  z-index: 2;
-  border-radius: 14px;
-  border: 1px solid rgba(217, 56, 48, 0.4);
-  box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
-}
+    .hero-banner-img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      max-height: 72vh;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      position: relative;
+      z-index: 2;
+      border-radius: 14px;
+      border: 1px solid rgba(217, 56, 48, 0.4);
+      box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
+    }
 
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 10px 8px;
-  }
-  .hero-banner-img {
-    max-height: 48vh;
-    border-radius: 10px;
-  }
-}
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 10px 8px;
-  }
-  .hero-banner-img {
-    max-height: 48vh;
-    border-radius: 10px;
-  }
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 10px 8px;
-  }
-  .hero-banner-img {
-    max-height: 48vh;
-    border-radius: 10px;
-  }
-}
     /* Client Logo Marquee Section */
     .marquee-section {
       background-color: #ffffff;
@@ -729,21 +697,6 @@
       background-color: #b52b24;
     }
 
-    .form-status {
-      grid-column: span 2;
-      font-size: 14px;
-      font-weight: 700;
-      text-align: center;
-      padding: 10px;
-      display: none;
-    }
-
-    .form-status.success {
-      color: #27ae60;
-      background: #e8f8f0;
-      display: block;
-    }
-
     /* Floating Click-to-Call Button for Mobile */
     .floating-call-btn {
       display: none;
@@ -1004,7 +957,7 @@
 
   <!-- Main Navigation Header -->
   <header class="main-header">
-    <a href="#" class="logo-container">
+    <a href="index.html" class="logo-container">
       <img src="logo.png" alt="DS Safety Systems Logo" onerror="this.style.display='none';">
       <span class="brand-single-line">DS SAFETY SYSTEMS</span>
     </a>
@@ -1017,16 +970,16 @@
 
     <div class="header-right-group" id="header-group">
       <ul class="nav-links">
-        <li><a href="#">Home</a></li><span class="divider">|</span>
+        <li><a href="index.html">Home</a></li><span class="divider">|</span>
         <li><a href="#about">About Us</a></li><span class="divider">|</span>
-        <li><a href="#products">Products</a></li><span class="divider">|</span>
+        <li><a href="product.html">Products</a></li><span class="divider">|</span>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="btn-get-quote">Get Quote</a>
     </div>
   </header>
 
-  <!-- Hero Section: Fully Visible Banner Image -->
+  <!-- Hero Section -->
   <section class="hero-section">
     <img src="hero-banner.jpg.png.png" alt="DS Safety Systems Hero Banner" class="hero-banner-img">
   </section>
@@ -1076,28 +1029,28 @@
         <div class="service-card-body">
           <h3>Fire Extinguishers</h3>
           <p>Comprehensive range of high-grade ABC, CO2, and foam extinguishers for industrial, commercial, and residential properties.</p>
-          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+          <a href="product.html" class="service-link">View Catalog &rarr;</a>
         </div>
       </div>
       <div class="service-card">
         <div class="service-card-body">
           <h3>Fire Alarm Systems</h3>
           <p>Advanced smoke detectors, control panels, and alarm triggers designed for early detection and rapid emergency response.</p>
-          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+          <a href="product.html" class="service-link">View Catalog &rarr;</a>
         </div>
       </div>
       <div class="service-card">
         <div class="service-card-body">
           <h3>Hydrant & Sprinkler Systems</h3>
           <p>Robust water-based suppression setups configured for maximum coverage across complex commercial spaces.</p>
-          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+          <a href="product.html" class="service-link">View Catalog &rarr;</a>
         </div>
       </div>
       <div class="service-card">
         <div class="service-card-body">
           <h3>Annual Maintenance (AMC)</h3>
           <p>Regular expert inspections, testing, and servicing contracts to ensure your fire safety systems remain 100% operational.</p>
-          <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+          <a href="product.html" class="service-link">View Catalog &rarr;</a>
         </div>
       </div>
     </div>
@@ -1209,75 +1162,73 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
           </div>
-          <div class="form-group">
+          <div class="form-group full-width">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address">
-          </div>
-          <div class="form-group">
-            <label for="service">Select Service / Product</label>
-            <input type="text" id="service" name="service" placeholder="e.g., Fire Extinguisher / AMC">
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
           </div>
           <div class="form-group full-width">
-            <label for="message">Project Details / Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your requirements..."></textarea>
+            <label for="message">Project Details / Requirements</label>
+            <textarea id="message" name="message" placeholder="Describe your safety requirements..." required></textarea>
           </div>
-          <button type="submit" class="btn-submit">Send Inquiry / Get Quote</button>
-          <div class="form-status" id="formStatus">Thank you! Your inquiry has been sent successfully.</div>
+          <button type="submit" class="btn-submit">Send Inquiry</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Floating Click-to-Call Button for Mobile -->
-  <a href="tel:9818701683" class="floating-call-btn" aria-label="Call Us">
-    <img src="call.png" alt="Phone">
-  </a>
-
-<!-- Professional Footer Section -->
-<footer class="site-footer">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="footer-container">
-        <div class="footer-col">
-            <h3>DS Safety Systems</h3>
-            <p>Your premier destination for advanced fire protection systems, certified equipment supply, installation, and comprehensive AMC services in New Delhi.</p>
+      <div class="footer-col">
+        <h3>DS Safety Systems</h3>
+        <p>Your trusted local partner for complete fire protection design, certified equipment installation, and comprehensive AMC services in New Delhi.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="product.html">Products Catalog</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <div class="footer-contact-info">
+          <a href="tel:9818701683" class="footer-contact-item">
+            <img src="call.png" alt="Phone"> <span>9818701683</span>
+          </a>
+          <a href="mailto:Dssafetysystems@hotmail.com" class="footer-contact-item">
+            <img src="email.png" alt="Email"> <span>Dssafetysystems@hotmail.com</span>
+          </a>
+          <div class="footer-contact-item">
+            <img src="pin.png" alt="Location"> <span>Govind Puri, New Delhi</span>
+          </div>
         </div>
-        <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#products">Products & Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h3>Our Core Solutions</h3>
-            <ul class="footer-links">
-                <li><a href="#products">Fire Extinguishers</a></li>
-                <li><a href="#products">Fire Alarm Systems</a></li>
-                <li><a href="#products">Hydrant & Sprinklers</a></li>
-                <li><a href="#products">Annual Maintenance (AMC)</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h3>Contact Info</h3>
-            <div class="footer-contact-info">
-                <a href="tel:9818701683" class="footer-contact-item">
-                    <img src="call.png" alt="Phone"> 9818701683
-                </a>
-                <a href="mailto:Dssafetysystems@hotmail.com" class="footer-contact-item">
-                    <img src="email.png" alt="Email"> Dssafetysystems@hotmail.com
-                </a>
-                <div class="footer-contact-item">
-                    <img src="pin.png" alt="Location"> Govind Puri, New Delhi
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 DS Safety Systems. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
-    </div> 
-</footer>
+      <p>&copy; 2026 DS Safety Systems. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call Button -->
+  <a href="tel:9818701683" class="floating-call-btn">
+    <img src="call.png" alt="Call Us">
+  </a>
+
+  <script>
+    // Mobile menu toggle functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const headerGroup = document.getElementById('header-group');
+
+    mobileMenu.addEventListener('click', () => {
+      headerGroup.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
