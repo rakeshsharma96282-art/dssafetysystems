@@ -165,6 +165,7 @@
     .nav-links li {
       opacity: 0;
       animation: slideInFromLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      position: relative;
     }
 
     .nav-links li:nth-child(1) { animation-delay: 0.3s; }
@@ -191,10 +192,61 @@
       font-weight: 700;
       padding: 5px 10px;
       transition: color 0.3s ease;
+      display: block;
     }
 
     .nav-links li a:hover {
       color: #d93830;
+    }
+
+    /* Animated Dropdown Styling */
+    .nav-links li.dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 240px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      list-style: none;
+      padding: 10px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease-in-out;
+      border-top: 3px solid #d93830;
+      z-index: 100;
+    }
+
+    .nav-links li.dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li {
+      opacity: 1 !important;
+      animation: none !important;
+      width: 100%;
+    }
+
+    .dropdown-menu li a {
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #444;
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #f9f9f9;
+      color: #d93830;
+      padding-left: 24px;
     }
 
     .btn-get-quote {
@@ -228,76 +280,44 @@
       border-radius: 2px;
     }
 
-/* Hero Banner Section with Blurred Background */
-/* Hero Banner Image Section with Built-in Blurred Background */
-.hero-section {
-  width: 100%;
-  background-color: #111;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 30px;
-}
+    /* Hero Banner Section */
+    .hero-section {
+      width: 100%;
+      background-color: #111;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 30px;
+    }
 
-/* Creates a dark blurred backdrop */
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, #2a2a2a 0%, #0a0a0a 100%);
-  z-index: 1;
-}
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #2a2a2a 0%, #0a0a0a 100%);
+      z-index: 1;
+    }
 
-.hero-banner-img {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  max-height: 72vh;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  position: relative;
-  z-index: 2;
-  border-radius: 14px;
-  border: 1px solid rgba(217, 56, 48, 0.4);
-  box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
-}
+    .hero-banner-img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      max-height: 72vh;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      position: relative;
+      z-index: 2;
+      border-radius: 14px;
+      border: 1px solid rgba(217, 56, 48, 0.4);
+      box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
+    }
 
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 10px 8px;
-  }
-  .hero-banner-img {
-    max-height: 48vh;
-    border-radius: 10px;
-  }
-}
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 10px 8px;
-  }
-  .hero-banner-img {
-    max-height: 48vh;
-    border-radius: 10px;
-  }
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 10px 8px;
-  }
-  .hero-banner-img {
-    max-height: 48vh;
-    border-radius: 10px;
-  }
-}
     /* Client Logo Marquee Section */
     .marquee-section {
       background-color: #ffffff;
@@ -615,7 +635,7 @@
       font-size: 14px;
     }
 
-    /* Contact / Get a Quote Form Section */
+    /* Contact Section */
     .contact-section {
       padding: 90px 25px;
       background-color: #ffffff;
@@ -727,21 +747,6 @@
 
     .btn-submit:hover {
       background-color: #b52b24;
-    }
-
-    .form-status {
-      grid-column: span 2;
-      font-size: 14px;
-      font-weight: 700;
-      text-align: center;
-      padding: 10px;
-      display: none;
-    }
-
-    .form-status.success {
-      color: #27ae60;
-      background: #e8f8f0;
-      display: block;
     }
 
     /* Floating Click-to-Call Button for Mobile */
@@ -948,6 +953,22 @@
       }
       .nav-links { flex-direction: column; width: 100%; gap: 0; }
       .nav-links li { width: 100%; padding: 10px 0; border-bottom: 1px solid #f0f0f0; text-align: center; animation: none; opacity: 1; }
+      
+      /* Mobile dropdown behavior */
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-top: none;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height 0.3s ease;
+      }
+      .nav-links li.dropdown:hover .dropdown-menu {
+        max-height: 200px;
+        padding: 10px 0;
+      }
+
       .divider { display: none; }
       .btn-get-quote { width: 100%; text-align: center; }
 
@@ -1019,14 +1040,22 @@
       <ul class="nav-links">
         <li><a href="#">Home</a></li><span class="divider">|</span>
         <li><a href="#about">About Us</a></li><span class="divider">|</span>
-        <li><a href="#products">Products</a></li><span class="divider">|</span>
+        <li class="dropdown">
+          <a href="#products">Products ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#products">Fire Extinguishers</a></li>
+            <li><a href="#products">Fire Alarm Systems</a></li>
+            <li><a href="#products">Hydrant & Sprinklers</a></li>
+            <li><a href="#products">Annual Maintenance (AMC)</a></li>
+          </ul>
+        </li><span class="divider">|</span>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="btn-get-quote">Get Quote</a>
     </div>
   </header>
 
-  <!-- Hero Section: Fully Visible Banner Image -->
+  <!-- Hero Section -->
   <section class="hero-section">
     <img src="hero-banner.jpg.png.png" alt="DS Safety Systems Hero Banner" class="hero-banner-img">
   </section>
@@ -1209,36 +1238,26 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
           </div>
-          <div class="form-group">
+          <div class="form-group full-width">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address">
-          </div>
-          <div class="form-group">
-            <label for="service">Select Service / Product</label>
-            <input type="text" id="service" name="service" placeholder="e.g., Fire Extinguisher / AMC">
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
           </div>
           <div class="form-group full-width">
-            <label for="message">Project Details / Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your requirements..."></textarea>
+            <label for="message">Project Details / Requirements</label>
+            <textarea id="message" name="message" placeholder="Tell us about your fire protection needs..." required></textarea>
           </div>
-          <button type="submit" class="btn-submit">Send Inquiry / Get Quote</button>
-          <div class="form-status" id="formStatus">Thank you! Your inquiry has been sent successfully.</div>
+          <button type="submit" class="btn-submit">Submit Request</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Floating Click-to-Call Button for Mobile -->
-  <a href="tel:9818701683" class="floating-call-btn" aria-label="Call Us">
-    <img src="call.png" alt="Phone">
-  </a>
-
-  <!-- Professional Footer Section -->
-  <site-footer class="site-footer">
+  <!-- Footer Section -->
+  <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-col">
         <h3>DS Safety Systems</h3>
-        <p>Your premier destination for advanced fire protection systems, certified equipment supply, installation, and comprehensive AMC services in New Delhi.</p>
+        <p>Your trusted local partner for advanced fire prevention, certified equipment, and regular maintenance checks across New Delhi.</p>
       </div>
       <div class="footer-col">
         <h3>Quick Links</h3>
@@ -1250,12 +1269,12 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h3>Our Core Solutions</h3>
+        <h3>Solutions</h3>
         <ul class="footer-links">
           <li><a href="#products">Fire Extinguishers</a></li>
-          <li><a href="#products">Fire Alarm Systems</a></li>
-          <li><a href="#products">Hydrant & Sprinklers</a></li>
-          <li><a href="#products">Annual Maintenance (AMC)</a></li>
+          <li><a href="#products">Fire Alarms</a></li>
+          <li><a href="#products">Hydrant Systems</a></li>
+          <li><a href="#products">AMC Maintenance</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1280,6 +1299,21 @@
         <a href="#">Terms of Service</a>
       </div>
     </div>
-  </site-footer>
+  </footer>
 
-  
+  <!-- Floating Mobile Call Button -->
+  <a href="tel:9818701683" class="floating-call-btn">
+    <img src="call.png" alt="Call Now">
+  </a>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const headerGroup = document.getElementById('header-group');
+
+    mobileMenu.addEventListener('click', () => {
+      headerGroup.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
