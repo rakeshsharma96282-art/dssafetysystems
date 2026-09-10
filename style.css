@@ -1107,3 +1107,52 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+/* Modern Glow & Dynamic Styling Upgrades */
+
+/* Brand Glow Effect */
+.brand-single-line {
+  text-shadow: 0 0 10px rgba(230, 57, 48, 0.4), 0 0 20px rgba(230, 57, 48, 0.2);
+}
+
+/* Glowing Accent Buttons */
+.btn-contact, .btn-get-quote, .btn-submit, .btn-quote {
+  background: linear-gradient(135deg, #e63930, #b52b24);
+  box-shadow: 0 0 15px rgba(230, 57, 48, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover, .btn-get-quote:hover, .btn-submit:hover, .btn-quote:hover {
+  background: linear-gradient(135deg, #ff4d42, #d93830);
+  box-shadow: 0 0 25px rgba(230, 57, 48, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Service & Product Cards with Hover Glow */
+.service-card, .product-card, .testimonial-card, .contact-container {
+  border: 1px solid rgba(230, 57, 48, 0.15);
+  transition: all 0.35s ease;
+}
+
+.service-card:hover, .product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(230, 57, 48, 0.6);
+  box-shadow: 0 10px 30px rgba(230, 57, 48, 0.15), 0 0 15px rgba(230, 57, 48, 0.1);
+}
+
+/* Hero Section Neon Border Glow Enhancement */
+.hero-banner-img {
+  border: 1px solid rgba(230, 57, 48, 0.5);
+  box-shadow: 0 0 30px rgba(230, 57, 48, 0.35), inset 0 0 15px rgba(230, 57, 48, 0.2);
+}
+
+/* Highlight Boxes Glow */
+.highlight-box {
+  background: #fff;
+  border-left: 4px solid #e63930;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s ease;
+}
+
+.highlight-box:hover {
+  box-shadow: 0 0 12px rgba(230, 57, 48, 0.2);
+}
