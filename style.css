@@ -434,104 +434,38 @@ html {
   position: relative;
 }
 
+/* About Us Section */
+.about-section {
+  padding: 90px 25px;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
 .about-card-box h3 {
   font-family: 'Outfit', sans-serif;
-  font-size: 26px;
+  font-size: 32px;
   margin-bottom: 15px;
-  color: #ff6b63;
+  color: #1a1a1a;
+}
+
+.about-card-box h3 span {
+  color: #d93830;
 }
 
 .about-card-box p {
-  color: #ddd;
+  color: #555;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-}
-
-.section-title-container {
-  max-width: 600px;
-  margin: 0 auto 50px auto;
-}
-
-.section-title-container h2 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 34px;
-  color: #1a1a1a;
-  margin-bottom: 12px;
-}
-
-.section-title-container h2 span {
-  color: #e63930;
-}
-
-.section-title-container p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  border-top: 4px solid #d93830;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.service-card-body {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.service-card h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 20px;
-  color: #1a1a1a;
-  margin-bottom: 12px;
-}
-
-.service-card p {
-  color: #555;
-  font-size: 15px;
-  line-height: 1.5;
   margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.service-link {
-  color: #d93830;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 15px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  transition: gap 0.2s ease;
-}
-
-.service-link:hover {
-  gap: 8px;
 }
 
 /* Why Choose Us Section */
