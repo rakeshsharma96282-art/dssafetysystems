@@ -311,82 +311,90 @@
       color: #d93830;
     }
 
-    /* About Us Section */
-    .about-section {
-      padding: 90px 25px;
-      background-color: #ffffff;
-    }
+   /* About Us Section */
+.about-section {
+  padding: 90px 25px;
+  background-color: #ffffff;
+}
 
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
 
-    .about-badge {
-      display: inline-block;
-      background-color: rgba(217, 56, 48, 0.1);
-      color: #d93830;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 15px;
-    }
+.about-text h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 34px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
 
-    .about-text h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 34px;
-      color: #1a1a1a;
-      margin-bottom: 20px;
-      line-height: 1.3;
-    }
+.about-text h2 span {
+  color: #d93830;
+}
 
-    .about-text h2 span {
-      color: #d93830;
-    }
+.about-text p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
 
-    .about-text p {
-      color: #555;
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
 
-    .about-btn {
-      display: inline-block;
-      background-color: #d93830;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 4px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+.highlight-box {
+  background: #fff;
+  padding: 15px 20px;
+  border-left: 4px solid #e63930;
+  font-weight: 700;
+  color: #333;
+  font-size: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s ease;
+}
 
-    .about-btn:hover {
-      background-color: #b52b24;
-    }
+.highlight-box:hover {
+  box-shadow: 0 0 12px rgba(230, 57, 48, 0.2);
+}
 
-    .about-image-wrapper {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+.about-card-box {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  color: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: relative;
+  border: 1px solid rgba(230, 57, 48, 0.15);
+  animation: subtleGlow 4s ease-in-out infinite;
+}
 
-    .about-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-    }
+.about-card-box h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
 
+.about-card-box h3 span {
+  color: #d93830;
+}
+
+.about-card-box p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
     /* Industries We Serve Section */
     .industries-section {
       padding: 90px 25px;
@@ -1106,25 +1114,66 @@
   </div>
 
   <!-- About Us Section -->
-  <section id="about" class="about-section">
-    <div class="about-container">
-      <div class="about-text">
-        <div class="about-badge">About DS Safety Systems</div>
-        <h2>Engineered Protection. <span>Uncompromising Safety.</span></h2>
-        <p>
-          We specialize in delivering mission-critical fire protection solutions, ISI-certified safety equipment, and rigorous annual maintenance contracts (AMC) designed to safeguard commercial spaces, industrial plants, and residential properties.
-        </p>
-        <p>
-          Backed by expert engineering and rapid response protocols, our mission is to ensure absolute compliance and total peace of mind against fire hazards.
-        </p>
-        <a href="#contact" class="about-btn">Get in Touch</a>
-      </div>
-      <div class="about-image-wrapper">
-        <img src="bg.png" alt="About DS Safety Systems" class="about-img">
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>Pioneering Excellence in <span>Fire Safety & Security Solutions</span></h2>
+      <p>Welcome to the forefront of modern life safety engineering. For years, we have built an unyielding reputation for safeguarding residential, commercial, and industrial landscapes against unforeseen hazards. We don't just install equipment—we engineer comprehensive defense ecosystems tailored to the exact vulnerabilities of your environment.</p>
+      <p>Our multidisciplinary team comprises certified fire protection engineers, master technicians, and compliance strategists who stay ahead of evolving regulatory codes. By fusing advanced IoT-enabled detection technology with robust, time-tested hardware, we deliver seamless protection that operates flawlessly behind the scenes.</p>
+      <p>Driven by a core philosophy that human life and asset integrity are paramount, we approach every blueprint with absolute precision. From initial risk assessment and custom layout design to frictionless installation and lifetime maintenance schedules, we stand shoulder-to-shoulder with our clients at every single phase.</p>
+      
+      <div class="about-highlights">
+        <div class="highlight-box">Certified Compliance & Engineering</div>
+        <div class="highlight-box">Rapid Response Emergency Teams</div>
+        <div class="highlight-box">Smart IoT Detection Integration</div>
+        <div class="highlight-box">Tailored Turnkey Project Execution</div>
       </div>
     </div>
-  </section>
 
+    <div class="about-card-box">
+      <h3>Our Vision & <span>Mission</span></h3>
+      <p><strong>Our Vision:</strong> To be the undisputed industry leader in intelligent fire safety and security, setting global benchmarks for operational reliability, technical innovation, and client trust.</p>
+      <p><strong>Our Mission:</strong> To eliminate structural vulnerabilities through proactive engineering, uncompromised product quality, and round-the-clock vigilance, ensuring total peace of mind for every community and enterprise we protect.</p>
+      <p>When the unexpected occurs, every second counts. Our systems are engineered to react instantaneously, giving you the ultimate advantage when it matters most.</p>
+      <a href="#contact" class="btn-contact" style="display: inline-block; margin-top: 10px; background-color: #d93830; color: white; padding: 12px 25px; border-radius: 4px; font-weight: 700; text-decoration: none;">Consult Our Experts</a>
+    </div>
+  </div>
+
+  <!-- Why Choose Us Integrated Subsection -->
+  <div class="why-us-container" style="max-width: 1200px; margin: 70px auto 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; border-top: 1px solid rgba(230, 57, 48, 0.2); padding-top: 50px;">
+    <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+      <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">01</div>
+      <div class="why-us-text">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">Certified Engineering</h3>
+        <p style="color: #555; font-size: 14px; line-height: 1.6;">Executed by master technicians and certified fire protection specialists meeting rigorous compliance benchmarks.</p>
+      </div>
+    </div>
+    
+    <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+      <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">02</div>
+      <div class="why-us-text">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">24/7 Rapid Response</h3>
+        <p style="color: #555; font-size: 14px; line-height: 1.6;">Round-the-clock remote system monitoring and emergency technical dispatch units deployed instantaneously.</p>
+      </div>
+    </div>
+
+    <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+      <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">03</div>
+      <div class="why-us-text">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">Smart Integration</h3>
+        <p style="color: #555; font-size: 14px; line-height: 1.6;">Seamlessly fusing advanced IoT sensors, addressable panels, and automated suppression networks.</p>
+      </div>
+    </div>
+
+    <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+      <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">04</div>
+      <div class="why-us-text">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">Turnkey Reliability</h3>
+        <p style="color: #555; font-size: 14px; line-height: 1.6;">End-to-end execution covering risk blueprints, frictionless installation, and lifecycle audits.</p>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- Industries We Serve Section -->
   <section id="industries" class="industries-section">
     <div class="industries-container">
