@@ -1178,3 +1178,15 @@ html {
   background-color: #e02a20;
   box-shadow: 0 0 12px rgba(255, 50, 40, 0.6);
 }
+footer, .footer-section, .site-footer {
+  background-color: #0b0b0b !important;
+  color: #fff !important;
+}
+
+footer a, .footer-section a, .site-footer a {
+  color: #aaa !important;
+}
+
+footer a:hover, .footer-section a:hover, .site-footer a:hover {
+  color: #ff3228 !important;
+}
