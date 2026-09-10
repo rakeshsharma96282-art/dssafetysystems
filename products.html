@@ -1,1 +1,2185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Products | DS Safety Systems</title>
+
+<meta name="description"
+content="Explore fire safety products and systems from DS Safety Systems, New Delhi.">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lato',Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:#222;
+}
+
+body.modal-open{
+    overflow:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:#1a1a1a;
+    color:#fff;
+    padding:12px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.top-bar-left,
+.top-bar-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+}
+
+.info-item img{
+    width:18px;
+    height:18px;
+    object-fit:contain;
+    filter:invert(1);
+}
+
+.top-bar-right a{
+    color:#fff;
+    font-size:15px;
+}
+
+.btn-contact,
+.btn-get-quote,
+.hero-quote-btn,
+.quote-btn{
+    background:#d93830;
+    color:#fff;
+    border-radius:5px;
+    font-weight:700;
+    transition:.25s ease;
+}
+
+.btn-contact{
+    padding:10px 20px;
+}
+
+.btn-contact:hover,
+.btn-get-quote:hover,
+.hero-quote-btn:hover,
+.quote-btn:hover{
+    background:#b52b24;
+    transform:translateY(-1px);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.main-header{
+    background:#fff;
+    border-bottom:1px solid #e0e0e0;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:#e63930;
+}
+
+.logo-container img{
+    height:62px;
+    width:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 0 6px rgba(217,56,48,.35));
+}
+
+.brand-single-line{
+    font-family:'Outfit',sans-serif;
+    font-size:37px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.header-right-group{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.nav-links li a{
+    color:#333;
+    font-size:17px;
+    font-weight:700;
+    padding:5px 10px;
+    transition:.25s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active{
+    color:#d93830;
+}
+
+.divider{
+    color:#ccc;
+    font-size:18px;
+}
+
+.btn-get-quote{
+    padding:10px 20px;
+}
+
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:30px;
+    height:3px;
+    background:#333;
+    border-radius:2px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.products-hero{
+    min-height:400px;
+    padding:80px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.70)
+        ),
+        url('hero-banner.jpg.png.png');
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    border-bottom:3px solid #d93830;
+}
+
+.products-hero > div{
+    max-width:850px;
+}
+
+.eyebrow{
+    color:#ff625a;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.products-hero h1{
+    font-family:'Outfit',sans-serif;
+    font-size:clamp(40px,6vw,68px);
+    margin:10px 0 14px;
+}
+
+.products-hero h1 span{
+    color:#ff3b32;
+}
+
+.products-hero p{
+    color:#ddd;
+    font-size:17px;
+    line-height:1.7;
+    max-width:700px;
+    margin:0 auto 28px;
+}
+
+.hero-quote-btn{
+    display:inline-block;
+    padding:13px 25px;
+}
+
+/* =========================
+   CATALOGUE
+========================= */
+
+.catalogue-section{
+    padding:85px 25px;
+    background:#f8f8f8;
+}
+
+.section-heading{
+    max-width:700px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.section-heading > span{
+    color:#d93830;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.section-heading h2{
+    font-family:'Outfit',sans-serif;
+    font-size:36px;
+    margin:8px 0 12px;
+}
+
+.section-heading h2 strong{
+    color:#d93830;
+}
+
+.section-heading p{
+    color:#666;
+    line-height:1.6;
+}
+
+/* Search */
+
+.catalogue-tools{
+    max-width:1200px;
+    margin:0 auto 35px;
+}
+
+.search-box{
+    max-width:650px;
+    margin:0 auto 22px;
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:7px;
+    padding:0 15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+
+.search-box span{
+    font-size:25px;
+    color:#d93830;
+    margin-right:10px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 0;
+    border:0;
+    outline:0;
+    font-size:16px;
+    background:transparent;
+}
+
+/* Filters */
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.filter-btn{
+    border:1px solid #ddd;
+    background:#fff;
+    color:#444;
+    padding:9px 15px;
+    border-radius:20px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    color:#fff;
+    background:#d93830;
+    border-color:#d93830;
+}
+
+/* Product grid */
+
+.product-grid{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.catalogue-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #e6e6e6;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+    transition:.3s ease;
+}
+
+.catalogue-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(217,56,48,.5);
+    box-shadow:0 12px 28px rgba(0,0,0,.11);
+}
+
+.catalogue-card[hidden]{
+    display:none;
+}
+
+/* Product visual */
+
+.product-visual{
+    height:210px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:8px;
+
+    background:linear-gradient(135deg,#121212,#272727);
+
+    border-bottom:3px solid #d93830;
+}
+
+.product-visual span{
+    font-size:74px;
+    line-height:1;
+}
+
+.product-visual small{
+    color:#ff5a52;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.product-visual.sign span{
+    font-family:'Outfit',sans-serif;
+    font-size:45px;
+    color:#fff;
+    border:3px solid #fff;
+    padding:8px 15px;
+    border-radius:4px;
+}
+
+.product-visual.amc span{
+    color:#fff;
+    font-size:70px;
+    border:4px solid #ff3b32;
+    border-radius:50%;
+    width:85px;
+    height:85px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Cards */
+
+.card-content{
+    padding:23px;
+}
+
+.product-category{
+    display:inline-block;
+    color:#d93830;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    margin-bottom:8px;
+}
+
+.card-content h3{
+    font-family:'Outfit',sans-serif;
+    font-size:21px;
+    margin-bottom:10px;
+    color:#1a1a1a;
+}
+
+.card-content p{
+    color:#666;
+    font-size:14px;
+    line-height:1.6;
+    min-height:68px;
+    margin-bottom:18px;
+}
+
+.card-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.details-btn,
+.quote-btn{
+    min-height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:5px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.details-btn{
+    border:1px solid #d93830;
+    background:#fff;
+    color:#d93830;
+}
+
+.details-btn:hover{
+    background:#fff3f2;
+}
+
+.quote-btn{
+    border:0;
+}
+
+/* No results */
+
+.no-results{
+    display:none;
+    max-width:600px;
+    margin:30px auto 0;
+    text-align:center;
+    padding:25px;
+    background:#fff;
+    border-radius:8px;
+    color:#666;
+}
+
+.no-results.show{
+    display:block;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+    padding:20px;
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.72);
+}
+
+.modal-box{
+    position:relative;
+    width:min(620px,100%);
+    background:#fff;
+    border-top:5px solid #d93830;
+    border-radius:12px;
+    padding:38px;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    z-index:1;
+}
+
+.modal-close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    border:0;
+    background:transparent;
+    font-size:32px;
+    color:#555;
+    cursor:pointer;
+}
+
+.modal-box h2{
+    font-family:'Outfit',sans-serif;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.modal-box > p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+.modal-note{
+    background:#f8f8f8;
+    border-left:3px solid #d93830;
+    padding:15px;
+    margin-bottom:22px;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.modal-note span{
+    color:#666;
+    font-size:14px;
+}
+
+.modal-quote{
+    display:inline-flex;
+    padding:12px 22px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+    background:#141414;
+    color:#bbb;
+    padding:65px 25px 25px;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:0 auto 45px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+}
+
+.footer-col h3{
+    font-family:'Outfit',sans-serif;
+    color:#fff;
+    margin-bottom:18px;
+}
+
+.footer-col p{
+    color:#aaa;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.footer-links{
+    list-style:none;
+    display:grid;
+    gap:10px;
+}
+
+.footer-links a{
+    color:#aaa;
+    font-size:14px;
+    transition:.2s;
+}
+
+.footer-links a:hover{
+    color:#ff3b32;
+}
+
+.footer-contact-info{
+    display:grid;
+    gap:12px;
+}
+
+.footer-contact-item{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    color:#aaa;
+    font-size:14px;
+}
+
+.footer-contact-item img{
+    width:18px;
+    height:18px;
+    object-fit:contain;
+    filter:invert(.75);
+    flex-shrink:0;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:auto;
+    padding-top:22px;
+    border-top:1px solid #2a2a2a;
+    color:#888;
+    font-size:13px;
+    text-align:center;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .brand-single-line{
+        font-size:25px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .top-bar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .top-bar-left,
+    .top-bar-right{
+        justify-content:center;
+    }
+
+    .main-header{
+        padding:10px 15px;
+    }
+
+    .logo-container img{
+        height:45px;
+    }
+
+    .brand-single-line{
+        font-size:17px;
+        letter-spacing:.5px;
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .header-right-group{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#fff;
+
+        flex-direction:column;
+
+        padding:0;
+
+        max-height:0;
+        overflow:hidden;
+
+        transition:
+            max-height .4s ease,
+            padding .4s ease;
+
+        box-shadow:0 10px 15px rgba(0,0,0,.05);
+    }
+
+    .header-right-group.active{
+        max-height:450px;
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        width:100%;
+        gap:0;
+    }
+
+    .nav-links li{
+        width:100%;
+        padding:10px 0;
+        border-bottom:1px solid #f0f0f0;
+        text-align:center;
+    }
+
+    .divider{
+        display:none;
+    }
+
+    .btn-get-quote{
+        width:100%;
+        text-align:center;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+        max-width:520px;
+    }
+
+    .products-hero{
+        min-height:320px;
+        padding:55px 20px;
+    }
+
+    .products-hero h1{
+        font-size:43px;
+    }
+
+    .catalogue-section{
+        padding:60px 15px;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .top-bar-left{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .top-bar-right{
+        flex-direction:column;
+    }
+
+    .products-hero h1{
+        font-size:36px;
+    }
+
+    .card-actions{
+        grid-template-columns:1fr;
+    }
+
+    .modal-box{
+        padding:30px 22px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <div class="top-bar-left">
+
+        <a href="tel:9818701683" class="info-item">
+            <img src="call.png" alt="Call">
+            9818701683
+        </a>
+
+        <a href="mailto:Dssafetysystems@hotmail.com" class="info-item">
+            <img src="email.png" alt="Email">
+            Dssafetysystems@hotmail.com
+        </a>
+
+        <span class="info-item">
+            <img src="pin.png" alt="Location">
+            Govind Puri, New Delhi
+        </span>
+
+    </div>
+
+    <div class="top-bar-right">
+
+        <a href="#">Client Portal</a>
+
+        <a href="tel:9818701683" class="btn-contact">
+            Contact Us
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="main-header">
+
+    <a href="index.html" class="logo-container">
+
+        <img src="logo.png" alt="DS Safety Systems Logo">
+
+        <span class="brand-single-line">
+            DS SAFETY SYSTEMS
+        </span>
+
+    </a>
+
+
+    <div class="header-right-group">
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <span class="divider">|</span>
+
+                <li>
+                    <a href="index.html#about">
+                        About Us
+                    </a>
+                </li>
+
+                <span class="divider">|</span>
+
+                <li>
+                    <a class="active" href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <span class="divider">|</span>
+
+                <li>
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <a href="index.html#contact" class="btn-get-quote">
+            Get Quote
+        </a>
+
+    </div>
+
+
+    <div class="menu-toggle" id="menuToggle" aria-label="Open menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="products-hero">
+
+    <div>
+
+        <span class="eyebrow">
+            DS SAFETY SYSTEMS
+        </span>
+
+        <h1>
+            Fire Safety <span>Products</span>
+        </h1>
+
+        <p>
+            Reliable fire protection equipment and systems
+            for residential, commercial and industrial requirements.
+        </p>
+
+        <a href="index.html#contact" class="hero-quote-btn">
+            Request a Quote
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CATALOGUE -->
+
+<section class="catalogue-section">
+
+
+    <div class="section-heading">
+
+        <span>
+            OUR CATALOGUE
+        </span>
+
+        <h2>
+            Choose the right <strong>solution</strong>
+        </h2>
+
+        <p>
+            Search the catalogue or filter products by category.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH + FILTER -->
+
+    <div class="catalogue-tools">
+
+        <label class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                id="productSearch"
+                type="search"
+                placeholder="Search products..."
+                aria-label="Search products"
+            >
+
+        </label>
+
+
+        <div class="filter-buttons" id="filterButtons">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="extinguishers">
+                Extinguishers
+            </button>
+
+            <button class="filter-btn" data-filter="alarms">
+                Fire Alarms
+            </button>
+
+            <button class="filter-btn" data-filter="hydrant">
+                Hydrant
+            </button>
+
+            <button class="filter-btn" data-filter="sprinkler">
+                Sprinklers
+            </button>
+
+            <button class="filter-btn" data-filter="pumps">
+                Fire Pumps
+            </button>
+
+            <button class="filter-btn" data-filter="accessories">
+                Accessories
+            </button>
+
+            <button class="filter-btn" data-filter="amc">
+                AMC
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="product-grid" id="productGrid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article
+            class="catalogue-card"
+            data-category="extinguishers"
+            data-name="ABC Dry Powder Fire Extinguisher"
+        >
+
+            <div class="product-visual extinguisher">
+
+                <span>🧯</span>
+
+                <small>
+                    FIRE EXTINGUISHER
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    EXTINGUISHERS
+                </span>
+
+                <h3>
+                    ABC Dry Powder Fire Extinguisher
+                </h3>
+
+                <p>
+                    Multi-purpose extinguisher option for common fire-risk environments.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="ABC Dry Powder Fire Extinguisher"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=ABC%20Dry%20Powder%20Fire%20Extinguisher#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article
+            class="catalogue-card"
+            data-category="extinguishers"
+            data-name="CO2 Fire Extinguisher"
+        >
+
+            <div class="product-visual co2">
+
+                <span>🧯</span>
+
+                <small>
+                    CO₂
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    EXTINGUISHERS
+                </span>
+
+                <h3>
+                    CO₂ Fire Extinguisher
+                </h3>
+
+                <p>
+                    Compact fire protection option commonly used around electrical equipment.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="CO2 Fire Extinguisher"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=CO2%20Fire%20Extinguisher#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+
+        <article
+            class="catalogue-card"
+            data-category="extinguishers"
+            data-name="Foam Fire Extinguisher"
+        >
+
+            <div class="product-visual foam">
+
+                <span>🧯</span>
+
+                <small>
+                    FOAM
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    EXTINGUISHERS
+                </span>
+
+                <h3>
+                    Foam Fire Extinguisher
+                </h3>
+
+                <p>
+                    Designed for suitable liquid and solid-material fire applications.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Foam Fire Extinguisher"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Foam%20Fire%20Extinguisher#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 4 -->
+
+        <article
+            class="catalogue-card"
+            data-category="alarms"
+            data-name="Fire Alarm Control Panel"
+        >
+
+            <div class="product-visual alarm">
+
+                <span>🚨</span>
+
+                <small>
+                    CONTROL PANEL
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    FIRE ALARMS
+                </span>
+
+                <h3>
+                    Fire Alarm Control Panel
+                </h3>
+
+                <p>
+                    Central control equipment for monitoring and managing fire alarm systems.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Fire Alarm Control Panel"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Fire%20Alarm%20Control%20Panel#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 5 -->
+
+        <article
+            class="catalogue-card"
+            data-category="alarms"
+            data-name="Smoke Detector"
+        >
+
+            <div class="product-visual detector">
+
+                <span>◉</span>
+
+                <small>
+                    DETECTOR
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    FIRE ALARMS
+                </span>
+
+                <h3>
+                    Smoke Detector
+                </h3>
+
+                <p>
+                    Early-warning detection component for compatible fire alarm installations.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Smoke Detector"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Smoke%20Detector#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 6 -->
+
+        <article
+            class="catalogue-card"
+            data-category="hydrant"
+            data-name="Fire Hydrant System"
+        >
+
+            <div class="product-visual hydrant">
+
+                <span>🚒</span>
+
+                <small>
+                    HYDRANT
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    HYDRANT SYSTEMS
+                </span>
+
+                <h3>
+                    Fire Hydrant System
+                </h3>
+
+                <p>
+                    Firefighting water-distribution solution for suitable building applications.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Fire Hydrant System"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Fire%20Hydrant%20System#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 7 -->
+
+        <article
+            class="catalogue-card"
+            data-category="sprinkler"
+            data-name="Fire Sprinkler System"
+        >
+
+            <div class="product-visual sprinkler">
+
+                <span>💧</span>
+
+                <small>
+                    SPRINKLER
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    SPRINKLER SYSTEMS
+                </span>
+
+                <h3>
+                    Fire Sprinkler System
+                </h3>
+
+                <p>
+                    Automatic fire suppression components for appropriately designed systems.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Fire Sprinkler System"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Fire%20Sprinkler%20System#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 8 -->
+
+        <article
+            class="catalogue-card"
+            data-category="pumps"
+            data-name="Fire Pump System"
+        >
+
+            <div class="product-visual pump">
+
+                <span>⚙</span>
+
+                <small>
+                    FIRE PUMP
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    FIRE PUMPS
+                </span>
+
+                <h3>
+                    Fire Pump System
+                </h3>
+
+                <p>
+                    Fire-water pumping equipment selected according to system requirements.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Fire Pump System"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Fire%20Pump%20System#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 9 -->
+
+        <article
+            class="catalogue-card"
+            data-category="accessories"
+            data-name="Fire Hose Reel"
+        >
+
+            <div class="product-visual hose">
+
+                <span>◉</span>
+
+                <small>
+                    HOSE REEL
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    ACCESSORIES
+                </span>
+
+                <h3>
+                    Fire Hose Reel
+                </h3>
+
+                <p>
+                    Hose-reel equipment for accessible first-response firefighting arrangements.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Fire Hose Reel"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Fire%20Hose%20Reel#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 10 -->
+
+        <article
+            class="catalogue-card"
+            data-category="accessories"
+            data-name="Emergency Exit Signage"
+        >
+
+            <div class="product-visual sign">
+
+                <span>
+                    EXIT
+                </span>
+
+                <small>
+                    SAFETY SIGNAGE
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    ACCESSORIES
+                </span>
+
+                <h3>
+                    Emergency Exit Signage
+                </h3>
+
+                <p>
+                    Safety signage options for clear emergency-route identification.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Emergency Exit Signage"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Emergency%20Exit%20Signage#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 11 -->
+
+        <article
+            class="catalogue-card"
+            data-category="amc"
+            data-name="Fire Safety AMC"
+        >
+
+            <div class="product-visual amc">
+
+                <span>✓</span>
+
+                <small>
+                    AMC
+                </small>
+
+            </div>
+
+
+            <div class="card-content">
+
+                <span class="product-category">
+                    MAINTENANCE
+                </span>
+
+                <h3>
+                    Fire Safety AMC
+                </h3>
+
+                <p>
+                    Planned inspection and maintenance support for fire safety systems.
+                </p>
+
+
+                <div class="card-actions">
+
+                    <button
+                        class="details-btn"
+                        data-product="Fire Safety AMC"
+                    >
+                        View Details
+                    </button>
+
+                    <a
+                        class="quote-btn"
+                        href="index.html?product=Fire%20Safety%20AMC#contact"
+                    >
+                        Get Quote
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <div class="no-results" id="noResults">
+        No products found. Try another search or category.
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     PRODUCT MODAL
+========================= -->
+
+<div class="modal" id="productModal" aria-hidden="true">
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+
+    <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+        <button
+            class="modal-close"
+            id="modalClose"
+            aria-label="Close"
+        >
+            &times;
+        </button>
+
+
+        <span class="product-category" id="modalCategory">
+            PRODUCT
+        </span>
+
+
+        <h2 id="modalTitle">
+            Product
+        </h2>
+
+
+        <p id="modalDescription"></p>
+
+
+        <div class="modal-note">
+
+            <strong>
+                Need specifications or pricing?
+            </strong>
+
+            <span>
+                Contact DS Safety Systems for the suitable configuration and quotation.
+            </span>
+
+        </div>
+
+
+        <a
+            id="modalQuote"
+            class="quote-btn modal-quote"
+            href="index.html#contact"
+        >
+            Request a Quote
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-col">
+
+            <h3>
+                DS Safety Systems
+            </h3>
+
+            <p>
+                Your premier destination for advanced fire protection
+                systems, equipment supply, installation and AMC services
+                in New Delhi.
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#about">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Products
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="products.html?category=extinguishers">
+                        Extinguishers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html?category=alarms">
+                        Fire Alarms
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html?category=hydrant">
+                        Hydrant Systems
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html?category=amc">
+                        AMC Services
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Contact Info
+            </h3>
+
+
+            <div class="footer-contact-info">
+
+                <a
+                    href="tel:9818701683"
+                    class="footer-contact-item"
+                >
+
+                    <img src="call.png" alt="Call">
+
+                    9818701683
+
+                </a>
+
+
+                <a
+                    href="mailto:Dssafetysystems@hotmail.com"
+                    class="footer-contact-item"
+                >
+
+                    <img src="email.png" alt="Email">
+
+                    Dssafetysystems@hotmail.com
+
+                </a>
+
+
+                <div class="footer-contact-item">
+
+                    <img src="pin.png" alt="Location">
+
+                    Govind Puri, New Delhi
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            &copy; 2026 DS Safety Systems. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   SEARCH + FILTER
+========================= */
+
+const cards = [
+    ...document.querySelectorAll('.catalogue-card')
+];
+
+const filters = [
+    ...document.querySelectorAll('.filter-btn')
+];
+
+const search =
+    document.getElementById('productSearch');
+
+const noResults =
+    document.getElementById('noResults');
+
+
+let currentFilter =
+    new URLSearchParams(location.search).get('category')
+    || 'all';
+
+
+function renderProducts(){
+
+    const query =
+        search.value.trim().toLowerCase();
+
+    let visible = 0;
+
+
+    cards.forEach(card => {
+
+        const category =
+            card.dataset.category;
+
+        const name =
+            card.dataset.name.toLowerCase();
+
+
+        const matchesFilter =
+            currentFilter === 'all'
+            || category === currentFilter;
+
+
+        const matchesSearch =
+            !query
+            || name.includes(query)
+            || card.textContent
+                .toLowerCase()
+                .includes(query);
+
+
+        const show =
+            matchesFilter
+            && matchesSearch;
+
+
+        card.hidden = !show;
+
+
+        if(show){
+            visible++;
+        }
+
+    });
+
+
+    filters.forEach(btn => {
+
+        btn.classList.toggle(
+            'active',
+            btn.dataset.filter === currentFilter
+        );
+
+    });
+
+
+    noResults.classList.toggle(
+        'show',
+        visible === 0
+    );
+
+}
+
+
+/* Filter buttons */
+
+filters.forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        currentFilter =
+            btn.dataset.filter;
+
+        renderProducts();
+
+    });
+
+});
+
+
+/* Search */
+
+search.addEventListener(
+    'input',
+    renderProducts
+);
+
+
+/* =========================
+   PRODUCT DETAILS MODAL
+========================= */
+
+const modal =
+    document.getElementById('productModal');
+
+const modalTitle =
+    document.getElementById('modalTitle');
+
+const modalCategory =
+    document.getElementById('modalCategory');
+
+const modalDescription =
+    document.getElementById('modalDescription');
+
+const modalQuote =
+    document.getElementById('modalQuote');
+
+
+document
+.querySelectorAll('.details-btn')
+.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+
+        const card =
+            button.closest('.catalogue-card');
+
+
+        const product =
+            card.dataset.name;
+
+
+        modalTitle.textContent =
+            product;
+
+
+        modalCategory.textContent =
+            card
+            .querySelector('.product-category')
+            .textContent;
+
+
+        modalDescription.textContent =
+            card
+            .querySelector('p')
+            .textContent;
+
+
+        modalQuote.href =
+            'index.html?product='
+            + encodeURIComponent(product)
+            + '#contact';
+
+
+        modal.classList.add('open');
+
+        modal.setAttribute(
+            'aria-hidden',
+            'false'
+        );
+
+
+        document.body.classList.add(
+            'modal-open'
+        );
+
+    });
+
+});
+
+
+/* Close modal */
+
+function closeModal(){
+
+    modal.classList.remove('open');
+
+    modal.setAttribute(
+        'aria-hidden',
+        'true'
+    );
+
+    document.body.classList.remove(
+        'modal-open'
+    );
+
+}
+
+
+document
+.getElementById('modalClose')
+.addEventListener(
+    'click',
+    closeModal
+);
+
+
+document
+.getElementById('modalOverlay')
+.addEventListener(
+    'click',
+    closeModal
+);
+
+
+document.addEventListener(
+    'keydown',
+    e => {
+
+        if(e.key === 'Escape'){
+            closeModal();
+        }
+
+    }
+);
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuToggle =
+    document.getElementById('menuToggle');
+
+const headerGroup =
+    document.querySelector(
+        '.header-right-group'
+    );
+
+
+menuToggle.addEventListener(
+    'click',
+    () => {
+
+        headerGroup.classList.toggle(
+            'active'
+        );
+
+    }
+);
+
+
+/* Initial products */
+
+renderProducts();
+
+</script>
+
+</body>
+</html>
