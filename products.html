@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - DS Safety Systems</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,7 +13,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="products.html" class="active">Products</a>
+            <a href="product.html" class="active">Products</a>
             <a href="contact.html">Contact</a>
             <a href="quote.html" class="btn-quote-nav">Get Quote</a>
         </nav>
@@ -92,24 +91,182 @@
 
     <!-- JavaScript for Interactivity -->
     <script>
-        // Navigates to Tier 2 Single Product Detail page
         function viewProduct(pageUrl) {
             window.location.href = pageUrl;
         }
 
         function handleQuote(productName) {
             alert("Redirecting to Quote Form for: " + productName);
-            // Example: window.location.href = "quote.html?product=" + encodeURIComponent(productName);
         }
 
         function handleEnquiry(productName) {
             alert("Opening Enquiry Form for: " + productName);
-            // Example: open a modal or redirect to contact page
         }
     </script>
 
+    <!-- CSS Styling Placed at the Bottom -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .site-header {
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-bottom: 3px solid #d91414;
+        }
+
+        .site-header .logo {
+            font-weight: bold;
+            font-size: 20px;
+            color: #d91414;
+        }
+
+        .site-header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .site-header nav a:hover, .site-header nav a.active {
+            color: #d91414;
+        }
+
+        .site-header .btn-quote-nav {
+            background-color: #d91414;
+            padding: 8px 15px;
+            border-radius: 4px;
+            color: white !important;
+        }
+
+        .catalog-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .catalog-container h1 {
+            font-size: 32px;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .catalog-container .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            background-color: #e2e8f0;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-content h3 {
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .product-actions button {
+            flex: 1;
+            padding: 10px 0;
+            font-size: 13px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-quote {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .btn-quote:hover {
+            background-color: #333;
+        }
+
+        .btn-enquiry {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc !important;
+        }
+
+        .btn-enquiry:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+
 </body>
 </html>
-git add .
-git commit -m "Update products page"
-git push origin main
