@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Product Details | DS Safety Systems</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Lato', Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
+    .info-item { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 15px; font-weight: 700; text-decoration: none; }
+    .info-item img { width: 18px; height: 18px; filter: invert(1); }
+    .btn-contact { background-color: #d93830; color: white; padding: 8px 18px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 15px; }
+
+    /* Main Navigation */
+    .main-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-container { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-container img { height: 50px; width: auto; object-fit: contain; }
+    .brand-single-line { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 28px; color: #e63930; letter-spacing: 1px; }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 20px; }
+    .nav-links li a { text-decoration: none; color: #333; font-size: 16px; font-weight: 700; transition: color 0.3s; }
+    .nav-links li a:hover { color: #d93830; }
+
+    /* Product Detail Container */
+    .detail-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    @keyframes slideFromLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideFromRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .detail-image-box {
+      background: #f9f9f9;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      padding: 30px;
+      text-align: center;
+      opacity: 0;
+      animation: slideFromLeft 0.8s ease 0.2s forwards;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .detail-image-box img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .detail-info-box {
+      opacity: 0;
+      animation: slideFromRight 0.8s ease 0.4s forwards;
+    }
+
+    .detail-category-badge {
+      display: inline-block;
+      background-color: rgba(217, 56, 48, 0.1);
+      color: #d93830;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    .detail-info-box h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 34px;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .detail-info-box p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    /* Specs Table */
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    .specs-table th, .specs-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .specs-table th {
+      color: #1a1a1a;
+      font-weight: 700;
+      width: 40%;
+      background: #fcfcfc;
+    }
+
+    .specs-table td {
+      color: #666;
+    }
+
+    /* CTA Buttons */
+    .detail-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn-main-quote {
+      background-color: #d93830;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-main-quote:hover { background-color: #b52b24; }
+
+    .btn-back {
+      background-color: #f1f1f1;
+      color: #333;
+      padding: 14px 25px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .btn-back:hover { background-color: #e2e2e2; }
+
+    /* Footer */
+    .site-footer { background-color: #141414; color: #bbb; padding: 40px 25px; text-align: center; font-size: 14px; margin-top: 80px; }
+    .site-footer p { color: #888; }
+
+    @media (max-width: 900px) {
+      .detail-container { grid-template-columns: 1fr; gap: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="tel:9818701683" class="info-item"><img src="call.png" alt="Phone"> 9818701683</a>
+      <a href="mailto:Dssafetysystems@hotmail.com" class="info-item"><img src="email.png" alt="Email"> Dssafetysystems@hotmail.com</a>
+    </div>
+    <div class="top-bar-right">
+      <a href="index.html#contact" class="btn-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-header">
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="Logo" onerror="this.style.display='none';">
+      <span class="brand-single-line">DS SAFETY SYSTEMS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Dynamic Product Detail Section -->
+  <div class="detail-container">
+    <div class="detail-image-box">
+      <img id="productImage" src="hero-banner.jpg.png.png" alt="Product Image">
+    </div>
+    <div class="detail-info-box">
+      <span id="productBadge" class="detail-category-badge">Certified Protection</span>
+      <h1 id="productTitle">Loading Product...</h1>
+      <p id="productDescription">Please wait while we load the specifications for this safety equipment.</p>
+
+      <table class="specs-table">
+        <tr>
+          <th>Certification</th>
+          <td id="specCert">ISI & BIS Approved</td>
+        </tr>
+        <tr>
+          <th>Application</th>
+          <td id="specApp">Commercial & Industrial Safety</td>
+        </tr>
+        <tr>
+          <th>Maintenance</th>
+          <td id="specMaint">Annual Maintenance Contract Supported</td>
+        </tr>
+        <tr>
+          <th>Warranty</th>
+          <td id="specWarranty">1 Year Manufacturer Warranty</td>
+        </tr>
+      </table>
+
+      <div class="detail-actions">
+        <a href="index.html#contact" class="btn-main-quote">Request Quote / Inquiry</a>
+        <a href="product.html" class="btn-back">&larr; Back to Catalog</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 DS Safety Systems. All rights reserved.</p>
+  </footer>
+
+  <!-- Dynamic Script to Load Product Data based on URL Parameter -->
+  <script>
+    const productsData = {
+      "abc-extinguisher": {
+        title: "ABC Powder Fire Extinguisher",
+        badge: "Best Seller",
+        desc: "Multi-purpose stored pressure fire extinguisher ideal for Class A (solid combustibles), Class B (flammable liquids), and Class C (electrical equipment) fires. Built with heavy-duty steel cylinders and corrosion-resistant polyester powder coating.",
+        cert: "ISI Marked, BIS Approved",
+        app: "Offices, Retail Stores, Warehouses",
+        maint: "Supported by DS Safety Systems AMC",
+        warranty: "1 Year Replacement Warranty"
+      },
+      "co2-extinguisher": {
+        title: "CO2 Fire Extinguisher",
+        badge: "Industrial Grade",
+        desc: "Clean agent carbon dioxide fire extinguisher designed specifically for electrical equipment rooms, server labs, and sensitive machinery where chemical residue must be avoided completely upon discharge.",
+        cert: "CE Certified & BIS Approved",
+        app: "Server Rooms, Electrical Panels, Laboratories",
+        maint: "Quarterly pressure check recommended",
+        warranty: "1 Year Manufacturer Warranty"
+      },
+      "alarm-panel": {
+        title: "Microprocessor Fire Alarm Panel",
+        badge: "Advanced Technology",
+        desc: "Multi-zone conventional and addressable fire alarm control panels providing ultra-fast early emergency alerts with backup battery support and loud digital sounder outputs.",
+        cert: "ISO 9001 Compliant",
+        app: "High-rise Buildings, Corporate Complexes, Hotels",
+        maint: "Full testing available under annual contract",
+        warranty: "2 Year Electronic Warranty"
+      },
+      "hydrant-valve": {
+        title: "Landing Valve & Hydrant System",
+        badge: "Heavy Duty",
+        desc: "High-pressure copper and gunmetal fire hydrant valves engineered for robust commercial building installations, ensuring steady high-volume water flow during fire emergencies.",
+        cert: "Fire Department Approved",
+        app: "Industrial Parks, Basements, Commercial Towers",
+        maint: "Biannual hydrostatic pressure testing",
+        warranty: "1 Year Structural Warranty"
+      },
+      "amc-contract": {
+        title: "Annual Maintenance Contract (AMC)",
+        badge: "Service Contract",
+        desc: "Comprehensive quarterly safety audits, pressure testing, and component servicing performed by certified technicians to ensure your entire fire infrastructure remains 100% operational.",
+        cert: "Certified Compliance Partner",
+        app: "All Residential & Commercial Properties",
+        maint: "24/7 Priority Emergency Support",
+        warranty: "Active Coverage Throughout Contract Year"
+      },
+      "smoke-detector": {
+        title: "Optical Smoke & Heat Detectors",
+        badge: "High Sensitivity",
+        desc: "High-sensitivity photoelectric smoke detectors featuring auto-compensation technology to eliminate false alarms while detecting slow smoldering fires rapidly.",
+        cert: "UL Listed & BIS Approved",
+        app: "Bedrooms, Corridors, Office Ceilings",
+        maint: "Annual calibration check",
+        warranty: "1 Year Replacement Warranty"
+      }
+    };
+
+    // Read URL query parameter (e.g., product-detail.html?id=abc-extinguisher)
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    if (productId && productsData[productId]) {
+      const p = productsData[productId];
+      document.getElementById('pageTitle').innerText = p.title + " | DS Safety Systems";
+      document.getElementById('productTitle').innerText = p.title;
+      document.getElementById('productBadge').innerText = p.badge;
+      document.getElementById('productDescription').innerText = p.desc;
+      document.getElementById('specCert').innerText = p.cert;
+      document.getElementById('specApp').innerText = p.app;
+      document.getElementById('specMaint').innerText = p.maint;
+      document.getElementById('specWarranty').innerText = p.warranty;
+    } else {
+      document.getElementById('productTitle').innerText = "Product Not Found";
+      document.getElementById('productDescription').innerText = "Please select a valid product from our catalog.";
+    }
+  </script>
+
+</body>
+</html>
