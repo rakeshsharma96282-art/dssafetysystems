@@ -1024,53 +1024,312 @@
   </div>
 
   <!-- Main Navigation Header -->
-  <header class="main-header">
+ <header class="main-header">
+
+  <!-- LOGO -->
   <a href="#" class="logo-container">
-    <img src="logo.png" alt="DS Safety Systems Logo" onerror="this.style.display='none';">
+    <img src="logo.png" alt="DS Safety Systems Logo"
+         onerror="this.style.display='none';">
     <span class="brand-single-line">DS SAFETY SYSTEMS</span>
   </a>
 
+
+  <!-- MOBILE MENU -->
   <div class="menu-toggle" id="mobile-menu">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <div class="header-right-group" id="header-group">
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li><span class="divider">|</span>
-      <li><a href="#about">About Us</a></li><span class="divider">|</span>
-      
-      <!-- Services/Products Dropdown with nested Fire Extinguishers structure -->
-      <li class="dropdown">
-        <a href="#services">Services ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="#alarms">Fire Alarms</a></li>
-          <li class="has-submenu">
-            <a href="#extinguishers">Fire Extinguishers &raquo;</a>
-            <ul class="dropdown-submenu">
-              <li><a href="#installation">Installation</a></li>
-              <li><a href="#servicing">Servicing</a></li>
-              <li class="has-submenu">
-                <a href="#types">Fire Extinguisher Types &raquo;</a>
-                <ul class="dropdown-submenu">
-                  <li><a href="#water">Water</a></li>
-                  <li><a href="#foam">Foam</a></li>
-                  <li><a href="#powder">Dry Powder</a></li>
-                  <li><a href="#co2">CO2</a></li>
-                  <li><a href="#wet-chemical">Wet Chemical</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#assessments">Fire Risk Assessments</a></li>
-        </ul>
-      </li><span class="divider">|</span>
 
-      <li><a href="#contact">Contact</a></li>
+  <!-- NAVIGATION -->
+  <div class="header-right-group" id="header-group">
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#">Home</a>
+      </li>
+
+      <span class="divider">|</span>
+
+      <li>
+        <a href="#about">About Us</a>
+      </li>
+
+      <span class="divider">|</span>
+
+
+      <!-- =========================
+           SERVICES
+      ========================== -->
+
+      <li class="ds-services-dropdown">
+
+        <a href="#services" class="ds-services-link">
+          Services <span class="ds-down-arrow">▾</span>
+        </a>
+
+
+        <!-- MAIN SERVICES MENU -->
+
+        <div class="ds-services-menu">
+
+
+          <!-- LEFT COLUMN -->
+
+          <div class="ds-service-column">
+
+
+            <!-- FIRE EXTINGUISHERS -->
+
+            <div class="ds-service-item ds-has-submenu">
+
+              <a href="#extinguishers">
+                Fire Extinguishers
+                <span>›</span>
+              </a>
+
+              <div class="ds-submenu">
+
+                <a href="#installation">
+                  Installation
+                </a>
+
+                <a href="#servicing">
+                  Servicing
+                </a>
+
+                <div class="ds-submenu-item ds-has-submenu">
+
+                  <a href="#types">
+                    Fire Extinguisher Types
+                    <span>›</span>
+                  </a>
+
+                  <div class="ds-submenu ds-types-menu">
+
+                    <a href="#water">Water</a>
+                    <a href="#foam">Foam</a>
+                    <a href="#powder">Dry Powder</a>
+                    <a href="#co2">CO₂</a>
+                    <a href="#wet-chemical">Wet Chemical</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- FIRE ALARM -->
+
+            <div class="ds-service-item ds-has-submenu">
+
+              <a href="#alarms">
+                Fire Alarm Systems
+                <span>›</span>
+              </a>
+
+              <div class="ds-submenu">
+
+                <a href="#alarm-installation">
+                  Installation
+                </a>
+
+                <a href="#alarm-testing">
+                  Testing
+                </a>
+
+                <a href="#alarm-maintenance">
+                  Maintenance
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- HYDRANT -->
+
+            <div class="ds-service-item ds-has-submenu">
+
+              <a href="#hydrant">
+                Fire Hydrant Systems
+                <span>›</span>
+              </a>
+
+              <div class="ds-submenu">
+
+                <a href="#hydrant-installation">
+                  Installation
+                </a>
+
+                <a href="#fire-pumps">
+                  Fire Pumps
+                </a>
+
+                <a href="#hose-reels">
+                  Hose Reels
+                </a>
+
+                <a href="#hydrant-maintenance">
+                  Maintenance
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- RISK ASSESSMENT -->
+
+            <div class="ds-service-item">
+
+              <a href="#assessments">
+                Fire Risk Assessments
+              </a>
+
+            </div>
+
+
+            <!-- TRAINING -->
+
+            <div class="ds-service-item ds-has-submenu">
+
+              <a href="#training">
+                Fire Safety Training
+                <span>›</span>
+              </a>
+
+              <div class="ds-submenu">
+
+                <a href="#staff-training">
+                  Staff Training
+                </a>
+
+                <a href="#fire-drills">
+                  Emergency Fire Drills
+                </a>
+
+                <a href="#safety-training">
+                  Fire Safety Training
+                </a>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- RIGHT COLUMN -->
+
+          <div class="ds-service-column">
+
+
+            <div class="ds-service-item">
+
+              <a href="#installation">
+                Fire Safety Installation
+              </a>
+
+            </div>
+
+
+            <div class="ds-service-item">
+
+              <a href="#maintenance">
+                Servicing & Maintenance
+              </a>
+
+            </div>
+
+
+            <div class="ds-service-item">
+
+              <a href="#amc">
+                AMC Services
+              </a>
+
+            </div>
+
+
+            <div class="ds-service-item">
+
+              <a href="#inspection">
+                Inspection & Testing
+              </a>
+
+            </div>
+
+
+            <div class="ds-service-item">
+
+              <a href="#audit">
+                Fire Safety Audits
+              </a>
+
+            </div>
+
+
+            <div class="ds-service-item">
+
+              <a href="#passive-fire">
+                Passive Fire Protection
+              </a>
+
+            </div>
+
+
+            <div class="ds-service-item">
+
+              <a href="#emergency-lighting">
+                Emergency Lighting
+              </a>
+
+            </div>
+
+
+            <div class="ds-service-item">
+
+              <a href="#safety-signs">
+                Fire Safety Signs
+              </a>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </li>
+
+
+      <span class="divider">|</span>
+
+
+      <!-- CONTACT -->
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
     </ul>
-    <a href="#contact" class="btn-get-quote">Get Quote</a>
+
+
+    <!-- GET QUOTE -->
+
+    <a href="#contact" class="btn-get-quote">
+      Get Quote
+    </a>
+
   </div>
+
 </header>
 
   <!-- Hero Section -->
