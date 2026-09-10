@@ -1190,3 +1190,97 @@ footer a, .footer-section a, .site-footer a {
 footer a:hover, .footer-section a:hover, .site-footer a:hover {
   color: #ff3228 !important;
 }
+/* Navigation Dropdown Styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #ff3228;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 280px;
+  background-color: #151515;
+  border: 1px solid rgba(255, 50, 40, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 50, 40, 0.15);
+  transform: translateX(4px);
+}
+
+.dropdown-item .icon {
+  font-size: 18px;
+}
+
+.dropdown-item .item-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dropdown-item .item-text strong {
+  font-size: 14px;
+  color: #fff;
+}
+
+.dropdown-item .item-text small {
+  font-size: 11px;
+  color: #888;
+}
+
+.dropdown-item .chevron {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.dropdown-item:hover .chevron {
+  color: #ff3228;
+}
