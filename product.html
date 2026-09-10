@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire Safety Products Catalog | DS Safety Systems</title>
+  <meta name="description" content="Browse certified fire extinguishers, alarm systems, and hydrants from DS Safety Systems in New Delhi. Request a quote or expert inquiry instantly.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Lato', Arial, sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 25px; flex-wrap: wrap; }
+    .info-item { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 15px; font-weight: 700; text-decoration: none; }
+    .info-item img { width: 18px; height: 18px; filter: invert(1); }
+    .btn-contact { background-color: #d93830; color: white; padding: 8px 18px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 15px; transition: background 0.3s; }
+    .btn-contact:hover { background-color: #b52b24; }
+
+    /* Main Navigation */
+    .main-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 10px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-container { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-container img { height: 50px; width: auto; object-fit: contain; }
+    .brand-single-line { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 28px; color: #e63930; letter-spacing: 1px; }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 20px; }
+    .nav-links li a { text-decoration: none; color: #333; font-size: 16px; font-weight: 700; transition: color 0.3s; }
+    .nav-links li a:hover, .nav-links li a.active { color: #d93830; }
+
+    /* Catalog Hero */
+    .catalog-hero {
+      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .catalog-hero h1 { font-family: 'Outfit', sans-serif; font-size: 40px; margin-bottom: 10px; }
+    .catalog-hero h1 span { color: #d93830; }
+    .catalog-hero p { color: #aaa; font-size: 16px; max-width: 600px; margin: 0 auto; }
+
+    /* Product Grid Section */
+    .catalog-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .product-card {
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .product-card:nth-child(1) { animation-delay: 0.1s; }
+    .product-card:nth-child(2) { animation-delay: 0.2s; }
+    .product-card:nth-child(3) { animation-delay: 0.3s; }
+    .product-card:nth-child(4) { animation-delay: 0.4s; }
+    .product-card:nth-child(5) { animation-delay: 0.5s; }
+    .product-card:nth-child(6) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+    .product-img-box {
+      height: 200px;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .product-card:hover .product-img-box img {
+      transform: scale(1.05);
+    }
+    .product-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #d93830;
+      color: white;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 3px;
+    }
+    .product-content {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-content h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    .product-content p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .product-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .btn-details {
+      flex: 1;
+      background-color: #f1f1f1;
+      color: #333;
+      padding: 10px;
+      text-align: center;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn-details:hover { background-color: #e2e2e2; }
+    
+    .btn-quote {
+      flex: 1;
+      background-color: #d93830;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn-quote:hover { background-color: #b52b24; }
+
+    /* Footer */
+    .site-footer { background-color: #141414; color: #bbb; padding: 40px 25px; text-align: center; font-size: 14px; margin-top: 60px; }
+    .site-footer p { color: #888; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="tel:9818701683" class="info-item"><img src="call.png" alt="Phone"> 9818701683</a>
+      <a href="mailto:Dssafetysystems@hotmail.com" class="info-item"><img src="email.png" alt="Email"> Dssafetysystems@hotmail.com</a>
+    </div>
+    <div class="top-bar-right">
+      <a href="index.html#contact" class="btn-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Main Nav -->
+  <header class="main-header">
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="Logo" onerror="this.style.display='none';">
+      <span class="brand-single-line">DS SAFETY SYSTEMS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html" class="active">Products</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="catalog-hero">
+    <h1>Certified Fire Protection <span>Equipment Catalog</span></h1>
+    <p>Explore our elite selection of extinguishers, automated alarms, hydrant systems, and comprehensive maintenance packages.</p>
+  </section>
+
+  <!-- Product Catalog Grid -->
+  <section class="catalog-section">
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img-box">
+          <span class="product-badge">Best Seller</span>
+          <img src="hero-banner.jpg.png.png" alt="ABC Fire Extinguisher">
+        </div>
+        <div class="product-content">
+          <h3>ABC Powder Fire Extinguisher</h3>
+          <p>Multi-purpose stored pressure fire extinguisher ideal for Class A, B, and C fires in offices and industrial plants.</p>
+          <div class="product-actions">
+            <a href="product-detail.html?id=abc-extinguisher" class="btn-details">View Details</a>
+            <a href="index.html#contact" class="btn-quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img-box">
+          <span class="product-badge">Industrial</span>
+          <img src="hero-banner.jpg.png.png" alt="CO2 Fire Extinguisher">
+        </div>
+        <div class="product-content">
+          <h3>CO2 Fire Extinguisher</h3>
+          <p>Clean agent carbon dioxide fire extinguisher designed specifically for electrical equipment rooms and server labs.</p>
+          <div class="product-actions">
+            <a href="product-detail.html?id=co2-extinguisher" class="btn-details">View Details</a>
+            <a href="index.html#contact" class="btn-quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img-box">
+          <span class="product-badge">Advanced</span>
+          <img src="hero-banner.jpg.png.png" alt="Fire Alarm Control Panel">
+        </div>
+        <div class="product-content">
+          <h3>Microprocessor Fire Alarm Panel</h3>
+          <p>Multi-zone conventional and addressable fire alarm control panels providing ultra-fast early emergency alerts.</p>
+          <div class="product-actions">
+            <a href="product-detail.html?id=alarm-panel" class="btn-details">View Details</a>
+            <a href="index.html#contact" class="btn-quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-img-box">
+          <span class="product-badge">Heavy Duty</span>
+          <img src="hero-banner.jpg.png.png" alt="Hydrant Valve">
+        </div>
+        <div class="product-content">
+          <h3>Landing Valve & Hydrant System</h3>
+          <p>High-pressure copper and gunmetal fire hydrant valves engineered for robust commercial building installations.</p>
+          <div class="product-actions">
+            <a href="product-detail.html?id=hydrant-valve" class="btn-details">View Details</a>
+            <a href="index.html#contact" class="btn-quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="product-img-box">
+          <span class="product-badge">Service Contract</span>
+          <img src="hero-banner.jpg.png.png" alt="AMC Fire Maintenance">
+        </div>
+        <div class="product-content">
+          <h3>Annual Maintenance Contract (AMC)</h3>
+          <p>Comprehensive quarterly safety audits, pressure testing, and component servicing for complete regulatory compliance.</p>
+          <div class="product-actions">
+            <a href="product-detail.html?id=amc-contract" class="btn-details">View Details</a>
+            <a href="index.html#contact" class="btn-quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="product-img-box">
+          <span class="product-badge">Safety Gear</span>
+          <img src="hero-banner.jpg.png.png" alt="Smoke Detector">
+        </div>
+        <div class="product-content">
+          <h3>Optical Smoke & Heat Detectors</h3>
+          <p>High-sensitivity photoelectric smoke detectors featuring auto-compensation technology to eliminate false alarms.</p>
+          <div class="product-actions">
+            <a href="product-detail.html?id=smoke-detector" class="btn-details">View Details</a>
+            <a href="index.html#contact" class="btn-quote">Get Quote</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 DS Safety Systems. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
