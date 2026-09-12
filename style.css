@@ -424,152 +424,111 @@ body {
   margin-bottom: 0;
 }
 
-/* Animated Multi-Layer Mesh Background for Services Section */
-@keyframes meshShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* Services / Products Section Styles */
 .services-section {
-  padding: 100px 25px;
-  background: linear-gradient(135deg, #121824 0%, #1a1016 50%, #0d1117 100%);
-  background-size: 250% 250%;
-  animation: meshShift 12s ease infinite;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.services-section::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(230, 57, 48, 0.15) 0%, transparent 70%);
-  z-index: 1;
-  pointer-events: none;
-  border-radius: 50%;
-}
-
-.services-section::after {
-  content: '';
-  position: absolute;
-  bottom: -50px;
-  right: -50px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(249, 203, 40, 0.1) 0%, transparent 70%);
-  z-index: 1;
-  pointer-events: none;
-  border-radius: 50%;
+  padding: 90px 25px;
+  background-color: #0f1319; /* Updated background to dark for contrast */
+  text-align: center;
 }
 
 .section-title-container {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin: 0 auto 50px auto;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
 }
 
 .section-title-container h2 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 34px;
-  color: #ffffff;
-  margin-bottom: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 34px;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 
 .section-title-container h2 span {
-  color: #ff4d4d;
+  color: #ff4d4d;
 }
 
 .section-title-container p {
-  color: #a0aec0;
-  font-size: 16px;
-  line-height: 1.6;
+  color: #a0aec0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .services-grid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .service-card {
-  background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(45, 55, 72, 0.9) 100%);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-init-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
 }
 
 .service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff4d4d, #f9cb28);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: rgba(255, 77, 77, 0.4);
-  box-shadow: 0 20px 40px rgba(255, 77, 77, 0.2);
-  background: linear-gradient(135deg, rgba(34, 40, 52, 0.95) 0%, rgba(52, 65, 85, 0.95) 100%);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 77, 77, 0.4);
+  box-shadow: 0 20px 40px rgba(255, 77, 77, 0.15);
+  background: linear-gradient(135deg, #222834 0%, #344155 100%);
 }
 
 .service-card:hover::before {
-  opacity: 1;
+  opacity: 1;
 }
 
 .service-card-body {
-  padding: 30px;
+  padding: 30px;
 }
 
 .service-card-body h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 20px;
-  color: #ffffff;
-  margin-bottom: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 
 .service-card-body p {
-  color: #cbd5e0;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  color: #cbd5e0;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .service-link {
-  color: #ff4d4d;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  transition: gap 0.3s ease, color 0.3s ease;
+  color: #ff4d4d;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.3s ease, color 0.3s ease;
 }
 
 .service-link:hover {
-  gap: 8px;
-  color: #ff7878;
-}
+  gap: 8px;
+  color: #ff7878;
+}  u can add in this 
 /* Testimonials Section */
 .testimonials-section {
   padding: 90px 25px;
