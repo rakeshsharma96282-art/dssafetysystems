@@ -386,90 +386,90 @@
       color: #d93830;
     }
 
-    /* About Us Section */
-    .about-section {
-      padding: 90px 25px;
-      background-color: #ffffff;
-    }
+   /* About Us Section */
+.about-section {
+  padding: 90px 25px;
+  background-color: #ffffff;
+}
 
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
 
-    .about-text h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 34px;
-      color: #1a1a1a;
-      margin-bottom: 20px;
-      line-height: 1.3;
-    }
+.about-text h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 34px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
 
-    .about-text h2 span {
-      color: #d93830;
-    }
+.about-text h2 span {
+  color: #d93830;
+}
 
-    .about-text p {
-      color: #555;
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
+.about-text p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
 
-    .about-highlights {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 25px;
-    }
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
 
-    .highlight-box {
-      background: #fff;
-      padding: 15px 20px;
-      border-left: 4px solid #e63930;
-      font-weight: 700;
-      color: #333;
-      font-size: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-      transition: box-shadow 0.3s ease;
-    }
+.highlight-box {
+  background: #fff;
+  padding: 15px 20px;
+  border-left: 4px solid #e63930;
+  font-weight: 700;
+  color: #333;
+  font-size: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: box-shadow 0.3s ease;
+}
 
-    .highlight-box:hover {
-      box-shadow: 0 0 12px rgba(230, 57, 48, 0.2);
-    }
+.highlight-box:hover {
+  box-shadow: 0 0 12px rgba(230, 57, 48, 0.2);
+}
 
-    .about-card-box {
-      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-      color: white;
-      padding: 50px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      position: relative;
-      border: 1px solid rgba(230, 57, 48, 0.15);
-    }
+.about-card-box {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  color: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: relative;
+  border: 1px solid rgba(230, 57, 48, 0.15);
+  animation: subtleGlow 4s ease-in-out infinite;
+}
 
-    .about-card-box h3 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
+.about-card-box h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
 
-    .about-card-box h3 span {
-      color: #d93830;
-    }
+.about-card-box h3 span {
+  color: #d93830;
+}
 
-    .about-card-box p {
-      color: #ccc;
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
+.about-card-box p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
     /* Industries We Serve Section */
     .industries-section {
       padding: 90px 25px;
@@ -667,23 +667,27 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      gap: 40px;
     }
 
     .why-us-feature {
       display: flex;
-      flex-direction: column;
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      gap: 20px;
+      align-items: flex-start;
     }
 
     .why-us-icon {
-      font-size: 24px;
-      font-weight: 800;
+      background-color: rgba(217, 56, 48, 0.1);
       color: #d93830;
-      margin-bottom: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      font-weight: bold;
     }
 
     .why-us-text h3 {
@@ -1235,306 +1239,40 @@
     </div>
 
     <!-- Why Choose Us Integrated Subsection -->
-    <div class="why-us-container" style="max-width: 1200px; margin: 70px auto 0 auto; border-top: 1px solid rgba(230, 57, 48, 0.2); padding-top: 50px;">
-      <div class="why-us-feature">
-        <div class="why-us-icon">01</div>
+    <div class="why-us-container" style="max-width: 1200px; margin: 70px auto 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; border-top: 1px solid rgba(230, 57, 48, 0.2); padding-top: 50px;">
+      <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">01</div>
         <div class="why-us-text">
-          <h3>Certified Quality</h3>
-          <p>All suppression systems, alarms, and extinguishers comply strictly with Indian Standards (ISI) and local safety codes.</p>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">Certified Engineering</h3>
+          <p style="color: #555; font-size: 14px; line-height: 1.6;">Executed by master technicians and certified fire protection specialists meeting rigorous compliance benchmarks.</p>
         </div>
       </div>
 
-      <div class="why-us-feature">
-        <div class="why-us-icon">02</div>
+      <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">02</div>
         <div class="why-us-text">
-          <h3>End-to-End Execution</h3>
-          <p>From blueprint design and installation to quarterly maintenance contracts, we handle everything under one roof.</p>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">24/7 Rapid Response</h3>
+          <p style="color: #555; font-size: 14px; line-height: 1.6;">Round-the-clock remote system monitoring and emergency technical dispatch units deployed instantaneously.</p>
         </div>
       </div>
 
-      <div class="why-us-feature">
-        <div class="why-us-icon">03</div>
+      <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">03</div>
         <div class="why-us-text">
-          <h3>Rapid Response</h3>
-          <p>Our local New Delhi technical teams ensure rapid deployment, emergency refilling, and responsive troubleshooting.</p>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">Smart Integration</h3>
+          <p style="color: #555; font-size: 14px; line-height: 1.6;">Seamlessly fusing advanced IoT sensors, addressable panels, and automated suppression networks.</p>
         </div>
       </div>
 
-      <div class="why-us-feature">
-        <div class="why-us-icon">04</div>
+      <div class="why-us-feature" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+        <div class="why-us-icon" style="font-size: 24px; font-weight: 800; color: #d93830; margin-bottom: 10px;">04</div>
         <div class="why-us-text">
-          <h3>Proven Track Record</h3>
-          <p>Trusted by hundreds of commercial hubs, corporate offices, and residential housing societies across the capital region.</p>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; margin-bottom: 8px; color: #1a1a1a;">Turnkey Reliability</h3>
+          <p style="color: #555; font-size: 14px; line-height: 1.6;">End-to-end execution covering risk blueprints, frictionless installation, and lifecycle audits.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Industries We Serve Section -->
-  <section class="industries-section" id="industries">
-    <div class="industries-container">
-      <div class="industries-badge">Sectors We Protect</div>
-      <h2 class="industries-title">Tailored Safety Solutions Across <span>Diverse Industries</span></h2>
-      <p class="industries-subtitle">Every environment has unique fire risks and regulatory compliance standards. We deliver specialized engineering and equipment tailored to your exact sector.</p>
-      
-      <div class="industries-grid">
-        <div class="industry-card">
-          <img src="commercial.png" alt="Commercial Offices" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80';">
-          <div class="industry-content">
-            <h3>Commercial & Corporate</h3>
-            <p>Advanced addressable alarm systems, clean-agent server room suppression, and evacuation planning for office towers and business parks.</p>
-          </div>
-        </div>
-
-        <div class="industry-card">
-          <img src="industrial.png" alt="Industrial Warehouses" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80';">
-          <div class="industry-content">
-            <h3>Industrial & Warehousing</h3>
-            <p>Heavy-duty hydrant networks, foam suppression systems, and high-capacity extinguishers designed for large manufacturing floors and logistics hubs.</p>
-          </div>
-        </div>
-
-        <div class="industry-card">
-          <img src="residential.png" alt="Residential Complexes" onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80';">
-          <div class="industry-content">
-            <h3>Residential & Housing Societies</h3>
-            <p>Comprehensive fire safety audits, wet riser systems, smoke extraction, and society-wide AMC services to protect apartment complexes.</p>
-          </div>
-        </div>
-
-        <div class="industry-card">
-          <img src="healthcare.png" alt="Healthcare & Hospitals" onerror="this.src='https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80';">
-          <div class="industry-content">
-            <h3>Healthcare & Institutional</h3>
-            <p>Specialized non-toxic gas suppression and rapid detection networks ensuring zero disruption to patient care and sensitive medical wards.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products & Services Section -->
-  <section class="services-section" id="services">
-    <div class="section-title-container">
-      <h2>Certified Fire Protection <span>Products & Services</span></h2>
-      <p>From cutting-edge suppression systems to rigorous annual maintenance contracts, we provide an exhaustive suite of safety solutions.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-card-body">
-          <h3>Fire Extinguishers Supply & Refilling</h3>
-          <p>ABC powder, CO2, water, and foam extinguishers certified to ISI standards. Complete inspection, pressure testing, and professional refilling services.</p>
-          <a href="product.html" class="service-link">View Range →</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-body">
-          <h3>Hydrant & Sprinkler Systems</h3>
-          <p>Design, installation, and hydrostatic pressure testing of internal and external hydrant networks, landing valves, and automatic sprinkler grids.</p>
-          <a href="product.html" class="service-link">Learn More →</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-body">
-          <h3>Fire Alarm & Detection Systems</h3>
-          <p>Conventional and intelligent addressable fire alarm panels, smoke detectors, heat sensors, manual call points, and automated hooters.</p>
-          <a href="product.html" class="service-link">Explore Systems →</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-body">
-          <h3>Annual Maintenance Contracts (AMC)</h3>
-          <p>Comprehensive quarterly testing, compliance auditing, preventive maintenance, and 24/7 emergency support for all fire equipment.</p>
-          <a href="#contact" class="service-link">Get AMC Quote →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials-section">
-    <div class="section-title-container">
-      <h2>What Our <span>Clients Say</span></h2>
-      <p>Read genuine feedback from facility managers, corporate leaders, and housing societies who trust DS Safety Systems.</p>
-    </div>
-
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div>
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"DS Safety Systems completely overhauled our corporate office fire network. Their team was professional, adhered strictly to timelines, and ensured complete compliance with Delhi safety codes."</p>
-        </div>
-        <div class="testimonial-author">
-          <h4>Rajesh Sharma</h4>
-          <p>Facility Manager, Vertex Enterprises</p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div>
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"We rely on DS Safety Systems for our housing society's annual maintenance contract. Their technicians are extremely knowledgeable, punctual, and thorough during quarterly audits."</p>
-        </div>
-        <div class="testimonial-author">
-          <h4>Col. Suresh Menon</h4>
-          <p>President, RWA Apex Towers</p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div>
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Top-tier service! They provided prompt fire extinguisher refilling and installed our warehouse hydrant system seamlessly. Highly recommended for any industrial safety needs."</p>
-        </div>
-        <div class="testimonial-author">
-          <h4>Amit Bansal</h4>
-          <p>Operations Head, Metro Infrastructure</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact / Get a Quote Form Section -->
-  <section class="contact-section" id="contact">
-    <div class="contact-wrapper">
-      <div class="contact-info-side">
-        <h2>Let’s Secure Your Property <span>Get In Touch</span></h2>
-        <p>Have questions about fire safety compliance, product specifications, or need an urgent quote? Reach out to our expert team today and we will respond within 24 hours.</p>
-        
-        <div class="footer-contact-info" style="margin-bottom: 25px;">
-          <a href="tel:9818701683" class="footer-contact-item" style="color: #333; font-weight: 700;">
-            <img src="call.png" alt="Phone" style="filter: none;"> +91 9818701683
-          </a>
-          <a href="mailto:Dssafetysystems@hotmail.com" class="footer-contact-item" style="color: #333; font-weight: 700;">
-            <img src="email.png" alt="Email" style="filter: none;"> Dssafetysystems@hotmail.com
-          </a>
-          <div class="footer-contact-item" style="color: #333; font-weight: 700;">
-            <img src="pin.png" alt="Location" style="filter: none;"> Govind Puri, New Delhi, India
-          </div>
-        </div>
-
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.88219451152!2d77.25!3d28.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c029759c55%3A0x6b4991585ee5220c!2sGovind%20Puri%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <div class="contact-container">
-        <h3>Request a Free Quote</h3>
-        <form class="contact-form" action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
-          </div>
-
-          <div class="form-group full-width">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-          </div>
-
-          <div class="form-group full-width">
-            <label for="service-select">Service Required</label>
-            <input type="text" id="service-select" name="service" placeholder="e.g. Fire Extinguishers, Hydrants, AMC">
-          </div>
-
-          <div class="form-group full-width">
-            <label for="message">Project Details / Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your property and requirements..."></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">Submit Request</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Floating Click-to-Call Button for Mobile -->
-  <a href="tel:9818701683" class="floating-call-btn" aria-label="Call Us Now">
-    <img src="call.png" alt="Call">
-  </a>
-
-  <!-- Professional Footer Section -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-col">
-        <h3>DS Safety Systems</h3>
-        <p>Your trusted partner for certified fire protection equipment, professional installation, and comprehensive maintenance services across New Delhi and surrounding regions.</p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="product.html">Products & Services</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Our Products</h3>
-        <ul class="footer-links">
-          <li><a href="product.html">Fire Extinguishers</a></li>
-          <li><a href="product.html">Hydrant Systems</a></li>
-          <li><a href="product.html">Alarm & Smoke Detectors</a></li>
-          <li><a href="product.html">Safety Signage & PPE</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Contact Info</h3>
-        <div class="footer-contact-info">
-          <a href="tel:9818701683" class="footer-contact-item">
-            <img src="call.png" alt="Phone"> +91 9818701683
-          </a>
-          <a href="mailto:Dssafetysystems@hotmail.com" class="footer-contact-item">
-            <img src="email.png" alt="Email"> Dssafetysystems@hotmail.com
-          </a>
-          <div class="footer-contact-item">
-            <img src="pin.png" alt="Location"> Govind Puri, New Delhi, India
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 DS Safety Systems. All Rights Reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Sitemap</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript for Mobile Navigation Toggle -->
-  <script>
-    const mobileMenu = document.getElementById('mobile-menu');
-    const headerGroup = document.getElementById('header-group');
-
-    mobileMenu.addEventListener('click', () => {
-      headerGroup.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a, .btn-get-quote').forEach(link => {
-      link.addEventListener('click', () => {
-        headerGroup.classList.remove('active');
-      });
-    });
-  </script>
 </body>
 </html>
-   <!-- Your website content is above this line -->
-
-    <script src="script.js"></script>
-  </body>
-</html> 
