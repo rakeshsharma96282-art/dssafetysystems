@@ -1024,3 +1024,24 @@ footer a:hover, .footer-section a:hover, .site-footer a:hover, .footer-links li 
     opacity: 0;
   }
 }
+.sketch-button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border: none;
+  display: inline-block; /* Added to fix link layout */
+  text-decoration: none; /* Removes the underline */
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+  border-radius: 12px;
+  padding: 12px 28px;
+  position: relative;
+  line-height: 24px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+}
