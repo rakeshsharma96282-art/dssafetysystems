@@ -930,3 +930,97 @@ footer a:hover, .footer-section a:hover, .site-footer a:hover, .footer-links li 
     max-height: 45vh;
     border-radius: 8px;
   }
+.sketch-button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+  border-radius: 12px;
+  padding: 12px 28px;
+  position: relative;
+  line-height: 24px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.sketch-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255, 77, 77, 0.25);
+}
+
+.sketch-button.start svg {
+  animation: stroke 1s linear forwards;
+}
+
+.sketch-button .lines {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: hard-light;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sketch-button .lines > div {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.sketch-button .lines > div:last-child {
+  transform: rotate(180deg);
+}
+
+.sketch-button .lines svg {
+  display: block;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  fill: none;
+  stroke-width: 2;
+  stroke: #ff4d4d;
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 2 10;
+  stroke-dashoffset: 14;
+  opacity: 0;
+}
+
+.sketch-button .lines div svg:nth-child(1) {
+  stroke: #ffffff;
+}
+
+.sketch-button .lines div svg:nth-child(2) {
+  stroke-width: 6px;
+  filter: blur(20px);
+  stroke: #ff4d4d;
+}
+
+.sketch-button .lines div svg:nth-child(3) {
+  stroke-width: 5px;
+  filter: blur(6px);
+  stroke: #ff4d4d;
+}
+
+.sketch-button .lines div svg:nth-child(4) {
+  stroke-width: 10px;
+  filter: blur(56px);
+  stroke: #ff4d4d;
+}
+
+@keyframes stroke {
+  30%,
+  55% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 4;
+    opacity: 0;
+  }
+}
