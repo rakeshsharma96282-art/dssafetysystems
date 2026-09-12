@@ -169,27 +169,30 @@ body {
   color: #d93830;
 }
 
-.btn-contact, .btn-get-quote, .btn-submit, .btn-quote {
+.btn-contact, .btn-get-quote, .btn-submit, .btn-quote, .sketch-button {
   background: linear-gradient(135deg, #e63930, #b52b24);
-  color: white;
+  color: white !important;
   padding: 10px 20px;
   border-radius: 4px;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 16px;
   box-shadow: 0 0 15px rgba(230, 57, 48, 0.4);
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
+  overflow: visible;
 }
 
-.btn-contact:hover, .btn-get-quote:hover, .btn-submit:hover, .btn-quote:hover {
+.btn-contact:hover, .btn-get-quote:hover, .btn-submit:hover, .btn-quote:hover, .sketch-button:hover {
   background: linear-gradient(135deg, #ff4d42, #d93830);
   box-shadow: 0 0 25px rgba(230, 57, 48, 0.7);
   transform: translateY(-2px);
 }
 
-.btn-get-quote {
+.sketch-button {
   opacity: 0;
   animation: pureFadeIn 0.9s ease 0.85s forwards;
 }
@@ -930,3 +933,47 @@ footer a:hover, .footer-section a:hover, .site-footer a:hover, .footer-links li 
     max-height: 45vh;
     border-radius: 8px;
  
+.sketch-button {
+  position: relative;
+  overflow: visible;
+}
+
+.sketch-button .lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.sketch-button .lines div {
+  position: absolute;
+  inset: 0;
+}
+
+.sketch-button .lines svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: url(#sketch-gradient); /* fallback or direct stroke color */
+  stroke-width: 2;
+  stroke-dasharray: 2 8;
+  stroke-dashoffset: 10;
+  opacity: 0;
+}
+
+.sketch-button.start .lines svg {
+  opacity: 1;
+  animation: sketchTrace 0.8s linear forwards;
+}
+
+@keyframes sketchTrace {
+  0% {
+    stroke-dashoffset: 10;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
