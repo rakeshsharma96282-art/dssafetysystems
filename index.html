@@ -228,43 +228,13 @@
       border-radius: 2px;
     }
 
-    /* Hero Section */
-    .hero-section {
-      width: 100%;
-      background-color: #111;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 30px;
-    }
-
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, #2a2a2a 0%, #0a0a0a 100%);
-      z-index: 1;
-    }
-
-    .hero-banner-img {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      max-height: 72vh;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      position: relative;
-      z-index: 2;
-      border-radius: 14px;
-      border: 1px solid rgba(217, 56, 48, 0.4);
-      box-shadow: 0 0 25px rgba(217, 56, 48, 0.45);
-    }
+    <!-- Hero Section -->
+  <section class="hero-section">
+    <video autoplay muted loop playsinline class="hero-banner-img">
+      <source src="hero-video.mp4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
      <!-- About Us Section -->
   <section id="about" class="about-main-section" style="padding: 90px 25px; background-color: #ffffff;">
     <div class="about-container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
@@ -1064,10 +1034,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <img src="hero-banner.jpg.png.png" alt="DS Safety Systems Hero Banner" class="hero-banner-img">
-  </section>
 
   <!-- Client Logo Marquee Trust Bar -->
   <div class="marquee-section">
